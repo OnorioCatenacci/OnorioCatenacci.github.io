@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">My Blog: My Blog</title>
+ <link rel="self" href="http://www.example.com/feeds/all.atom.xml" />
+ <link href="http://www.example.com/index.html" />
+ <id>urn:http-www-example-com:-index-html</id>
+ <updated>2024-12-03T01:12:35Z</updated>
+ <entry>
+  <title type="text">HelloAgainWorld</title>
+  <link rel="alternate" href="http://www.example.com/2024/12/helloagainworld.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-2024-12-helloagainworld-html</id>
+  <published>2024-12-03T01:12:35Z</published>
+  <updated>2024-12-03T01:12:35Z</updated>
+  <author>
+   <name>The Unknown Author</name></author>
+  <content type="html">
+&lt;p&gt;Yeah I want to write some stuff again and I don&amp;rsquo;t want to let procrastination keep me from writing. So, yeah, this is a really, really short first post but if I wait for inspiration or something smart to say I&amp;rsquo;ll never say anything!&lt;/p&gt;</content></entry></feed>
