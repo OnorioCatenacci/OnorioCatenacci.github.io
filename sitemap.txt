@@ -1,2 +1,2 @@
-http://www.example.com/2024/12/helloagainworld.html
-http://www.example.com/About.html
+https://onoriocatenacci.github.io/2024/12/helloagainworld.html
+https://onoriocatenacci.github.io/About.html
