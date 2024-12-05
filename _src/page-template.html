@@ -102,9 +102,7 @@
                                              "/index.html"))
             @list{
               <h1>Welcome</h1>
-              <p>Here is some text that only goes on the home page,
-                because <code>@"@"uri-path</code> is
-                <code>/index.html</code>.</p> })
+              <p>Yes, shockingly you've found the blog of yet another nerd with lots of opinions.</p> })
           @;{ Index pages for posts have @tag that's not #f }
           @(when tag
             @list{<h1>Posts tagged <em>@|tag|</em></h1>})
@@ -114,7 +112,6 @@
       </div>
       <footer>
         <hr />
-        <p>@twitter-follow-button["racketlang" "Follow RacketLang"]</p>
         <p>Site generated
         by <a href="https://github.com/greghendershott/frog">Frog</a>,
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
