@@ -3,14 +3,14 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Desultory Nerdery</title>
-    <meta name="description" content="Desultory Nerdery">
+    <title>Three Ways To Share Values Between Elixir Modules</title>
+    <meta name="description" content="I find that as I get older I find myself trying to remember coding techniques and idioms that shouldn't be hard to remember but sometimes are anyway. This is one of those cases--the module attributes took me a bit of effort to work out so I thought I'd wr...">
     <meta name="author"      content="Onorio Catenacci">
-    <meta name="keywords"    content="Coding Recipes, Writing, Software Engineering, all, Elixir, Intro, Personal">
+    <meta name="keywords"    content="Elixir, Coding Recipes">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="https://onoriocatenacci.github.io/index.html">
-
+    <link rel="canonical" href="https://onoriocatenacci.github.io/2024\12\three-ways-to-share-values-between-elixir-modules.html">
+    <link rel="next" href="/2024\12\where-i-m-going.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
@@ -85,14 +85,13 @@
         <!-- Main column -->
         <div id="content" class="col-md-12">
 
-          <h1>Welcome</h1>
-          <p>Yes, shockingly you've found the blog of yet another nerd with lots of opinions.</p> 
+
 
 
 
           <article>
   <header>
-    <h2><a href='/2024\12\three-ways-to-share-values-between-elixir-modules.html'>Three Ways To Share Values Between Elixir Modules</a></h2>
+    <h1>Three Ways To Share Values Between Elixir Modules</h1>
     <p class='date-and-tags'>
 <time datetime="2024-12-06" pubdate="true">2024-12-06</time> :: <span class="tags"><a href="/tags\Elixir.html">Elixir</a>, <a href="/tags\Coding-Recipes.html">Coding Recipes</a></span></p>
     <p class='authors'>By: <span class="authors">Onorio Catenacci</span></p>
@@ -310,31 +309,45 @@
 </div>
 
 <p>The main idea here is that if you&rsquo;re using the same named value in multiple modules, you want to avoid <em>defining</em> it more than once. Defining the value in several different modules is an excellent way to insure that someone will miss changing the value somewhere in maintenance and that can lead to some really odd, difficult to reproduce bugs.</p>
-
-</article>
-<article>
-  <header>
-    <h2><a href='/2024\12\where-i-m-going.html'>Where I&rsquo;m Going</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2024-12-05" pubdate="true">2024-12-05</time> :: <span class="tags"><a href="/tags\Personal.html">Personal</a>, <a href="/tags\Software-Engineering.html">Software Engineering</a></span></p>
-    <p class='authors'>By: <span class="authors">Onorio Catenacci</span></p>
-  </header>
-
-<p>There are a few things in terms of technology that I&rsquo;ve had my eye upon. I&rsquo;d like to share some thoughts with you for whatever it&rsquo;s worth.</p>
   <footer>
-    <a href='/2024\12\where-i-m-going.html'>&hellip; more &hellip;</a>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <g:plusone size="medium" href="https://onoriocatenacci.github.io/2024\12\three-ways-to-share-values-between-elixir-modules.html"></g:plusone>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.identifier = undefined;
+        this.page.url = undefined;
+        this.page.title = undefined;
+        this.page.category_id = undefined;
+      };
+      var disqus_shortname = 'DesultoryNerdery';
+      (function() {
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          dsq.setAttribute('data-timestamp', +new Date());
+          (document.head || document.body).appendChild(dsq);
+      })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <div class="row justify-content-center">
+      <nav aria-label="Page Navigation">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="/2024\12\where-i-m-going.html"
+               aria-label="Previous">
+              <span aria-hidden="true">&larr; Where I&rsquo;m Going</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
   </footer>
-</article>
-<article>
-  <header>
-    <h2><a href='/2024\12\hello-again-world.html'>Hello Again World</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2024-12-02" pubdate="true">2024-12-02</time> :: <span class="tags"><a href="/tags\Writing.html">Writing</a>, <a href="/tags\Intro.html">Intro</a></span></p>
-    <p class='authors'>By: <span class="authors">Onorio Catenacci</span></p>
-  </header>
-
-<p>Yeah I want to write some stuff again and I don&rsquo;t want to let procrastination keep me from writing. So, yeah, this is a really, really short first post but if I wait for inspiration or something smart to say I&rsquo;ll never say anything!</p>
-
 </article>
         </div>
       </div>

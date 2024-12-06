@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
- <title type="text">Desultory Nerdery: Desultory Nerdery</title>
- <link rel="self" href="https://onoriocatenacci.github.io/feeds\all.atom.xml" />
- <link href="https://onoriocatenacci.github.io/index.html" />
- <id>urn:https-onoriocatenacci-github-io:-index-html</id>
- <updated>2024-12-06T19:35:02Z</updated>
- <entry>
-  <title type="text">Three Ways To Share Values Between Elixir Modules</title>
-  <link rel="alternate" href="https://onoriocatenacci.github.io/2024\12\three-ways-to-share-values-between-elixir-modules.html?utm_source=all&amp;utm_medium=Atom" />
-  <id>urn:https-onoriocatenacci-github-io:-2024-12-three-ways-to-share-values-between-elixir-modules-html</id>
-  <published>2024-12-06T19:35:02Z</published>
-  <updated>2024-12-06T19:35:02Z</updated>
-  <author>
-   <name>Onorio Catenacci</name></author>
-  <content type="html">
+<rss version="2.0">
+ <channel>
+  <title>Desultory Nerdery: Posts tagged 'Coding Recipes'</title>
+  <description>Desultory Nerdery: Posts tagged 'Coding Recipes'</description>
+  <link>https://onoriocatenacci.github.io/tags\Coding-Recipes.html</link>
+  <lastBuildDate>Fri, 06 Dec 2024 19:35:02 UT</lastBuildDate>
+  <pubDate>Fri, 06 Dec 2024 19:35:02 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>Three Ways To Share Values Between Elixir Modules</title>
+   <link>https://onoriocatenacci.github.io/2024\12\three-ways-to-share-values-between-elixir-modules.html?utm_source=Coding-Recipes&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onoriocatenacci-github-io:-2024-12-three-ways-to-share-values-between-elixir-modules-html</guid>
+   <pubDate>Fri, 06 Dec 2024 19:35:02 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
 &lt;p&gt;I find that as I get older I find myself trying to remember coding techniques and idioms that shouldn&amp;rsquo;t be hard to remember but sometimes are anyway. This is one of those cases&amp;mdash;the module attributes took me a bit of effort to work out so I thought I&amp;rsquo;d write it down. I&amp;rsquo;m sharing it here so others might benefit from it as well.&lt;/p&gt;
 
 &lt;h2 id="what-do-i-mean-by-constant"&gt;What Do I Mean By Constant?&lt;/h2&gt;
@@ -225,24 +225,4 @@
 
 &lt;/div&gt;
 
-&lt;p&gt;The main idea here is that if you&amp;rsquo;re using the same named value in multiple modules, you want to avoid &lt;em&gt;defining&lt;/em&gt; it more than once. Defining the value in several different modules is an excellent way to insure that someone will miss changing the value somewhere in maintenance and that can lead to some really odd, difficult to reproduce bugs.&lt;/p&gt;</content></entry>
- <entry>
-  <title type="text">Where I'm Going</title>
-  <link rel="alternate" href="https://onoriocatenacci.github.io/2024\12\where-i-m-going.html?utm_source=all&amp;utm_medium=Atom" />
-  <id>urn:https-onoriocatenacci-github-io:-2024-12-where-i-m-going-html</id>
-  <published>2024-12-05T15:38:50Z</published>
-  <updated>2024-12-05T15:38:50Z</updated>
-  <author>
-   <name>Onorio Catenacci</name></author>
-  <content type="html">
-&lt;p&gt;There are a few things in terms of technology that I&amp;rsquo;ve had my eye upon. I&amp;rsquo;d like to share some thoughts with you for whatever it&amp;rsquo;s worth.&lt;/p&gt;&lt;a href="https://onoriocatenacci.github.io/2024\12\where-i-m-going.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
- <entry>
-  <title type="text">Hello Again World</title>
-  <link rel="alternate" href="https://onoriocatenacci.github.io/2024\12\hello-again-world.html?utm_source=all&amp;utm_medium=Atom" />
-  <id>urn:https-onoriocatenacci-github-io:-2024-12-hello-again-world-html</id>
-  <published>2024-12-03T01:12:35Z</published>
-  <updated>2024-12-03T01:12:35Z</updated>
-  <author>
-   <name>Onorio Catenacci</name></author>
-  <content type="html">
-&lt;p&gt;Yeah I want to write some stuff again and I don&amp;rsquo;t want to let procrastination keep me from writing. So, yeah, this is a really, really short first post but if I wait for inspiration or something smart to say I&amp;rsquo;ll never say anything!&lt;/p&gt;</content></entry></feed>
+&lt;p&gt;The main idea here is that if you&amp;rsquo;re using the same named value in multiple modules, you want to avoid &lt;em&gt;defining&lt;/em&gt; it more than once. Defining the value in several different modules is an excellent way to insure that someone will miss changing the value somewhere in maintenance and that can lead to some really odd, difficult to reproduce bugs.&lt;/p&gt;</description></item></channel></rss>
