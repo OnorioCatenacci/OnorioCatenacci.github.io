@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">Desultory Nerdery: Posts tagged 'Racket'</title>
+ <link rel="self" href="https://onoriocatenacci.github.io/feeds\Racket.atom.xml" />
+ <link href="https://onoriocatenacci.github.io/tags\Racket.html" />
+ <id>urn:https-onoriocatenacci-github-io:-tags-Racket-html</id>
+ <updated>2024-12-11T22:13:20Z</updated>
+ <entry>
+  <title type="text">Scripting With Racket</title>
+  <link rel="alternate" href="https://onoriocatenacci.github.io/2024\12\scripting-with-racket.html?utm_source=Racket&amp;utm_medium=Atom" />
+  <id>urn:https-onoriocatenacci-github-io:-2024-12-scripting-with-racket-html</id>
+  <published>2024-12-11T22:13:20Z</published>
+  <updated>2024-12-11T22:13:20Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Using &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; in a shell script allows a developer to basically use a lot of the same code across platforms.&lt;/p&gt;&lt;a href="https://onoriocatenacci.github.io/2024\12\scripting-with-racket.html?utm_source=Racket&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>

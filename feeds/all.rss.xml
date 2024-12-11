@@ -4,9 +4,17 @@
   <title>Desultory Nerdery: Desultory Nerdery</title>
   <description>Desultory Nerdery: Desultory Nerdery</description>
   <link>https://onoriocatenacci.github.io/index.html</link>
-  <lastBuildDate>Fri, 06 Dec 2024 19:35:02 UT</lastBuildDate>
-  <pubDate>Fri, 06 Dec 2024 19:35:02 UT</pubDate>
+  <lastBuildDate>Wed, 11 Dec 2024 22:13:20 UT</lastBuildDate>
+  <pubDate>Wed, 11 Dec 2024 22:13:20 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Scripting With Racket</title>
+   <link>https://onoriocatenacci.github.io/2024\12\scripting-with-racket.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onoriocatenacci-github-io:-2024-12-scripting-with-racket-html</guid>
+   <pubDate>Wed, 11 Dec 2024 22:13:20 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;Using &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; in a shell script allows a developer to basically use a lot of the same code across platforms.&lt;/p&gt;&lt;a href="https://onoriocatenacci.github.io/2024\12\scripting-with-racket.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>Three Ways To Share Values Between Elixir Modules</title>
    <link>https://onoriocatenacci.github.io/2024\12\three-ways-to-share-values-between-elixir-modules.html?utm_source=all&amp;utm_medium=RSS</link>
