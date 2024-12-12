@@ -81,3 +81,22 @@ And finally just for sake of completeness:
 
 The ability to reuse basically the same scripts in three different shell scripting systems is a win to me.  I don't have a Mac handy to test but I'm sure that the only change that I'd need would be the shebang lines at the top of the script.  
 
+### EDIT
+It occurs to me that others might mistake my intent to be complete in type specifications as being necessary.  It isn't.  Here's the version of the PS script with the type specifications removed so Typed Racket can infer the types.  This works equally well and it's a bit shorter. 
+
+```powershell
+; Racket.exe (Resolve-Path $PSCommandPath) $args
+; Exit
+#lang typed/racket/base
+
+; Set everything up first
+(define base-frog-dir (string->path "OnorioCatenacci.github.io"))
+(define home-dir (find-system-path (quote home-dir)))
+(define hidden-frog-build-dir (string->path ".frog"))
+(define frog-build-dir (string->path "build"))
+(define full-frog-path (build-path home-dir base-frog-dir hidden-frog-build-dir frog-build-dir))
+
+; Now we finally go ahead and delete the build file
+(delete-file full-frog-path)
+```
+

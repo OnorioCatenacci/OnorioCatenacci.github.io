@@ -260,6 +260,49 @@
 </div>
 
 <p>The ability to reuse basically the same scripts in three different shell scripting systems is a win to me. I don&rsquo;t have a Mac handy to test but I&rsquo;m sure that the only change that I&rsquo;d need would be the shebang lines at the top of the script.</p>
+
+<h3 id="edit">EDIT</h3>
+
+<p>It occurs to me that others might mistake my intent to be complete in type specifications as being necessary. It isn&rsquo;t. Here&rsquo;s the version of the PS script with the type specifications removed so Typed Racket can infer the types. This works equally well and it&rsquo;s a bit shorter.</p>
+
+<div class="brush: powershell">
+ <div class="source">
+  <table class="sourcetable">
+   <tbody>
+    <tr>
+     <td class="linenos">
+      <div class="linenodiv">
+       <pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td>
+     <td class="code">
+      <div>
+       <pre><span></span><span class="p">;</span> <span class="n">Racket</span><span class="p">.</span><span class="n">exe</span> <span class="p">(</span><span class="nb">Resolve-Path</span> <span class="nv">$PSCommandPath</span><span class="p">)</span> <span class="nv">$args</span>
+<span class="p">;</span> <span class="n">Exit</span>
+<span class="c">#lang typed/racket/base</span>
+
+<span class="p">;</span> <span class="nb">Set </span><span class="n">everything</span> <span class="n">up</span> <span class="n">first</span>
+<span class="p">(</span><span class="n">define</span> <span class="n">base-frog-dir</span> <span class="p">(</span><span class="n">string</span><span class="p">-&gt;</span><span class="n">path</span> <span class="s2">"OnorioCatenacci.github.io"</span><span class="p">))</span>
+<span class="p">(</span><span class="n">define</span> <span class="n">home-dir</span> <span class="p">(</span><span class="nb">find-system</span><span class="n">-path</span> <span class="p">(</span><span class="n">quote</span> <span class="n">home-dir</span><span class="p">)))</span>
+<span class="p">(</span><span class="n">define</span> <span class="n">hidden-frog-build-dir</span> <span class="p">(</span><span class="n">string</span><span class="p">-&gt;</span><span class="n">path</span> <span class="s2">".frog"</span><span class="p">))</span>
+<span class="p">(</span><span class="n">define</span> <span class="n">frog-build-dir</span> <span class="p">(</span><span class="n">string</span><span class="p">-&gt;</span><span class="n">path</span> <span class="s2">"build"</span><span class="p">))</span>
+<span class="p">(</span><span class="n">define</span> <span class="n">full-frog-path</span> <span class="p">(</span><span class="n">build-path</span> <span class="n">home-dir</span> <span class="n">base-frog-dir</span> <span class="n">hidden-frog-build-dir</span> <span class="n">frog-build-dir</span><span class="p">))</span>
+
+<span class="p">;</span> <span class="n">Now</span> <span class="n">we</span> <span class="k">finally</span> <span class="n">go</span> <span class="n">ahead</span> <span class="n">and</span> <span class="n">delete</span> <span class="n">the</span> <span class="n">build</span> <span class="n">file</span>
+<span class="p">(</span><span class="n">delete</span><span class="o">-file</span> <span class="n">full-frog-path</span><span class="p">)</span>
+</pre></div></td></tr></tbody></table></div>
+
+</div>
   <footer>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
     <g:plusone size="medium" href="https://onoriocatenacci.github.io/2024\12\scripting-with-racket.html"></g:plusone>
