@@ -3,13 +3,13 @@
  <channel>
   <title>Desultory Nerdery: Posts tagged 'Elixir'</title>
   <description>Desultory Nerdery: Posts tagged 'Elixir'</description>
-  <link>https://onoriocatenacci.github.io/tags\Elixir.html</link>
+  <link>https://onoriocatenacci.github.io/tags/Elixir.html</link>
   <lastBuildDate>Fri, 06 Dec 2024 19:35:02 UT</lastBuildDate>
   <pubDate>Fri, 06 Dec 2024 19:35:02 UT</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>Three Ways To Share Values Between Elixir Modules</title>
-   <link>https://onoriocatenacci.github.io/2024\12\three-ways-to-share-values-between-elixir-modules.html?utm_source=Elixir&amp;utm_medium=RSS</link>
+   <link>https://onoriocatenacci.github.io/2024/12/three-ways-to-share-values-between-elixir-modules.html?utm_source=Elixir&amp;utm_medium=RSS</link>
    <guid isPermaLink="false">urn:https-onoriocatenacci-github-io:-2024-12-three-ways-to-share-values-between-elixir-modules-html</guid>
    <pubDate>Fri, 06 Dec 2024 19:35:02 UT</pubDate>
    <author>Onorio Catenacci</author>
@@ -33,36 +33,12 @@
 &lt;p&gt;While a compiler and/or interpreter doesn&amp;rsquo;t care about the difference between code using literals and code using symbolic names, developers very much care about this. If I have code that reads like this:&lt;/p&gt;
 
 &lt;div class="brush: elixir"&gt;
- &lt;div class="source"&gt;
-  &lt;table class="sourcetable"&gt;
-   &lt;tbody&gt;
-    &lt;tr&gt;
-     &lt;td class="linenos"&gt;
-      &lt;div class="linenodiv"&gt;
-       &lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-     &lt;td class="code"&gt;
-      &lt;div&gt;
-       &lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;is_odd_number?&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;do&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;rem&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# Version 1&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
-
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;def is_odd_number?(number), do: rem(number,2) != 0 # Version 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;vs.&lt;/p&gt;
 
 &lt;div class="brush: elixir"&gt;
- &lt;div class="source"&gt;
-  &lt;table class="sourcetable"&gt;
-   &lt;tbody&gt;
-    &lt;tr&gt;
-     &lt;td class="linenos"&gt;
-      &lt;div class="linenodiv"&gt;
-       &lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-     &lt;td class="code"&gt;
-      &lt;div&gt;
-       &lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;do&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rem&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;                   &lt;/span&gt;&lt;span class="c1"&gt;# Version 2&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
-
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;def f(n), do: !(rem(n,2) == 0)                   # Version 2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;which one conveys the intent of the coder better? Now you might say &amp;ldquo;Hey no one names their functions &lt;em&gt;f&lt;/em&gt; and no one names their arguments &lt;em&gt;n&lt;/em&gt;&amp;rdquo; and I wish I could say you&amp;rsquo;re correct. But I have run across code like this in practice and it&amp;rsquo;s hard to decipher&amp;mdash;well for a human being to decipher at any rate. The compiler doesn&amp;rsquo;t care either way. The point is that using descriptive names (as opposed to bare literals) is a great technique for making your code more readable.
  &lt;br /&gt;Constants, in this sense, are a form of a descriptive name for a quantity.&lt;/p&gt;
@@ -92,78 +68,33 @@
 &lt;p&gt;Consider the following code:&lt;/p&gt;
 
 &lt;div class="brush: elixir"&gt;
- &lt;div class="source"&gt;
-  &lt;table class="sourcetable"&gt;
-   &lt;tbody&gt;
-    &lt;tr&gt;
-     &lt;td class="linenos"&gt;
-      &lt;div class="linenodiv"&gt;
-       &lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
-&lt;span class="normal"&gt;2&lt;/span&gt;
-&lt;span class="normal"&gt;3&lt;/span&gt;
-&lt;span class="normal"&gt;4&lt;/span&gt;
-&lt;span class="normal"&gt;5&lt;/span&gt;
-&lt;span class="normal"&gt;6&lt;/span&gt;
-&lt;span class="normal"&gt;7&lt;/span&gt;
-&lt;span class="normal"&gt;8&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-     &lt;td class="code"&gt;
-      &lt;div&gt;
-       &lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;defmodule&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;MyMath&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="nc"&gt;Module&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register_attribute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;__MODULE__&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;:pi&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;persist&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="no"&gt;true&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="na"&gt;@pi&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;3.141592653&lt;/span&gt;
+ &lt;pre&gt;&lt;code&gt;defmodule MyMath do
+   Module.register_attribute(__MODULE__, :pi, persist: true)
+   @pi 3.141592653
 
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="kd"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;do&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;3.141592653&lt;/span&gt;
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="c1"&gt;# this could also be: &lt;/span&gt;
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="c1"&gt;# def pi, do: @pi&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
-
-&lt;/div&gt;
+   def pi, do: 3.141592653
+   # this could also be: 
+   # def pi, do: @pi
+end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;and now there are two ways for me to fetch the value of Pi in other modules:&lt;/p&gt;
 
 &lt;div class="brush: elixir"&gt;
- &lt;div class="source"&gt;
-  &lt;table class="sourcetable"&gt;
-   &lt;tbody&gt;
-    &lt;tr&gt;
-     &lt;td class="linenos"&gt;
-      &lt;div class="linenodiv"&gt;
-       &lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
-&lt;span class="normal"&gt; 2&lt;/span&gt;
-&lt;span class="normal"&gt; 3&lt;/span&gt;
-&lt;span class="normal"&gt; 4&lt;/span&gt;
-&lt;span class="normal"&gt; 5&lt;/span&gt;
-&lt;span class="normal"&gt; 6&lt;/span&gt;
-&lt;span class="normal"&gt; 7&lt;/span&gt;
-&lt;span class="normal"&gt; 8&lt;/span&gt;
-&lt;span class="normal"&gt; 9&lt;/span&gt;
-&lt;span class="normal"&gt;10&lt;/span&gt;
-&lt;span class="normal"&gt;11&lt;/span&gt;
-&lt;span class="normal"&gt;12&lt;/span&gt;
-&lt;span class="normal"&gt;13&lt;/span&gt;
-&lt;span class="normal"&gt;14&lt;/span&gt;
-&lt;span class="normal"&gt;15&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-     &lt;td class="code"&gt;
-      &lt;div&gt;
-       &lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;defmodule&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;My.Other.Module.That.Needs.To.Know.Pi&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="kd"&gt;defp&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;get_pi&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;# module attribute approach&lt;/span&gt;
-&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;MyMath&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;__info__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:attributes&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="ss"&gt;:pi&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="k"&gt;end&lt;/span&gt;
+ &lt;pre&gt;&lt;code&gt;defmodule My.Other.Module.That.Needs.To.Know.Pi do
+   defp get_pi do # module attribute approach
+      [pi] = MyMath.__info__(:attributes)[:pi]
+      pi
+   end
 
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="kd"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;circle_area&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;radius&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
-&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="nc"&gt;MyMath&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;radius&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;radius&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;#constant function approach&lt;/span&gt;
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="k"&gt;end&lt;/span&gt;
+   def circle_area(radius) do
+      MyMath.pi() * radius * radius #constant function approach
+   end
 
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="c1"&gt;# or&lt;/span&gt;
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="kd"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;circle_area_alternate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;radius&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
-&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="n"&gt;get_pi&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;radius&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;radius&lt;/span&gt;
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
-
-&lt;/div&gt;
+   # or
+   def circle_area_alternate(radius) do
+      get_pi() * radius * radius
+   end
+end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Both of these approaches will work. The attributes approach is really not recommended for a constant shared between modules. It&amp;rsquo;s more recommended for metadata about a module&amp;mdash;author, last revision date etc. The more recommended way to do this (although I will grant that it looks a bit odd) is a constant function.&lt;/p&gt;
 
@@ -172,57 +103,22 @@
 &lt;p&gt;The trick is to define the value to be shared in a using macro in the source module. Like this:&lt;/p&gt;
 
 &lt;div class="brush: elixir"&gt;
- &lt;div class="source"&gt;
-  &lt;table class="sourcetable"&gt;
-   &lt;tbody&gt;
-    &lt;tr&gt;
-     &lt;td class="linenos"&gt;
-      &lt;div class="linenodiv"&gt;
-       &lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
-&lt;span class="normal"&gt;2&lt;/span&gt;
-&lt;span class="normal"&gt;3&lt;/span&gt;
-&lt;span class="normal"&gt;4&lt;/span&gt;
-&lt;span class="normal"&gt;5&lt;/span&gt;
-&lt;span class="normal"&gt;6&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-     &lt;td class="code"&gt;
-      &lt;div&gt;
-       &lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;defmodule&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;MyMath&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
-&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;defmacro&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;__using__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;_&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;quote&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
-&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="na"&gt;@pi&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;3.141592653&lt;/span&gt;
-&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
-
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;defmodule MyMath do
+ defmacro __using__(_) do
+    quote do
+       @pi 3.141592653
+    end
+end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Then you can simply use the module in a different module and the using macro is run and the value becomes available. Like so:&lt;/p&gt;
 
 &lt;div class="brush: elixir"&gt;
- &lt;div class="source"&gt;
-  &lt;table class="sourcetable"&gt;
-   &lt;tbody&gt;
-    &lt;tr&gt;
-     &lt;td class="linenos"&gt;
-      &lt;div class="linenodiv"&gt;
-       &lt;pre&gt;&lt;span class="normal"&gt;1&lt;/span&gt;
-&lt;span class="normal"&gt;2&lt;/span&gt;
-&lt;span class="normal"&gt;3&lt;/span&gt;
-&lt;span class="normal"&gt;4&lt;/span&gt;
-&lt;span class="normal"&gt;5&lt;/span&gt;
-&lt;span class="normal"&gt;6&lt;/span&gt;
-&lt;span class="normal"&gt;7&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-     &lt;td class="code"&gt;
-      &lt;div&gt;
-       &lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;defmodule&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;My.Other.Module.That.Needs.To.Know.Pi&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="kn"&gt;use&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;MyMath&lt;/span&gt;
+ &lt;pre&gt;&lt;code&gt;defmodule My.Other.Module.That.Needs.To.Know.Pi do
+   use MyMath
 
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="kd"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;circle_area&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;radius&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;
-&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="na"&gt;@pi&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;radius&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;radius&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;#"using" macro approach&lt;/span&gt;
-&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
-
-&lt;/div&gt;
+   def circle_area(radius) do
+      @pi * radius * radius #"using" macro approach
+   end
+end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The main idea here is that if you&amp;rsquo;re using the same named value in multiple modules, you want to avoid &lt;em&gt;defining&lt;/em&gt; it more than once. Defining the value in several different modules is an excellent way to insure that someone will miss changing the value somewhere in maintenance and that can lead to some really odd, difficult to reproduce bugs.&lt;/p&gt;</description></item></channel></rss>

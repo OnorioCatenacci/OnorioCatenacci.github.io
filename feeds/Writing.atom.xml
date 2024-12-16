@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
  <title type="text">Desultory Nerdery: Posts tagged 'Writing'</title>
- <link rel="self" href="https://onoriocatenacci.github.io/feeds\Writing.atom.xml" />
- <link href="https://onoriocatenacci.github.io/tags\Writing.html" />
+ <link rel="self" href="https://onoriocatenacci.github.io/feeds/Writing.atom.xml" />
+ <link href="https://onoriocatenacci.github.io/tags/Writing.html" />
  <id>urn:https-onoriocatenacci-github-io:-tags-Writing-html</id>
  <updated>2024-12-03T01:12:35Z</updated>
  <entry>
   <title type="text">Hello Again World</title>
-  <link rel="alternate" href="https://onoriocatenacci.github.io/2024\12\hello-again-world.html?utm_source=Writing&amp;utm_medium=Atom" />
+  <link rel="alternate" href="https://onoriocatenacci.github.io/2024/12/hello-again-world.html?utm_source=Writing&amp;utm_medium=Atom" />
   <id>urn:https-onoriocatenacci-github-io:-2024-12-hello-again-world-html</id>
   <published>2024-12-03T01:12:35Z</published>
   <updated>2024-12-03T01:12:35Z</updated>
