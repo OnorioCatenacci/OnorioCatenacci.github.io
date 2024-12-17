@@ -1,5 +1,5 @@
-https://onoriocatenacci.github.io/2024/12/where-i-m-going.html
-https://onoriocatenacci.github.io/2024/12/three-ways-to-share-values-between-elixir-modules.html
-https://onoriocatenacci.github.io/2024/12/hello-again-world.html
-https://onoriocatenacci.github.io/2024/12/scripting-with-racket.html
-https://onoriocatenacci.github.io/About.html
+https://onor.io/2024/12/where-i-m-going.html
+https://onor.io/2024/12/three-ways-to-share-values-between-elixir-modules.html
+https://onor.io/2024/12/hello-again-world.html
+https://onor.io/2024/12/scripting-with-racket.html
+https://onor.io/About.html

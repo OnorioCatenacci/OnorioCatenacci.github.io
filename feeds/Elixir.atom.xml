@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
  <title type="text">onor.io: Posts tagged 'Elixir'</title>
- <link rel="self" href="https://onoriocatenacci.github.io/feeds/Elixir.atom.xml" />
- <link href="https://onoriocatenacci.github.io/tags/Elixir.html" />
- <id>urn:https-onoriocatenacci-github-io:-tags-Elixir-html</id>
+ <link rel="self" href="https://onor.io/feeds/Elixir.atom.xml" />
+ <link href="https://onor.io/tags/Elixir.html" />
+ <id>urn:https-onor-io:-tags-Elixir-html</id>
  <updated>2024-12-06T19:35:02Z</updated>
  <entry>
   <title type="text">Three Ways To Share Values Between Elixir Modules</title>
-  <link rel="alternate" href="https://onoriocatenacci.github.io/2024/12/three-ways-to-share-values-between-elixir-modules.html?utm_source=Elixir&amp;utm_medium=Atom" />
-  <id>urn:https-onoriocatenacci-github-io:-2024-12-three-ways-to-share-values-between-elixir-modules-html</id>
+  <link rel="alternate" href="https://onor.io/2024/12/three-ways-to-share-values-between-elixir-modules.html?utm_source=Elixir&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2024-12-three-ways-to-share-values-between-elixir-modules-html</id>
   <published>2024-12-06T19:35:02Z</published>
   <updated>2024-12-06T19:35:02Z</updated>
   <author>

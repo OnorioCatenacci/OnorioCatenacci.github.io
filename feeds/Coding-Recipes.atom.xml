@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
  <title type="text">onor.io: Posts tagged 'Coding Recipes'</title>
- <link rel="self" href="https://onoriocatenacci.github.io/feeds/Coding-Recipes.atom.xml" />
- <link href="https://onoriocatenacci.github.io/tags/Coding-Recipes.html" />
- <id>urn:https-onoriocatenacci-github-io:-tags-Coding-Recipes-html</id>
+ <link rel="self" href="https://onor.io/feeds/Coding-Recipes.atom.xml" />
+ <link href="https://onor.io/tags/Coding-Recipes.html" />
+ <id>urn:https-onor-io:-tags-Coding-Recipes-html</id>
  <updated>2024-12-11T22:13:20Z</updated>
  <entry>
   <title type="text">Scripting With Racket</title>
-  <link rel="alternate" href="https://onoriocatenacci.github.io/2024/12/scripting-with-racket.html?utm_source=Coding-Recipes&amp;utm_medium=Atom" />
-  <id>urn:https-onoriocatenacci-github-io:-2024-12-scripting-with-racket-html</id>
+  <link rel="alternate" href="https://onor.io/2024/12/scripting-with-racket.html?utm_source=Coding-Recipes&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2024-12-scripting-with-racket-html</id>
   <published>2024-12-11T22:13:20Z</published>
   <updated>2024-12-11T22:13:20Z</updated>
   <author>
    <name>Onorio Catenacci</name></author>
   <content type="html">
-&lt;p&gt;Using &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; in a shell script allows a developer to basically use a lot of the same code across platforms.&lt;/p&gt;&lt;a href="https://onoriocatenacci.github.io/2024/12/scripting-with-racket.html?utm_source=Coding-Recipes&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+&lt;p&gt;Using &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; in a shell script allows a developer to basically use a lot of the same code across platforms.&lt;/p&gt;&lt;a href="https://onor.io/2024/12/scripting-with-racket.html?utm_source=Coding-Recipes&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Three Ways To Share Values Between Elixir Modules</title>
-  <link rel="alternate" href="https://onoriocatenacci.github.io/2024/12/three-ways-to-share-values-between-elixir-modules.html?utm_source=Coding-Recipes&amp;utm_medium=Atom" />
-  <id>urn:https-onoriocatenacci-github-io:-2024-12-three-ways-to-share-values-between-elixir-modules-html</id>
+  <link rel="alternate" href="https://onor.io/2024/12/three-ways-to-share-values-between-elixir-modules.html?utm_source=Coding-Recipes&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2024-12-three-ways-to-share-values-between-elixir-modules-html</id>
   <published>2024-12-06T19:35:02Z</published>
   <updated>2024-12-06T19:35:02Z</updated>
   <author>
