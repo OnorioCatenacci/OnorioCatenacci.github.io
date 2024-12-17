@@ -39,7 +39,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <div class="container">
 
-      <a href="/index.html" class="navbar-brand">Desultory Nerdery</a>
+      <a href="/index.html" class="navbar-brand">onor.io</a>
 
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
               data-target="#navbar_collapse" aria-controls="navbar_collapse"
@@ -252,6 +252,21 @@ end</code></pre></div>
 </article>
         </div>
       </div>
+      <div id="root"></div>
+      <script type="text/babel">
+        function App() {
+          return (
+            <img
+              src="https://i.imgur.com/MK3eW3Am.jpg"
+              alt="Katherine Johnson"
+            />
+          );
+        }
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+      </script>
+
       <footer>
         <hr />
         <p>Site generated
@@ -264,5 +279,9 @@ end</code></pre></div>
     <!-- </body> JS -->
     <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/react.development.js"></script>
+    <script src="/js/react-dom.development.js"></script>
+    <!-- Load our React component. -->
+<!--    <script type="text/javascript" src="/js/index.js"></script> -->
   </body>
 </html>

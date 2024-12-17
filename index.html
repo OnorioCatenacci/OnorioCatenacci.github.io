@@ -3,8 +3,8 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Desultory Nerdery</title>
-    <meta name="description" content="Desultory Nerdery">
+    <title>onor.io</title>
+    <meta name="description" content="onor.io">
     <meta name="author"      content="Onorio Catenacci">
     <meta name="keywords"    content="Coding Recipes, Racket, CrossPlatform, Personal, all, Software Engineering, Writing, Elixir, Scripting, Intro">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
@@ -39,7 +39,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <div class="container">
 
-      <a href="/index.html" class="navbar-brand">Desultory Nerdery</a>
+      <a href="/index.html" class="navbar-brand">onor.io</a>
 
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
               data-target="#navbar_collapse" aria-controls="navbar_collapse"
@@ -103,6 +103,7 @@
     <a href='/2024/12/scripting-with-racket.html'>&hellip; more &hellip;</a>
   </footer>
 </article>
+
 <article>
   <header>
     <h2><a href='/2024/12/three-ways-to-share-values-between-elixir-modules.html'>Three Ways To Share Values Between Elixir Modules</a></h2>
@@ -221,6 +222,7 @@ end</code></pre></div>
 <p>The main idea here is that if you&rsquo;re using the same named value in multiple modules, you want to avoid <em>defining</em> it more than once. Defining the value in several different modules is an excellent way to insure that someone will miss changing the value somewhere in maintenance and that can lead to some really odd, difficult to reproduce bugs.</p>
 
 </article>
+
 <article>
   <header>
     <h2><a href='/2024/12/where-i-m-going.html'>Where I&rsquo;m Going</a></h2>
@@ -234,6 +236,7 @@ end</code></pre></div>
     <a href='/2024/12/where-i-m-going.html'>&hellip; more &hellip;</a>
   </footer>
 </article>
+
 <article>
   <header>
     <h2><a href='/2024/12/hello-again-world.html'>Hello Again World</a></h2>
@@ -245,8 +248,24 @@ end</code></pre></div>
 <p>Yeah I want to write some stuff again and I don&rsquo;t want to let procrastination keep me from writing. So, yeah, this is a really, really short first post but if I wait for inspiration or something smart to say I&rsquo;ll never say anything!</p>
 
 </article>
+
         </div>
       </div>
+      <div id="root"></div>
+      <script type="text/babel">
+        function App() {
+          return (
+            <img
+              src="https://i.imgur.com/MK3eW3Am.jpg"
+              alt="Katherine Johnson"
+            />
+          );
+        }
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+      </script>
+
       <footer>
         <hr />
         <p>Site generated
@@ -259,5 +278,9 @@ end</code></pre></div>
     <!-- </body> JS -->
     <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/react.development.js"></script>
+    <script src="/js/react-dom.development.js"></script>
+    <!-- Load our React component. -->
+<!--    <script type="text/javascript" src="/js/index.js"></script> -->
   </body>
 </html>

@@ -6,7 +6,7 @@
 (define/contract (init)
   (-> any)
   (current-scheme/host "https://onoriocatenacci.github.io")
-  (current-title "Desultory Nerdery")
+  (current-title "onor.io")
   (current-author "Onorio Catenacci"))
 
 ;; Called once per post and non-post page, on the contents.
