@@ -4,7 +4,17 @@
  <link rel="self" href="https://onor.io/feeds/all.atom.xml" />
  <link href="https://onor.io/index.html" />
  <id>urn:https-onor-io:-index-html</id>
- <updated>2024-12-11T22:13:20Z</updated>
+ <updated>2024-12-18T14:40:00Z</updated>
+ <entry>
+  <title type="text">Three Ways To Share Values Between Elixir Modules</title>
+  <link rel="alternate" href="https://onor.io/2024/12/three-ways-to-share-values-between-elixir-modules.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2024-12-three-ways-to-share-values-between-elixir-modules-html</id>
+  <published>2024-12-18T14:40:00Z</published>
+  <updated>2024-12-18T14:40:00Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;A recipe for avoiding repeated definitions in &lt;a href="https://elixir-lang.org"&gt;Elixir&lt;/a&gt; modules!&lt;/p&gt;&lt;a href="https://onor.io/2024/12/three-ways-to-share-values-between-elixir-modules.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Scripting With Racket</title>
   <link rel="alternate" href="https://onor.io/2024/12/scripting-with-racket.html?utm_source=all&amp;utm_medium=Atom" />
@@ -15,123 +25,6 @@
    <name>Onorio Catenacci</name></author>
   <content type="html">
 &lt;p&gt;Using &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; in a shell script allows a developer to basically use a lot of the same code across platforms.&lt;/p&gt;&lt;a href="https://onor.io/2024/12/scripting-with-racket.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
- <entry>
-  <title type="text">Three Ways To Share Values Between Elixir Modules</title>
-  <link rel="alternate" href="https://onor.io/2024/12/three-ways-to-share-values-between-elixir-modules.html?utm_source=all&amp;utm_medium=Atom" />
-  <id>urn:https-onor-io:-2024-12-three-ways-to-share-values-between-elixir-modules-html</id>
-  <published>2024-12-06T19:35:02Z</published>
-  <updated>2024-12-06T19:35:02Z</updated>
-  <author>
-   <name>Onorio Catenacci</name></author>
-  <content type="html">
-&lt;p&gt;I find that as I get older I find myself trying to remember coding techniques and idioms that shouldn&amp;rsquo;t be hard to remember but sometimes are anyway. This is one of those cases&amp;mdash;the module attributes took me a bit of effort to work out so I thought I&amp;rsquo;d write it down. I&amp;rsquo;m sharing it here so others might benefit from it as well.&lt;/p&gt;
-
-&lt;h2 id="what-do-i-mean-by-constant"&gt;What Do I Mean By Constant?&lt;/h2&gt;
-
-&lt;p&gt;First it feels appropriate to say that when I say constant I have a definite technical meaning in mind. In a mathematical sense a constant like &lt;strong&gt;pi&lt;/strong&gt; or &lt;strong&gt;e&lt;/strong&gt; is simply a value that&amp;rsquo;s fixed on the number line. In the sense that software developers use the word &amp;ldquo;constant&amp;rdquo; we usually mean something which is an extension of the notion of a mathematical constant&amp;mdash;a fixed value. It could be a number or a string or even a more complex data structure; the point is that in the course of the normal execution of the binary it won&amp;rsquo;t change.&lt;/p&gt;
-
-&lt;p&gt;Here I&amp;rsquo;m using the term constant to name a value that needs to be referenced in two or more modules in Elixir which none of them will change. The value will be defined in one module and then read from others. There are two reasons to do this approach:&lt;/p&gt;
-
-&lt;ol&gt;
- &lt;li&gt;It makes the code more readable&lt;/li&gt;
- &lt;li&gt;It keeps the developer from repeating his/her self.&lt;/li&gt;&lt;/ol&gt;
-
-&lt;p&gt;Both of those are good reasons for using this approach. I&amp;rsquo;m going to examine them a little bit before I discuss the coding techniques specifically.&lt;/p&gt;
-
-&lt;h2 id="more-readable-code"&gt;More Readable Code&lt;/h2&gt;
-
-&lt;p&gt;While a compiler and/or interpreter doesn&amp;rsquo;t care about the difference between code using literals and code using symbolic names, developers very much care about this. If I have code that reads like this:&lt;/p&gt;
-
-&lt;div class="brush: elixir"&gt;
- &lt;pre&gt;&lt;code&gt;def is_odd_number?(number), do: rem(number,2) != 0 # Version 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;vs.&lt;/p&gt;
-
-&lt;div class="brush: elixir"&gt;
- &lt;pre&gt;&lt;code&gt;def f(n), do: !(rem(n,2) == 0)                   # Version 2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;which one conveys the intent of the coder better? Now you might say &amp;ldquo;Hey no one names their functions &lt;em&gt;f&lt;/em&gt; and no one names their arguments &lt;em&gt;n&lt;/em&gt;&amp;rdquo; and I wish I could say you&amp;rsquo;re correct. But I have run across code like this in practice and it&amp;rsquo;s hard to decipher&amp;mdash;well for a human being to decipher at any rate. The compiler doesn&amp;rsquo;t care either way. The point is that using descriptive names (as opposed to bare literals) is a great technique for making your code more readable.
- &lt;br /&gt;Constants, in this sense, are a form of a descriptive name for a quantity.&lt;/p&gt;
-
-&lt;p&gt;You may even have to read your own code in six months and you&amp;rsquo;ll be glad you took the extra time to make it easier to understand.&lt;/p&gt;
-
-&lt;h2 id="keeps-the-developer-from-repeating"&gt;Keeps the Developer From Repeating&lt;/h2&gt;
-
-&lt;p&gt;It&amp;rsquo;s become a mantra chanted over and over by developers who don&amp;rsquo;t know much but they do know that repeating &lt;em&gt;anything&lt;/em&gt; in code is a bad idea. Except it isn&amp;rsquo;t always a bad idea. The trick is to know when it&amp;rsquo;s ok to repeat things and when it isn&amp;rsquo;t.&lt;/p&gt;
-
-&lt;p&gt;Part of distinguishing between one case and the other is to understand why repetition is a bad thing in the first place. The problem is that if I duplicate code and said code needs to be fixed later there&amp;rsquo;s a good chance I won&amp;rsquo;t find all the duplications and fix them too. And that&amp;rsquo;s assuming I&amp;rsquo;m working on my own code. It&amp;rsquo;s even more likely to be a problem when someone else will be maintaining your code. They&amp;rsquo;re more likely to miss spots where the code needs to be fixed.&lt;/p&gt;
-
-&lt;p&gt;So the next time you&amp;rsquo;re tempted to copy/paste a bit of code think of your future self (or perhaps the poor person who will maintain your code) and do a bit of refactoring so you don&amp;rsquo;t need to repeat the code.&lt;/p&gt;
-
-&lt;p&gt;Now, there are times when repeating code actually simplifies things. Part of the issue with removing duplication is that it introduces coupling. As long as your coupling is clean and simple (in the decomplected sense of &amp;ldquo;simple&amp;rdquo;) you&amp;rsquo;re fine. Shared definitions&amp;mdash;numerical constants, strings that signify names, etc.&amp;mdash;definitely fall under this rubric.&lt;/p&gt;
-
-&lt;p&gt;However code under maintenance tends to get a lot of &amp;ldquo;this is almost what I need but not exactly&amp;rdquo;. This is part of the reason people tend to copy/paste code in the first place. So the admonition to avoid repeating code is not an absolute one and you should apply your judgement. Is the place where you&amp;rsquo;re thinking of copy/pasting likely to change frequently? Are the changes likely to differ from changes to the original code? Then by all means copy/paste. On the other hand, if it&amp;rsquo;s not likely to change frequently then you&amp;rsquo;re better off to reference the single defintion from the other places in your code. An example of something which may change but is not likely to change often is a company name. It&amp;rsquo;s possible for a company to change its name but it&amp;rsquo;s not likely to happen very frequently. If you&amp;rsquo;ve hard-coded that name 50 places in your code that&amp;rsquo;s 50 places you have to find and fix. If you hard code it in one place and then reference the constant in other code then you only need to fix it in one place.&lt;/p&gt;
-
-&lt;p&gt;Partially the decision about what should be repeated and what shouldn&amp;rsquo;t comes down to cohesion; that is to say, how much does the code in some particular block of code all serve one function. If a piece of code is highly cohesive (e. g. a function to calculate the area of a circle) vs a lower cohesion function (e. g. calculate the area of a circle, print the circle in three colors and then return the current date) then it&amp;rsquo;s better not to repeat the code. Our judgement about copying and pasting code should be inversely proportional to the strength of the cohesion of the code.&lt;/p&gt;
-
-&lt;p&gt;Like many ideas in engineering the notion of &amp;ldquo;don&amp;rsquo;t repeat yourself&amp;rdquo; is not one that can be applied without thought or judgement.&lt;/p&gt;
-
-&lt;h2 id="constants-in-elixir"&gt;Constants In Elixir&lt;/h2&gt;
-
-&lt;p&gt;Now having said all that let&amp;rsquo;s talk about a couple of ways to deal with values shared between modules in Elixir. You can register an attribute in one module and then reference that attibute from the other modules or you can create a (for lack of a better name) constant function&amp;mdash;that is a function that takes no argument and simply hands back a constant value. If someone knows the right name for this sort of function please post it in the comments for me! For sake of illustration I&amp;rsquo;ll pretend I need a Pi constant in my code.&lt;/p&gt;
-
-&lt;p&gt;Consider the following code:&lt;/p&gt;
-
-&lt;div class="brush: elixir"&gt;
- &lt;pre&gt;&lt;code&gt;defmodule MyMath do
-   Module.register_attribute(__MODULE__, :pi, persist: true)
-   @pi 3.141592653
-
-   def pi, do: 3.141592653
-   # this could also be: 
-   # def pi, do: @pi
-end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;and now there are two ways for me to fetch the value of Pi in other modules:&lt;/p&gt;
-
-&lt;div class="brush: elixir"&gt;
- &lt;pre&gt;&lt;code&gt;defmodule My.Other.Module.That.Needs.To.Know.Pi do
-   defp get_pi do # module attribute approach
-      [pi] = MyMath.__info__(:attributes)[:pi]
-      pi
-   end
-
-   def circle_area(radius) do
-      MyMath.pi() * radius * radius #constant function approach
-   end
-
-   # or
-   def circle_area_alternate(radius) do
-      get_pi() * radius * radius
-   end
-end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Both of these approaches will work. The attributes approach is really not recommended for a constant shared between modules. It&amp;rsquo;s more recommended for metadata about a module&amp;mdash;author, last revision date etc. The more recommended way to do this (although I will grant that it looks a bit odd) is a constant function.&lt;/p&gt;
-
-&lt;p&gt;Finally, here&amp;rsquo;s the third way to share values between modules. I wish I could take credit for coming up with it but as far as I know that credit belongs to Paul Schoenfelder (aka BitWalker) who&amp;rsquo;s a super-smart developer!&lt;/p&gt;
-
-&lt;p&gt;The trick is to define the value to be shared in a using macro in the source module. Like this:&lt;/p&gt;
-
-&lt;div class="brush: elixir"&gt;
- &lt;pre&gt;&lt;code&gt;defmodule MyMath do
- defmacro __using__(_) do
-    quote do
-       @pi 3.141592653
-    end
-end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then you can simply use the module in a different module and the using macro is run and the value becomes available. Like so:&lt;/p&gt;
-
-&lt;div class="brush: elixir"&gt;
- &lt;pre&gt;&lt;code&gt;defmodule My.Other.Module.That.Needs.To.Know.Pi do
-   use MyMath
-
-   def circle_area(radius) do
-      @pi * radius * radius #"using" macro approach
-   end
-end&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The main idea here is that if you&amp;rsquo;re using the same named value in multiple modules, you want to avoid &lt;em&gt;defining&lt;/em&gt; it more than once. Defining the value in several different modules is an excellent way to insure that someone will miss changing the value somewhere in maintenance and that can lead to some really odd, difficult to reproduce bugs.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Where I'm Going</title>
   <link rel="alternate" href="https://onor.io/2024/12/where-i-m-going.html?utm_source=all&amp;utm_medium=Atom" />

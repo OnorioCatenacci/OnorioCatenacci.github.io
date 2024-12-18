@@ -1,7 +1,9 @@
     Title: Three Ways To Share Values Between Elixir Modules
-    Date: 2024-12-06T14:35:02
+    Date: 2024-12-18T09:40:00
     Tags: Elixir, Coding Recipes
 
+A recipe for avoiding repeated definitions in [Elixir](https://elixir-lang.org) modules!
+<!-- more -->
 I find that as I get older I find myself trying to remember coding techniques and idioms that shouldn't be hard to remember but sometimes are anyway.  This is one of those cases--the module attributes took me a bit of effort to work out so I thought I'd write it down.  I'm sharing it here so others might benefit from it as well.  
 
 ## What Do I Mean By Constant?

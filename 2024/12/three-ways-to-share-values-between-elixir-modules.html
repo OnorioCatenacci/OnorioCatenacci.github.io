@@ -4,14 +4,14 @@
 
     <meta charset="utf-8">
     <title>Three Ways To Share Values Between Elixir Modules</title>
-    <meta name="description" content="I find that as I get older I find myself trying to remember coding techniques and idioms that shouldn't be hard to remember but sometimes are anyway. This is one of those cases--the module attributes took me a bit of effort to work out so I thought I'd wr...">
+    <meta name="description" content="A recipe for avoiding repeated definitions in Elixir modules!...">
     <meta name="author"      content="Onorio Catenacci">
     <meta name="keywords"    content="Elixir, Coding Recipes">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="https://onor.io/2024/12/three-ways-to-share-values-between-elixir-modules.html">
-    <link rel="next" href="/2024/12/where-i-m-going.html">
-    <link rel="prev" href="/2024/12/scripting-with-racket.html">
+    <link rel="next" href="/2024/12/scripting-with-racket.html">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -93,9 +93,12 @@
   <header>
     <h1>Three Ways To Share Values Between Elixir Modules</h1>
     <p class='date-and-tags'>
-<time datetime="2024-12-06" pubdate="true">2024-12-06</time> :: <span class="tags"><a href="/tags/Elixir.html">Elixir</a>, <a href="/tags/Coding-Recipes.html">Coding Recipes</a></span></p>
+<time datetime="2024-12-18" pubdate="true">2024-12-18</time> :: <span class="tags"><a href="/tags/Elixir.html">Elixir</a>, <a href="/tags/Coding-Recipes.html">Coding Recipes</a></span></p>
     <p class='authors'>By: <span class="authors">Onorio Catenacci</span></p>
   </header>
+
+<p>A recipe for avoiding repeated definitions in <a href="https://elixir-lang.org">Elixir</a> modules!</p>
+<!-- more-->
 
 <p>I find that as I get older I find myself trying to remember coding techniques and idioms that shouldn&rsquo;t be hard to remember but sometimes are anyway. This is one of those cases&mdash;the module attributes took me a bit of effort to work out so I thought I&rsquo;d write it down. I&rsquo;m sharing it here so others might benefit from it as well.</p>
 
@@ -234,17 +237,12 @@ end</code></pre></div>
       <nav aria-label="Page Navigation">
         <ul class="pagination">
           <li class="page-item">
-            <a class="page-link" href="/2024/12/where-i-m-going.html"
-               aria-label="Previous">
-              <span aria-hidden="true">&larr; Where I&rsquo;m Going</span>
-            </a>
-          </li>
-          <li class="page-item">
             <a class="page-link" href="/2024/12/scripting-with-racket.html"
-               aria-label="Next">
-              <span aria-hidden="true">Scripting With Racket &rarr;</span>
+               aria-label="Previous">
+              <span aria-hidden="true">&larr; Scripting With Racket</span>
             </a>
           </li>
+
         </ul>
       </nav>
     </div>

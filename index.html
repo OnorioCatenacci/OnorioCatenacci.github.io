@@ -92,6 +92,20 @@
 
           <article>
   <header>
+    <h2><a href='/2024/12/three-ways-to-share-values-between-elixir-modules.html'>Three Ways To Share Values Between Elixir Modules</a></h2>
+    <p class='date-and-tags'>
+<time datetime="2024-12-18" pubdate="true">2024-12-18</time> :: <span class="tags"><a href="/tags/Elixir.html">Elixir</a>, <a href="/tags/Coding-Recipes.html">Coding Recipes</a></span></p>
+    <p class='authors'>By: <span class="authors">Onorio Catenacci</span></p>
+  </header>
+
+<p>A recipe for avoiding repeated definitions in <a href="https://elixir-lang.org">Elixir</a> modules!</p>
+  <footer>
+    <a href='/2024/12/three-ways-to-share-values-between-elixir-modules.html'>&hellip; more &hellip;</a>
+  </footer>
+</article>
+
+<article>
+  <header>
     <h2><a href='/2024/12/scripting-with-racket.html'>Scripting With Racket</a></h2>
     <p class='date-and-tags'>
 <time datetime="2024-12-11" pubdate="true">2024-12-11</time> :: <span class="tags"><a href="/tags/Racket.html">Racket</a>, <a href="/tags/Scripting.html">Scripting</a>, <a href="/tags/CrossPlatform.html">CrossPlatform</a>, <a href="/tags/Coding-Recipes.html">Coding Recipes</a></span></p>
@@ -102,125 +116,6 @@
   <footer>
     <a href='/2024/12/scripting-with-racket.html'>&hellip; more &hellip;</a>
   </footer>
-</article>
-
-<article>
-  <header>
-    <h2><a href='/2024/12/three-ways-to-share-values-between-elixir-modules.html'>Three Ways To Share Values Between Elixir Modules</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2024-12-06" pubdate="true">2024-12-06</time> :: <span class="tags"><a href="/tags/Elixir.html">Elixir</a>, <a href="/tags/Coding-Recipes.html">Coding Recipes</a></span></p>
-    <p class='authors'>By: <span class="authors">Onorio Catenacci</span></p>
-  </header>
-
-<p>I find that as I get older I find myself trying to remember coding techniques and idioms that shouldn&rsquo;t be hard to remember but sometimes are anyway. This is one of those cases&mdash;the module attributes took me a bit of effort to work out so I thought I&rsquo;d write it down. I&rsquo;m sharing it here so others might benefit from it as well.</p>
-
-<h2 id="what-do-i-mean-by-constant">What Do I Mean By Constant?</h2>
-
-<p>First it feels appropriate to say that when I say constant I have a definite technical meaning in mind. In a mathematical sense a constant like <strong>pi</strong> or <strong>e</strong> is simply a value that&rsquo;s fixed on the number line. In the sense that software developers use the word &ldquo;constant&rdquo; we usually mean something which is an extension of the notion of a mathematical constant&mdash;a fixed value. It could be a number or a string or even a more complex data structure; the point is that in the course of the normal execution of the binary it won&rsquo;t change.</p>
-
-<p>Here I&rsquo;m using the term constant to name a value that needs to be referenced in two or more modules in Elixir which none of them will change. The value will be defined in one module and then read from others. There are two reasons to do this approach:</p>
-
-<ol>
- <li>It makes the code more readable</li>
- <li>It keeps the developer from repeating his/her self.</li></ol>
-
-<p>Both of those are good reasons for using this approach. I&rsquo;m going to examine them a little bit before I discuss the coding techniques specifically.</p>
-
-<h2 id="more-readable-code">More Readable Code</h2>
-
-<p>While a compiler and/or interpreter doesn&rsquo;t care about the difference between code using literals and code using symbolic names, developers very much care about this. If I have code that reads like this:</p>
-
-<div class="brush: elixir">
- <pre><code>def is_odd_number?(number), do: rem(number,2) != 0 # Version 1</code></pre></div>
-
-<p>vs.</p>
-
-<div class="brush: elixir">
- <pre><code>def f(n), do: !(rem(n,2) == 0)                   # Version 2</code></pre></div>
-
-<p>which one conveys the intent of the coder better? Now you might say &ldquo;Hey no one names their functions <em>f</em> and no one names their arguments <em>n</em>&rdquo; and I wish I could say you&rsquo;re correct. But I have run across code like this in practice and it&rsquo;s hard to decipher&mdash;well for a human being to decipher at any rate. The compiler doesn&rsquo;t care either way. The point is that using descriptive names (as opposed to bare literals) is a great technique for making your code more readable.
- <br />Constants, in this sense, are a form of a descriptive name for a quantity.</p>
-
-<p>You may even have to read your own code in six months and you&rsquo;ll be glad you took the extra time to make it easier to understand.</p>
-
-<h2 id="keeps-the-developer-from-repeating">Keeps the Developer From Repeating</h2>
-
-<p>It&rsquo;s become a mantra chanted over and over by developers who don&rsquo;t know much but they do know that repeating <em>anything</em> in code is a bad idea. Except it isn&rsquo;t always a bad idea. The trick is to know when it&rsquo;s ok to repeat things and when it isn&rsquo;t.</p>
-
-<p>Part of distinguishing between one case and the other is to understand why repetition is a bad thing in the first place. The problem is that if I duplicate code and said code needs to be fixed later there&rsquo;s a good chance I won&rsquo;t find all the duplications and fix them too. And that&rsquo;s assuming I&rsquo;m working on my own code. It&rsquo;s even more likely to be a problem when someone else will be maintaining your code. They&rsquo;re more likely to miss spots where the code needs to be fixed.</p>
-
-<p>So the next time you&rsquo;re tempted to copy/paste a bit of code think of your future self (or perhaps the poor person who will maintain your code) and do a bit of refactoring so you don&rsquo;t need to repeat the code.</p>
-
-<p>Now, there are times when repeating code actually simplifies things. Part of the issue with removing duplication is that it introduces coupling. As long as your coupling is clean and simple (in the decomplected sense of &ldquo;simple&rdquo;) you&rsquo;re fine. Shared definitions&mdash;numerical constants, strings that signify names, etc.&mdash;definitely fall under this rubric.</p>
-
-<p>However code under maintenance tends to get a lot of &ldquo;this is almost what I need but not exactly&rdquo;. This is part of the reason people tend to copy/paste code in the first place. So the admonition to avoid repeating code is not an absolute one and you should apply your judgement. Is the place where you&rsquo;re thinking of copy/pasting likely to change frequently? Are the changes likely to differ from changes to the original code? Then by all means copy/paste. On the other hand, if it&rsquo;s not likely to change frequently then you&rsquo;re better off to reference the single defintion from the other places in your code. An example of something which may change but is not likely to change often is a company name. It&rsquo;s possible for a company to change its name but it&rsquo;s not likely to happen very frequently. If you&rsquo;ve hard-coded that name 50 places in your code that&rsquo;s 50 places you have to find and fix. If you hard code it in one place and then reference the constant in other code then you only need to fix it in one place.</p>
-
-<p>Partially the decision about what should be repeated and what shouldn&rsquo;t comes down to cohesion; that is to say, how much does the code in some particular block of code all serve one function. If a piece of code is highly cohesive (e. g. a function to calculate the area of a circle) vs a lower cohesion function (e. g. calculate the area of a circle, print the circle in three colors and then return the current date) then it&rsquo;s better not to repeat the code. Our judgement about copying and pasting code should be inversely proportional to the strength of the cohesion of the code.</p>
-
-<p>Like many ideas in engineering the notion of &ldquo;don&rsquo;t repeat yourself&rdquo; is not one that can be applied without thought or judgement.</p>
-
-<h2 id="constants-in-elixir">Constants In Elixir</h2>
-
-<p>Now having said all that let&rsquo;s talk about a couple of ways to deal with values shared between modules in Elixir. You can register an attribute in one module and then reference that attibute from the other modules or you can create a (for lack of a better name) constant function&mdash;that is a function that takes no argument and simply hands back a constant value. If someone knows the right name for this sort of function please post it in the comments for me! For sake of illustration I&rsquo;ll pretend I need a Pi constant in my code.</p>
-
-<p>Consider the following code:</p>
-
-<div class="brush: elixir">
- <pre><code>defmodule MyMath do
-   Module.register_attribute(__MODULE__, :pi, persist: true)
-   @pi 3.141592653
-
-   def pi, do: 3.141592653
-   # this could also be: 
-   # def pi, do: @pi
-end</code></pre></div>
-
-<p>and now there are two ways for me to fetch the value of Pi in other modules:</p>
-
-<div class="brush: elixir">
- <pre><code>defmodule My.Other.Module.That.Needs.To.Know.Pi do
-   defp get_pi do # module attribute approach
-      [pi] = MyMath.__info__(:attributes)[:pi]
-      pi
-   end
-
-   def circle_area(radius) do
-      MyMath.pi() * radius * radius #constant function approach
-   end
-
-   # or
-   def circle_area_alternate(radius) do
-      get_pi() * radius * radius
-   end
-end</code></pre></div>
-
-<p>Both of these approaches will work. The attributes approach is really not recommended for a constant shared between modules. It&rsquo;s more recommended for metadata about a module&mdash;author, last revision date etc. The more recommended way to do this (although I will grant that it looks a bit odd) is a constant function.</p>
-
-<p>Finally, here&rsquo;s the third way to share values between modules. I wish I could take credit for coming up with it but as far as I know that credit belongs to Paul Schoenfelder (aka BitWalker) who&rsquo;s a super-smart developer!</p>
-
-<p>The trick is to define the value to be shared in a using macro in the source module. Like this:</p>
-
-<div class="brush: elixir">
- <pre><code>defmodule MyMath do
- defmacro __using__(_) do
-    quote do
-       @pi 3.141592653
-    end
-end</code></pre></div>
-
-<p>Then you can simply use the module in a different module and the using macro is run and the value becomes available. Like so:</p>
-
-<div class="brush: elixir">
- <pre><code>defmodule My.Other.Module.That.Needs.To.Know.Pi do
-   use MyMath
-
-   def circle_area(radius) do
-      @pi * radius * radius #"using" macro approach
-   end
-end</code></pre></div>
-
-<p>The main idea here is that if you&rsquo;re using the same named value in multiple modules, you want to avoid <em>defining</em> it more than once. Defining the value in several different modules is an excellent way to insure that someone will miss changing the value somewhere in maintenance and that can lead to some really odd, difficult to reproduce bugs.</p>
-
 </article>
 
 <article>
