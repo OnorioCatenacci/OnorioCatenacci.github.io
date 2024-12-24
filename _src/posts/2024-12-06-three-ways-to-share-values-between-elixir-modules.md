@@ -1,6 +1,6 @@
     Title: Three Ways To Share Values Between Elixir Modules
     Date: 2024-12-18T09:40:00
-    Tags: Elixir, Coding Recipes
+    Tags: Elixir, CodingRecipes
 
 A recipe for avoiding repeated definitions in [Elixir](https://elixir-lang.org) modules!
 <!-- more -->

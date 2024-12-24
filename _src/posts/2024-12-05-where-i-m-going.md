@@ -1,6 +1,6 @@
     Title: Where I'm Going
     Date: 2024-12-05T10:38:50
-    Tags: Personal, Software Engineering
+    Tags: Personal, SoftwareEngineering
 
 There are a few things in terms of technology that I've had my eye upon. I'd like to share some thoughts with you for whatever it's worth.
 

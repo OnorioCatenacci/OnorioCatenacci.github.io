@@ -1,6 +1,6 @@
     Title: Scripting With Racket
     Date: 2024-12-11T17:13:20
-    Tags: Racket, Scripting, CrossPlatform, Coding Recipes
+    Tags: Racket, Scripting, CrossPlatform, CodingRecipes
 
 Using [racket](https://racket-lang.org) in a shell script allows a developer to basically use a lot of the same code across platforms.  
 <!-- more -->
