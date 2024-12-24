@@ -1,4 +1,5 @@
 https://onor.io/2024/12/detroit-tech-watch-book-club.html
+https://onor.io/2024/12/the-map-is-not-the-territory.html
 https://onor.io/2024/12/where-i-m-going.html
 https://onor.io/2024/12/three-ways-to-share-values-between-elixir-modules.html
 https://onor.io/2024/12/hello-again-world.html
