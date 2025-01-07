@@ -1,4 +1,5 @@
 https://onor.io/2024/12/detroit-tech-watch-book-club.html
+https://onor.io/2025/01/some-exercises-from-htdp.html
 https://onor.io/2024/12/where-i-m-going.html
 https://onor.io/2024/12/speaking.html
 https://onor.io/2024/12/three-ways-to-share-values-between-elixir-modules.html

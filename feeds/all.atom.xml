@@ -4,7 +4,17 @@
  <link rel="self" href="https://onor.io/feeds/all.atom.xml" />
  <link href="https://onor.io/index.html" />
  <id>urn:https-onor-io:-index-html</id>
- <updated>2024-12-24T14:28:03Z</updated>
+ <updated>2025-01-07T18:21:18Z</updated>
+ <entry>
+  <title type="text">Some Exercises From HtDP</title>
+  <link rel="alternate" href="https://onor.io/2025/01/some-exercises-from-htdp.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-01-some-exercises-from-htdp-html</id>
+  <published>2025-01-07T18:21:18Z</published>
+  <updated>2025-01-07T18:21:18Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Working through How To Design Programs; here&amp;rsquo;s my first crack at one of the first exercises!&lt;/p&gt;&lt;a href="https://onor.io/2025/01/some-exercises-from-htdp.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Speaking</title>
   <link rel="alternate" href="https://onor.io/2024/12/speaking.html?utm_source=all&amp;utm_medium=Atom" />
