@@ -4,7 +4,17 @@
  <link rel="self" href="https://onor.io/feeds/HtDP.atom.xml" />
  <link href="https://onor.io/tags/HtDP.html" />
  <id>urn:https-onor-io:-tags-HtDP-html</id>
- <updated>2025-01-07T18:21:18Z</updated>
+ <updated>2025-01-10T16:46:08Z</updated>
+ <entry>
+  <title type="text">Another Exercise From HTDP</title>
+  <link rel="alternate" href="https://onor.io/2025/01/another-exercise-from-htdp.html?utm_source=HtDP&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-01-another-exercise-from-htdp-html</id>
+  <published>2025-01-10T16:46:08Z</published>
+  <updated>2025-01-10T16:46:08Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Another exercise from Chapter 1 of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;&lt;a href="https://onor.io/2025/01/another-exercise-from-htdp.html?utm_source=HtDP&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Some Exercises From HtDP</title>
   <link rel="alternate" href="https://onor.io/2025/01/some-exercises-from-htdp.html?utm_source=HtDP&amp;utm_medium=Atom" />
