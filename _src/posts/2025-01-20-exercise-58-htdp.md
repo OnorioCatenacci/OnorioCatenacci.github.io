@@ -33,3 +33,9 @@ My answers for the exercises in Chapter 4.6 Exercise 58 of [_How to Design Progr
     ))
 
 ```
+
+A few words of explanation to help clear some possible confusion:
+
+* I hard coded MTR-LOWER-BOUND as LTR-UPPER-BOUND; likewise with HTR-LOWER-BOUND. I did it in this way because initially they're the same; however if someone needs to change them in the future, they're separated as differing values.
+
+* I considered using the upper/lower bounds inside my unit tests but I don't think that would be wise.  Using the bound constant definitions in the test itself may hide issues with the code.

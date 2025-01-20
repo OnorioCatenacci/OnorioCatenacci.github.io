@@ -126,6 +126,14 @@
     [(&gt;= price HTR-LOWER-BOUND) (* price HIGH-TAX-RATE)]
     ))
 </code></pre></div>
+
+<p>A few words of explanation to help clear some possible confusion:</p>
+
+<ul>
+ <li>
+  <p>I hard coded MTR-LOWER-BOUND as LTR-UPPER-BOUND; likewise with HTR-LOWER-BOUND. I did it in this way because initially they&rsquo;re the same; however if someone needs to change them in the future, they&rsquo;re separated as differing values.</p></li>
+ <li>
+  <p>I considered using the upper/lower bounds inside my unit tests but I don&rsquo;t think that would be wise. Using the bound constant definitions in the test itself may hide issues with the code.</p></li></ul>
   <footer>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
     <g:plusone size="medium" href="https://onor.io/2025/01/exercise-58-htdp.html"></g:plusone>
