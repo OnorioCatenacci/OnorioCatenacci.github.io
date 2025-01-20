@@ -105,102 +105,45 @@
 <p>In the Racket guide <a href="https://docs.racket-lang.org/guide/scripts.html">here</a> there&rsquo;s a great pointer to how to create shell script in Linux and a batch file on Windows. But I hate that people are still using batch files on Windows after Powershell has been available for at least a decade. So I did a little digging and figured out how to do this task with Powershell too. Here&rsquo;s the Linux script</p>
 
 <div class="brush: zsh">
- <div class="source">
-  <table class="sourcetable">
-   <tbody>
-    <tr>
-     <td class="linenos">
-      <div class="linenodiv">
-       <pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td>
-     <td class="code">
-      <div>
-       <pre><span></span><span class="ch">#! /usr/local/bin/racket</span>
-<span class="c1">#lang typed/racket/base</span>
+ <pre><code>#! /usr/local/bin/racket
+#lang typed/racket/base
 
-<span class="p">;</span><span class="w"> </span>Set<span class="w"> </span>everything<span class="w"> </span>up<span class="w"> </span>first
-<span class="o">(</span>:<span class="w"> </span>base-frog-dir<span class="w"> </span>Path<span class="o">)</span>
-<span class="o">(</span>define<span class="w"> </span>base-frog-dir<span class="w"> </span><span class="o">(</span>string-&gt;path<span class="w"> </span><span class="s2">"OnorioCatenacci.github.io"</span><span class="o">))</span>
-<span class="o">(</span>:<span class="w"> </span>home-dir<span class="w"> </span>Path<span class="o">)</span>
-<span class="o">(</span>define<span class="w"> </span>home-dir<span class="w"> </span><span class="o">(</span>find-system-path<span class="w"> </span><span class="o">(</span>quote<span class="w"> </span>home-dir<span class="o">)))</span>
-<span class="o">(</span>:<span class="w"> </span>hidden-frog-build-dir<span class="w"> </span>Path<span class="o">)</span>
-<span class="o">(</span>define<span class="w"> </span>hidden-frog-build-dir<span class="w"> </span><span class="o">(</span>string-&gt;path<span class="w"> </span><span class="s2">".frog"</span><span class="o">))</span>
-<span class="o">(</span>:<span class="w"> </span>frog-build-dir<span class="w"> </span>Path<span class="o">)</span>
-<span class="o">(</span>define<span class="w"> </span>frog-build-dir<span class="w"> </span><span class="o">(</span>string-&gt;path<span class="w"> </span><span class="s2">"build"</span><span class="o">))</span>
-<span class="o">(</span>:<span class="w"> </span>full-frog-path<span class="w"> </span>Path<span class="o">)</span>
-<span class="o">(</span>define<span class="w"> </span>full-frog-path<span class="w"> </span><span class="o">(</span>build-path<span class="w"> </span>home-dir<span class="w"> </span>base-frog-dir<span class="w"> </span>hidden-frog-build-dir<span class="w"> </span>frog-build-dir<span class="o">))</span>
+; Set everything up first
+(: base-frog-dir Path)
+(define base-frog-dir (string-&gt;path "OnorioCatenacci.github.io"))
+(: home-dir Path)
+(define home-dir (find-system-path (quote home-dir)))
+(: hidden-frog-build-dir Path)
+(define hidden-frog-build-dir (string-&gt;path ".frog"))
+(: frog-build-dir Path)
+(define frog-build-dir (string-&gt;path "build"))
+(: full-frog-path Path)
+(define full-frog-path (build-path home-dir base-frog-dir hidden-frog-build-dir frog-build-dir))
 
-<span class="p">;</span><span class="w"> </span>Now<span class="w"> </span>we<span class="w"> </span>finally<span class="w"> </span>go<span class="w"> </span>ahead<span class="w"> </span>and<span class="w"> </span>delete<span class="w"> </span>the<span class="w"> </span>build<span class="w"> </span>file
-<span class="o">(</span>delete-file<span class="w"> </span>full-frog-path<span class="o">)</span>
-</pre></div></td></tr></tbody></table></div>
-
-</div>
+; Now we finally go ahead and delete the build file
+(delete-file full-frog-path)</code></pre></div>
 
 <p>Now, here&rsquo;s the extremely nice thing. Here&rsquo;s that same script in Powershell:</p>
 
 <div class="brush: powershell">
- <div class="source">
-  <table class="sourcetable">
-   <tbody>
-    <tr>
-     <td class="linenos">
-      <div class="linenodiv">
-       <pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td>
-     <td class="code">
-      <div>
-       <pre><span></span><span class="p">;</span> <span class="n">Racket</span><span class="p">.</span><span class="n">exe</span> <span class="p">(</span><span class="nb">Resolve-Path</span> <span class="nv">$PSCommandPath</span><span class="p">)</span> <span class="nv">$args</span>
-<span class="p">;</span> <span class="n">Exit</span>
-<span class="c">#lang typed/racket/base</span>
+ <pre><code>; Racket.exe (Resolve-Path $PSCommandPath) $args
+; Exit
+#lang typed/racket/base
 
-<span class="p">;</span> <span class="nb">Set </span><span class="n">everything</span> <span class="n">up</span> <span class="n">first</span>
-<span class="p">(:</span> <span class="n">base-frog-dir</span> <span class="n">Path</span><span class="p">)</span>
-<span class="p">(</span><span class="n">define</span> <span class="n">base-frog-dir</span> <span class="p">(</span><span class="n">string</span><span class="p">-&gt;</span><span class="n">path</span> <span class="s2">"OnorioCatenacci.github.io"</span><span class="p">))</span>
-<span class="p">(:</span> <span class="n">home-dir</span> <span class="n">Path</span><span class="p">)</span>
-<span class="p">(</span><span class="n">define</span> <span class="n">home-dir</span> <span class="p">(</span><span class="nb">find-system</span><span class="n">-path</span> <span class="p">(</span><span class="n">quote</span> <span class="n">home-dir</span><span class="p">)))</span>
-<span class="p">(:</span> <span class="n">hidden-frog-build-dir</span> <span class="n">Path</span><span class="p">)</span>
-<span class="p">(</span><span class="n">define</span> <span class="n">hidden-frog-build-dir</span> <span class="p">(</span><span class="n">string</span><span class="p">-&gt;</span><span class="n">path</span> <span class="s2">".frog"</span><span class="p">))</span>
-<span class="p">(:</span> <span class="n">frog-build-dir</span> <span class="n">Path</span><span class="p">)</span>
-<span class="p">(</span><span class="n">define</span> <span class="n">frog-build-dir</span> <span class="p">(</span><span class="n">string</span><span class="p">-&gt;</span><span class="n">path</span> <span class="s2">"build"</span><span class="p">))</span>
-<span class="p">(:</span> <span class="n">full-frog-path</span> <span class="n">Path</span><span class="p">)</span>
-<span class="p">(</span><span class="n">define</span> <span class="n">full-frog-path</span> <span class="p">(</span><span class="n">build-path</span> <span class="n">home-dir</span> <span class="n">base-frog-dir</span> <span class="n">hidden-frog-build-dir</span> <span class="n">frog-build-dir</span><span class="p">))</span>
+; Set everything up first
+(: base-frog-dir Path)
+(define base-frog-dir (string-&gt;path "OnorioCatenacci.github.io"))
+(: home-dir Path)
+(define home-dir (find-system-path (quote home-dir)))
+(: hidden-frog-build-dir Path)
+(define hidden-frog-build-dir (string-&gt;path ".frog"))
+(: frog-build-dir Path)
+(define frog-build-dir (string-&gt;path "build"))
+(: full-frog-path Path)
+(define full-frog-path (build-path home-dir base-frog-dir hidden-frog-build-dir frog-build-dir))
 
-<span class="p">;</span> <span class="n">Now</span> <span class="n">we</span> <span class="k">finally</span> <span class="n">go</span> <span class="n">ahead</span> <span class="n">and</span> <span class="n">delete</span> <span class="n">the</span> <span class="n">build</span> <span class="n">file</span>
-<span class="p">(</span><span class="n">delete</span><span class="o">-file</span> <span class="n">full-frog-path</span><span class="p">)</span>
-</pre></div></td></tr></tbody></table></div>
-
-</div>
+; Now we finally go ahead and delete the build file
+(delete-file full-frog-path)</code></pre></div>
 
 <p>See the difference? The first two lines. That&rsquo;s it. That&rsquo;s all.</p>
 
@@ -209,55 +152,25 @@
 <p>And finally just for sake of completeness:</p>
 
 <div class="brush: batch">
- <div class="source">
-  <table class="sourcetable">
-   <tbody>
-    <tr>
-     <td class="linenos">
-      <div class="linenodiv">
-       <pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span></pre></div></td>
-     <td class="code">
-      <div>
-       <pre><span></span>; <span class="p">@</span><span class="k">echo</span> off
-; Racket.exe <span class="s2">"</span><span class="nv">%~f0</span><span class="s2">"</span> <span class="nv">%*</span>
-; <span class="k">exit</span> /b
+ <pre><code>; @echo off
+; Racket.exe "%~f0" %*
+; exit /b
 #lang typed/racket/base
 
-; <span class="k">Set</span> <span class="nv">everything up first</span>
-(<span class="p">:</span> <span class="nl">base-frog-dir</span><span class="c1"> Path)</span>
-<span class="p">(</span>define base-frog-dir (string-<span class="p">&gt;</span>path <span class="s2">"OnorioCatenacci.github.io"</span><span class="p">)</span><span class="c1">)</span>
-(<span class="p">:</span> <span class="nl">home-dir</span><span class="c1"> Path)</span>
-<span class="p">(</span>define home-dir (find-system-path (quote home-dir<span class="p">)</span>))
-(<span class="p">:</span> <span class="nl">hidden-frog-build-dir</span><span class="c1"> Path)</span>
-<span class="p">(</span>define hidden-frog-build-dir (string-<span class="p">&gt;</span>path <span class="s2">".frog"</span><span class="p">)</span><span class="c1">)</span>
-(<span class="p">:</span> <span class="nl">frog-build-dir</span><span class="c1"> Path)</span>
-<span class="p">(</span>define frog-build-dir (string-<span class="p">&gt;</span>path <span class="s2">"build"</span><span class="p">)</span><span class="c1">)</span>
-(<span class="p">:</span> <span class="nl">full-frog-path</span><span class="c1"> Path)</span>
-<span class="p">(</span>define full-frog-path (build-path home-dir base-frog-dir hidden-frog-build-dir frog-build-dir<span class="p">)</span><span class="c1">)</span>
+; Set everything up first
+(: base-frog-dir Path)
+(define base-frog-dir (string-&gt;path "OnorioCatenacci.github.io"))
+(: home-dir Path)
+(define home-dir (find-system-path (quote home-dir)))
+(: hidden-frog-build-dir Path)
+(define hidden-frog-build-dir (string-&gt;path ".frog"))
+(: frog-build-dir Path)
+(define frog-build-dir (string-&gt;path "build"))
+(: full-frog-path Path)
+(define full-frog-path (build-path home-dir base-frog-dir hidden-frog-build-dir frog-build-dir))
 
 ; Now we finally go ahead and delete the build file
-<span class="p">(</span>delete-file full-frog-path<span class="p">)</span>
-</pre></div></td></tr></tbody></table></div>
-
-</div>
+(delete-file full-frog-path)</code></pre></div>
 
 <p>The ability to reuse basically the same scripts in three different shell scripting systems is a win to me. I don&rsquo;t have a Mac handy to test but I&rsquo;m sure that the only change that I&rsquo;d need would be the shebang lines at the top of the script.</p>
 
@@ -266,43 +179,19 @@
 <p>It occurs to me that others might mistake my intent to be complete in type specifications as being necessary. It isn&rsquo;t. Here&rsquo;s the version of the PS script with the type specifications removed so Typed Racket can infer the types. This works equally well and it&rsquo;s a bit shorter.</p>
 
 <div class="brush: powershell">
- <div class="source">
-  <table class="sourcetable">
-   <tbody>
-    <tr>
-     <td class="linenos">
-      <div class="linenodiv">
-       <pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td>
-     <td class="code">
-      <div>
-       <pre><span></span><span class="p">;</span> <span class="n">Racket</span><span class="p">.</span><span class="n">exe</span> <span class="p">(</span><span class="nb">Resolve-Path</span> <span class="nv">$PSCommandPath</span><span class="p">)</span> <span class="nv">$args</span>
-<span class="p">;</span> <span class="n">Exit</span>
-<span class="c">#lang typed/racket/base</span>
+ <pre><code>; Racket.exe (Resolve-Path $PSCommandPath) $args
+; Exit
+#lang typed/racket/base
 
-<span class="p">;</span> <span class="nb">Set </span><span class="n">everything</span> <span class="n">up</span> <span class="n">first</span>
-<span class="p">(</span><span class="n">define</span> <span class="n">base-frog-dir</span> <span class="p">(</span><span class="n">string</span><span class="p">-&gt;</span><span class="n">path</span> <span class="s2">"OnorioCatenacci.github.io"</span><span class="p">))</span>
-<span class="p">(</span><span class="n">define</span> <span class="n">home-dir</span> <span class="p">(</span><span class="nb">find-system</span><span class="n">-path</span> <span class="p">(</span><span class="n">quote</span> <span class="n">home-dir</span><span class="p">)))</span>
-<span class="p">(</span><span class="n">define</span> <span class="n">hidden-frog-build-dir</span> <span class="p">(</span><span class="n">string</span><span class="p">-&gt;</span><span class="n">path</span> <span class="s2">".frog"</span><span class="p">))</span>
-<span class="p">(</span><span class="n">define</span> <span class="n">frog-build-dir</span> <span class="p">(</span><span class="n">string</span><span class="p">-&gt;</span><span class="n">path</span> <span class="s2">"build"</span><span class="p">))</span>
-<span class="p">(</span><span class="n">define</span> <span class="n">full-frog-path</span> <span class="p">(</span><span class="n">build-path</span> <span class="n">home-dir</span> <span class="n">base-frog-dir</span> <span class="n">hidden-frog-build-dir</span> <span class="n">frog-build-dir</span><span class="p">))</span>
+; Set everything up first
+(define base-frog-dir (string-&gt;path "OnorioCatenacci.github.io"))
+(define home-dir (find-system-path (quote home-dir)))
+(define hidden-frog-build-dir (string-&gt;path ".frog"))
+(define frog-build-dir (string-&gt;path "build"))
+(define full-frog-path (build-path home-dir base-frog-dir hidden-frog-build-dir frog-build-dir))
 
-<span class="p">;</span> <span class="n">Now</span> <span class="n">we</span> <span class="k">finally</span> <span class="n">go</span> <span class="n">ahead</span> <span class="n">and</span> <span class="n">delete</span> <span class="n">the</span> <span class="n">build</span> <span class="n">file</span>
-<span class="p">(</span><span class="n">delete</span><span class="o">-file</span> <span class="n">full-frog-path</span><span class="p">)</span>
-</pre></div></td></tr></tbody></table></div>
-
-</div>
+; Now we finally go ahead and delete the build file
+(delete-file full-frog-path)</code></pre></div>
   <footer>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
     <g:plusone size="medium" href="https://onor.io/2024/12/scripting-with-racket.html"></g:plusone>

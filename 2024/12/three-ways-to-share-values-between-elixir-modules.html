@@ -119,36 +119,12 @@
 <p>While a compiler and/or interpreter doesn&rsquo;t care about the difference between code using literals and code using symbolic names, developers very much care about this. If I have code that reads like this:</p>
 
 <div class="brush: elixir">
- <div class="source">
-  <table class="sourcetable">
-   <tbody>
-    <tr>
-     <td class="linenos">
-      <div class="linenodiv">
-       <pre><span class="normal">1</span></pre></div></td>
-     <td class="code">
-      <div>
-       <pre><span></span><span class="kd">def</span><span class="w"> </span><span class="n">is_odd_number?</span><span class="p">(</span><span class="n">number</span><span class="p">),</span><span class="w"> </span><span class="ss">do</span><span class="p">:</span><span class="w"> </span><span class="n">rem</span><span class="p">(</span><span class="n">number</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="c1"># Version 1</span>
-</pre></div></td></tr></tbody></table></div>
-
-</div>
+ <pre><code>def is_odd_number?(number), do: rem(number,2) != 0 # Version 1</code></pre></div>
 
 <p>vs.</p>
 
 <div class="brush: elixir">
- <div class="source">
-  <table class="sourcetable">
-   <tbody>
-    <tr>
-     <td class="linenos">
-      <div class="linenodiv">
-       <pre><span class="normal">1</span></pre></div></td>
-     <td class="code">
-      <div>
-       <pre><span></span><span class="kd">def</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="w"> </span><span class="ss">do</span><span class="p">:</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">rem</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">                   </span><span class="c1"># Version 2</span>
-</pre></div></td></tr></tbody></table></div>
-
-</div>
+ <pre><code>def f(n), do: !(rem(n,2) == 0)                   # Version 2</code></pre></div>
 
 <p>which one conveys the intent of the coder better? Now you might say &ldquo;Hey no one names their functions <em>f</em> and no one names their arguments <em>n</em>&rdquo; and I wish I could say you&rsquo;re correct. But I have run across code like this in practice and it&rsquo;s hard to decipher&mdash;well for a human being to decipher at any rate. The compiler doesn&rsquo;t care either way. The point is that using descriptive names (as opposed to bare literals) is a great technique for making your code more readable.
  <br />Constants, in this sense, are a form of a descriptive name for a quantity.</p>
@@ -178,78 +154,33 @@
 <p>Consider the following code:</p>
 
 <div class="brush: elixir">
- <div class="source">
-  <table class="sourcetable">
-   <tbody>
-    <tr>
-     <td class="linenos">
-      <div class="linenodiv">
-       <pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td>
-     <td class="code">
-      <div>
-       <pre><span></span><span class="kd">defmodule</span><span class="w"> </span><span class="nc">MyMath</span><span class="w"> </span><span class="k">do</span>
-<span class="w">   </span><span class="nc">Module</span><span class="o">.</span><span class="n">register_attribute</span><span class="p">(</span><span class="bp">__MODULE__</span><span class="p">,</span><span class="w"> </span><span class="ss">:pi</span><span class="p">,</span><span class="w"> </span><span class="ss">persist</span><span class="p">:</span><span class="w"> </span><span class="no">true</span><span class="p">)</span>
-<span class="w">   </span><span class="na">@pi</span><span class="w"> </span><span class="mf">3.141592653</span>
+ <pre><code>defmodule MyMath do
+   Module.register_attribute(__MODULE__, :pi, persist: true)
+   @pi 3.141592653
 
-<span class="w">   </span><span class="kd">def</span><span class="w"> </span><span class="n">pi</span><span class="p">,</span><span class="w"> </span><span class="ss">do</span><span class="p">:</span><span class="w"> </span><span class="mf">3.141592653</span>
-<span class="w">   </span><span class="c1"># this could also be: </span>
-<span class="w">   </span><span class="c1"># def pi, do: @pi</span>
-<span class="k">end</span>
-</pre></div></td></tr></tbody></table></div>
-
-</div>
+   def pi, do: 3.141592653
+   # this could also be: 
+   # def pi, do: @pi
+end</code></pre></div>
 
 <p>and now there are two ways for me to fetch the value of Pi in other modules:</p>
 
 <div class="brush: elixir">
- <div class="source">
-  <table class="sourcetable">
-   <tbody>
-    <tr>
-     <td class="linenos">
-      <div class="linenodiv">
-       <pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td>
-     <td class="code">
-      <div>
-       <pre><span></span><span class="kd">defmodule</span><span class="w"> </span><span class="nc">My.Other.Module.That.Needs.To.Know.Pi</span><span class="w"> </span><span class="k">do</span>
-<span class="w">   </span><span class="kd">defp</span><span class="w"> </span><span class="n">get_pi</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="c1"># module attribute approach</span>
-<span class="w">      </span><span class="p">[</span><span class="n">pi</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">MyMath</span><span class="o">.</span><span class="n">__info__</span><span class="p">(</span><span class="ss">:attributes</span><span class="p">)[</span><span class="ss">:pi</span><span class="p">]</span>
-<span class="w">      </span><span class="n">pi</span>
-<span class="w">   </span><span class="k">end</span>
+ <pre><code>defmodule My.Other.Module.That.Needs.To.Know.Pi do
+   defp get_pi do # module attribute approach
+      [pi] = MyMath.__info__(:attributes)[:pi]
+      pi
+   end
 
-<span class="w">   </span><span class="kd">def</span><span class="w"> </span><span class="n">circle_area</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span><span class="w"> </span><span class="k">do</span>
-<span class="w">      </span><span class="nc">MyMath</span><span class="o">.</span><span class="n">pi</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="c1">#constant function approach</span>
-<span class="w">   </span><span class="k">end</span>
+   def circle_area(radius) do
+      MyMath.pi() * radius * radius #constant function approach
+   end
 
-<span class="w">   </span><span class="c1"># or</span>
-<span class="w">   </span><span class="kd">def</span><span class="w"> </span><span class="n">circle_area_alternate</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span><span class="w"> </span><span class="k">do</span>
-<span class="w">      </span><span class="n">get_pi</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span>
-<span class="w">   </span><span class="k">end</span>
-<span class="k">end</span>
-</pre></div></td></tr></tbody></table></div>
-
-</div>
+   # or
+   def circle_area_alternate(radius) do
+      get_pi() * radius * radius
+   end
+end</code></pre></div>
 
 <p>Both of these approaches will work. The attributes approach is really not recommended for a constant shared between modules. It&rsquo;s more recommended for metadata about a module&mdash;author, last revision date etc. The more recommended way to do this (although I will grant that it looks a bit odd) is a constant function.</p>
 
@@ -258,58 +189,23 @@
 <p>The trick is to define the value to be shared in a using macro in the source module. Like this:</p>
 
 <div class="brush: elixir">
- <div class="source">
-  <table class="sourcetable">
-   <tbody>
-    <tr>
-     <td class="linenos">
-      <div class="linenodiv">
-       <pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td>
-     <td class="code">
-      <div>
-       <pre><span></span><span class="kd">defmodule</span><span class="w"> </span><span class="nc">MyMath</span><span class="w"> </span><span class="k">do</span>
-<span class="w"> </span><span class="kd">defmacro</span><span class="w"> </span><span class="n">__using__</span><span class="p">(</span><span class="bp">_</span><span class="p">)</span><span class="w"> </span><span class="k">do</span>
-<span class="w">    </span><span class="k">quote</span><span class="w"> </span><span class="k">do</span>
-<span class="w">       </span><span class="na">@pi</span><span class="w"> </span><span class="mf">3.141592653</span>
-<span class="w">    </span><span class="k">end</span>
-<span class="k">end</span>
-</pre></div></td></tr></tbody></table></div>
-
-</div>
+ <pre><code>defmodule MyMath do
+ defmacro __using__(_) do
+    quote do
+       @pi 3.141592653
+    end
+end</code></pre></div>
 
 <p>Then you can simply use the module in a different module and the using macro is run and the value becomes available. Like so:</p>
 
 <div class="brush: elixir">
- <div class="source">
-  <table class="sourcetable">
-   <tbody>
-    <tr>
-     <td class="linenos">
-      <div class="linenodiv">
-       <pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td>
-     <td class="code">
-      <div>
-       <pre><span></span><span class="kd">defmodule</span><span class="w"> </span><span class="nc">My.Other.Module.That.Needs.To.Know.Pi</span><span class="w"> </span><span class="k">do</span>
-<span class="w">   </span><span class="kn">use</span><span class="w"> </span><span class="nc">MyMath</span>
+ <pre><code>defmodule My.Other.Module.That.Needs.To.Know.Pi do
+   use MyMath
 
-<span class="w">   </span><span class="kd">def</span><span class="w"> </span><span class="n">circle_area</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span><span class="w"> </span><span class="k">do</span>
-<span class="w">      </span><span class="na">@pi</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="c1">#"using" macro approach</span>
-<span class="w">   </span><span class="k">end</span>
-<span class="k">end</span>
-</pre></div></td></tr></tbody></table></div>
-
-</div>
+   def circle_area(radius) do
+      @pi * radius * radius #"using" macro approach
+   end
+end</code></pre></div>
 
 <p>The main idea here is that if you&rsquo;re using the same named value in multiple modules, you want to avoid <em>defining</em> it more than once. Defining the value in several different modules is an excellent way to insure that someone will miss changing the value somewhere in maintenance and that can lead to some really odd, difficult to reproduce bugs.</p>
   <footer>

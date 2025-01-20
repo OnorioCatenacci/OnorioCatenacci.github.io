@@ -3,15 +3,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Exercises for Chapter 2.1 HTDP</title>
-    <meta name="description" content="My answers for the exercises in Chapter 2 Section 1 of _How to Design Programs_....">
+    <title>Exercise 58 HtDP</title>
+    <meta name="description" content="My answers for the exercises in Chapter 4.6 Exercise 58 of _How to Design Programs_....">
     <meta name="author"      content="Onorio Catenacci">
     <meta name="keywords"    content="Learning, SoftwareEngineering, HtDP">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="https://onor.io/2025/01/exercises-for-chapter-2-1-htdp.html">
-    <link rel="next" href="/2025/01/another-exercise-from-htdp.html">
-    <link rel="prev" href="/2025/01/exercise-58-htdp.html">
+    <link rel="canonical" href="https://onor.io/2025/01/exercise-58-htdp.html">
+    <link rel="next" href="/2025/01/exercises-for-chapter-2-1-htdp.html">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -91,71 +91,44 @@
 
           <article>
   <header>
-    <h1>Exercises for Chapter 2.1 HTDP</h1>
+    <h1>Exercise 58 HtDP</h1>
     <p class='date-and-tags'>
-<time datetime="2025-01-13" pubdate="true">2025-01-13</time> :: <span class="tags"><a href="/tags/Learning.html">Learning</a>, <a href="/tags/SoftwareEngineering.html">SoftwareEngineering</a>, <a href="/tags/HtDP.html">HtDP</a></span></p>
+<time datetime="2025-01-20" pubdate="true">2025-01-20</time> :: <span class="tags"><a href="/tags/Learning.html">Learning</a>, <a href="/tags/SoftwareEngineering.html">SoftwareEngineering</a>, <a href="/tags/HtDP.html">HtDP</a></span></p>
     <p class='authors'>By: <span class="authors">Onorio Catenacci</span></p>
   </header>
 
-<p>My answers for the exercises in Chapter 2 Section 1 of <a href="https://htdp.org/2024-11-6/Book/index.html"><em>How to Design Programs</em></a>.</p>
+<p>My answers for the exercises in Chapter 4.6 Exercise 58 of <a href="https://htdp.org/2024-11-6/Book/index.html"><em>How to Design Programs</em></a>.</p>
 <!-- more-->
 
 <div class="brush: racket">
- <pre><code>#lang htdp/bsl
+ <pre><code>; Price -&gt; Number
+; computes the sales tax charged for price
+(define LOW-TAX-RATE 0)
+(define LTR-LOWER-BOUND 0)
+(define LTR-UPPER-BOUND 1000)
+(define MIDDLE-TAX-RATE 0.05)
+(define MTR-LOWER-BOUND LTR-UPPER-BOUND)
+(define MTR-UPPER-BOUND 10000)
+(define HIGH-TAX-RATE 0.08)
+(define HTR-LOWER-BOUND MTR-UPPER-BOUND)
 
-(require 2htdp/image)
+(check-expect (sales-tax 0) LOW-TAX-RATE)
+(check-expect (sales-tax 537) LOW-TAX-RATE)
+(check-expect (sales-tax 1000) (* MIDDLE-TAX-RATE 1000))
+(check-expect (sales-tax 9999) (* MIDDLE-TAX-RATE 9999))
+(check-expect (sales-tax 10000) (* HIGH-TAX-RATE 10000))
+(check-expect (sales-tax 12017) (* HIGH-TAX-RATE 12017))
 
-; Exercise 11 pg 53
-(define (cartesian-distance x y) (sqrt (+ (* x x) (* y y))))
-
-; Exercise 12 pg 53
-(define (cvolume side-length) (* side-length side-length side-length))
-(define (csurface side-length) (* 6 (* side-length side-length)))
-
-; Exercise 13 pg 53
-(define (string-empty? string) (= (string-length string) 0))
-
-(define (string-first string) (if (not (string-empty? string)) (string-ith string 0) ""))
-
-; Exercise 14 pg 53
-; last-position-of-string assumes that the calling code will check the string to ensure it's not empty!
-(define (last-position-of-string string) (- (string-length string) 1))
-(define (string-last string) (if (not (string-empty? string)) (string-ith string (last-position-of-string string)) ""))
-
-; Exercise 15 pg 53
-(define (==&gt; sunny friday) (or (not sunny) friday))
-
-; Exercise 16 pg 53
-(define (image-area image) (* (image-height image) (image-width image)))
-
-; Exercise 17 pg 53
-(define (image-classify image) 
+(define (sales-tax price)
   (cond
-    [(&gt; (image-height image) (image-width image)) "tall"]
-    [(&lt; (image-height image) (image-width image)) "wide"]
-    [(= (image-height image) (image-width image)) "square"]))
-
-; Exercise 18 pg 53
-(define (string-join left-string right-string) (string-append left-string "_" right-string))
-
-; Exercise 19 pg 53
-; Note, per the text we do not confirm that position is actually contained in the string! 
-(define (string-insert string position) (string-append (substring string 0 position) "_" (substring string position (string-length string))))
-
-; Exercise 20 pg 54
-; Note, again, per the text we do not confirm that the position is actually contained in the string!  Also note that we don't bother to check for an empty string being passed!
-(define (string-delete string position)
-  (cond
-    [(= position 0) (substring string 1 (string-length string))]
-    [(= position (string-length string)) (substring string 0 (- (string-length string) 1))]
-    [(&gt; position 0) (string-append (substring string 0 position) (substring string (+ position 1) (string-length string)))]))</code></pre></div>
-
-<p>I&rsquo;m not happy with my answer for Exercise 20; it feels like there should be a simpler solution and it&rsquo;s just eluding me. But, for whatever it&rsquo;s worth, here&rsquo;s my answers.</p>
-
-<p><strong>Edit:</strong> Yep, just looking at my answers it occurs to me that I defined a <code>last-position-of-string</code> function which I could have used in exercise 20 but didn&rsquo;t. Mea culpa. I&rsquo;ll leave this as is so that others might benefit from my oversight.</p>
+    [(and (&gt;= price LTR-LOWER-BOUND) (&lt; price LTR-UPPER-BOUND)) LOW-TAX-RATE]
+    [(and (&gt;= price MTR-LOWER-BOUND) (&lt; price MTR-UPPER-BOUND)) (* price MIDDLE-TAX-RATE)]
+    [(&gt;= price HTR-LOWER-BOUND) (* price HIGH-TAX-RATE)]
+    ))
+</code></pre></div>
   <footer>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-    <g:plusone size="medium" href="https://onor.io/2025/01/exercises-for-chapter-2-1-htdp.html"></g:plusone>
+    <g:plusone size="medium" href="https://onor.io/2025/01/exercise-58-htdp.html"></g:plusone>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
       var disqus_config = function () {
@@ -182,17 +155,12 @@
       <nav aria-label="Page Navigation">
         <ul class="pagination">
           <li class="page-item">
-            <a class="page-link" href="/2025/01/another-exercise-from-htdp.html"
+            <a class="page-link" href="/2025/01/exercises-for-chapter-2-1-htdp.html"
                aria-label="Previous">
-              <span aria-hidden="true">&larr; Another Exercise From HTDP</span>
+              <span aria-hidden="true">&larr; Exercises for Chapter 2.1 HTDP</span>
             </a>
           </li>
-          <li class="page-item">
-            <a class="page-link" href="/2025/01/exercise-58-htdp.html"
-               aria-label="Next">
-              <span aria-hidden="true">Exercise 58 HtDP &rarr;</span>
-            </a>
-          </li>
+
         </ul>
       </nav>
     </div>

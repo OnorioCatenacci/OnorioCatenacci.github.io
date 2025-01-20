@@ -103,35 +103,15 @@
 <p>My answer for exercise 9 in Chapter 1.</p>
 
 <div class="brush: racket">
- <div class="source">
-  <table class="sourcetable">
-   <tbody>
-    <tr>
-     <td class="linenos">
-      <div class="linenodiv">
-       <pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td>
-     <td class="code">
-      <div>
-       <pre><span></span><span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="n">expression</span><span class="p">)</span>
-<span class="w">  </span><span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/if.html#(form._((lib._racket/private/letstx-scheme..rkt)._cond))" style="color: inherit">cond</a></span>
-<span class="w">    </span><span class="p">[(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/strings.html#(def._((quote._~23~25kernel)._string~3f))" style="color: inherit">string?</a></span><span class="w"> </span><span class="n">expression</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/strings.html#(def._((quote._~23~25kernel)._string-length))" style="color: inherit">string-length</a></span><span class="w"> </span><span class="n">expression</span><span class="p">)]</span>
-<span class="w">    </span><span class="p">[(</span><span class="n">image?</span><span class="w"> </span><span class="n">expression</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit">*</a></span><span class="w"> </span><span class="p">(</span><span class="n">image-height</span><span class="w"> </span><span class="n">expression</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">image-width</span><span class="w"> </span><span class="n">expression</span><span class="p">))]</span>
-<span class="w">    </span><span class="p">[(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/number-types.html#(def._((quote._~23~25kernel)._number~3f))" style="color: inherit">number?</a></span><span class="w"> </span><span class="n">expression</span><span class="p">)</span>
-<span class="w">     </span><span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/if.html#(form._((quote._~23~25kernel)._if))" style="color: inherit">if</a></span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3c~3d))" style="color: inherit">&lt;=</a></span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">         </span><span class="n">expression</span>
-<span class="w">         </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._-))" style="color: inherit">-</a></span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="mi">1</span><span class="p">))]</span>
-<span class="w">    </span><span class="p">[(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/booleans.html#(def._((quote._~23~25kernel)._boolean~3f))" style="color: inherit">boolean?</a></span><span class="w"> </span><span class="n">expression</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/if.html#(form._((quote._~23~25kernel)._if))" style="color: inherit">if</a></span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">20</span><span class="p">)]))</span>
-</pre></div></td></tr></tbody></table></div>
-
-</div>
+ <pre><code>(define (in expression)
+  (cond
+    [(string? expression) (string-length expression)]
+    [(image? expression) (* (image-height expression) (image-width expression))]
+    [(number? expression)
+     (if (&lt;= expression 0)
+         expression
+         (- expression 1))]
+    [(boolean? expression) (if expression 10 20)]))</code></pre></div>
 
 <p>A few more points lest I forget:</p>
 

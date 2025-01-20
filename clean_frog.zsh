@@ -1,4 +1,4 @@
-#! /usr/bin/racket
+#! /snap/bin/racket
 #lang typed/racket/base
 
 ; Set everything up first
