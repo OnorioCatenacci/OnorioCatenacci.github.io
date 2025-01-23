@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <title>Exercise 72 From How To Design Programs</title>
-    <meta name="description" content="My response for Exercise 72 (Chapter 5.6) of _How to Design Programs_...">
+    <meta name="description" content="My response for Exercises 72 and 73 (Chapter 5.6) of _How to Design Programs_...">
     <meta name="author"      content="Onorio Catenacci">
     <meta name="keywords"    content="Learning, SoftwareEngineering, HtDP">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
@@ -97,14 +97,22 @@
     <p class='authors'>By: <span class="authors">Onorio Catenacci</span></p>
   </header>
 
-<p>My response for Exercise 72 (Chapter 5.6) of <a href="https://htdp.org/2024-11-6/Book/index.html"><em>How to Design Programs</em></a></p>
+<p>My response for Exercises 72 and 73 (Chapter 5.6) of <a href="https://htdp.org/2024-11-6/Book/index.html"><em>How to Design Programs</em></a></p>
 <!-- more-->
 
 <div class="brush: racket">
  <pre><code>#lang typed/racket
 
+; Exercise 72
 (struct phone-number ([area : String] [switch : String] [num : String]))
-(struct entry ([name : String] [phone : phone-number] [email : String]))</code></pre></div>
+(struct entry ([name : String] [phone : phone-number] [email : String]))
+
+; Exercise 73
+(struct posn ([x : Number] [y : Number]))
+
+(: posn-up-x (-&gt; posn Number posn))
+(define (posn-up-x p n)
+  (posn (+ (posn-x p) n) (posn-y p)))</code></pre></div>
 
 <p>I&rsquo;m using Typed Racket here rather than BSL because unless I need to do some graphic work I don&rsquo;t see any reason to solve the problems in BSL since that&rsquo;s ultimately a dead end.</p>
   <footer>
