@@ -32,7 +32,7 @@ My responses for Exercises 80 and 81 (Chapter 5.8) of [_How to Design Programs_]
 (struct movie ([title : String] [producer : String] [year : Number]))
 
 ; movie-produced-by? : movie -> Boolean
-(: movie-produced-by? (movie String -> Boolean))
+(: movie-produced-by? (-> movie String Boolean))
 (define (movie-produced-by? movie producer-name)
   (string=? (movie-producer movie) producer-name))
 
