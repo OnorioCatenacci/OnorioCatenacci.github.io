@@ -126,7 +126,7 @@
 (struct movie ([title : String] [producer : String] [year : Number]))
 
 ; movie-produced-by? : movie -&gt; Boolean
-(: movie-produced-by? (movie String -&gt; Boolean))
+(: movie-produced-by? (-&gt; movie String Boolean))
 (define (movie-produced-by? movie producer-name)
   (string=? (movie-producer movie) producer-name))
 
