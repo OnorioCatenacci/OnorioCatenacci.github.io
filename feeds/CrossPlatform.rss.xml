@@ -4,9 +4,17 @@
   <title>onor.io: Posts tagged 'CrossPlatform'</title>
   <description>onor.io: Posts tagged 'CrossPlatform'</description>
   <link>https://onor.io/tags\CrossPlatform.html</link>
-  <lastBuildDate>Wed, 11 Dec 2024 22:13:20 UT</lastBuildDate>
-  <pubDate>Wed, 11 Dec 2024 22:13:20 UT</pubDate>
+  <lastBuildDate>Thu, 30 Jan 2025 20:01:08 UT</lastBuildDate>
+  <pubDate>Thu, 30 Jan 2025 20:01:08 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>More Scripting With Racket</title>
+   <link>https://onor.io/2025\01\more-scripting-with-racket.html?utm_source=CrossPlatform&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-01-more-scripting-with-racket-html</guid>
+   <pubDate>Thu, 30 Jan 2025 20:01:08 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;Using &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; in a shell script to automate some repetitive commands.&lt;/p&gt;&lt;a href="https://onor.io/2025\01\more-scripting-with-racket.html?utm_source=CrossPlatform&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>Scripting With Racket</title>
    <link>https://onor.io/2024\12\scripting-with-racket.html?utm_source=CrossPlatform&amp;utm_medium=RSS</link>

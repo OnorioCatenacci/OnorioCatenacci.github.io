@@ -4,7 +4,17 @@
  <link rel="self" href="https://onor.io/feeds\Scripting.atom.xml" />
  <link href="https://onor.io/tags\Scripting.html" />
  <id>urn:https-onor-io:-tags-Scripting-html</id>
- <updated>2024-12-11T22:13:20Z</updated>
+ <updated>2025-01-30T20:01:08Z</updated>
+ <entry>
+  <title type="text">More Scripting With Racket</title>
+  <link rel="alternate" href="https://onor.io/2025\01\more-scripting-with-racket.html?utm_source=Scripting&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-01-more-scripting-with-racket-html</id>
+  <published>2025-01-30T20:01:08Z</published>
+  <updated>2025-01-30T20:01:08Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Using &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; in a shell script to automate some repetitive commands.&lt;/p&gt;&lt;a href="https://onor.io/2025\01\more-scripting-with-racket.html?utm_source=Scripting&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Scripting With Racket</title>
   <link rel="alternate" href="https://onor.io/2024\12\scripting-with-racket.html?utm_source=Scripting&amp;utm_medium=Atom" />
