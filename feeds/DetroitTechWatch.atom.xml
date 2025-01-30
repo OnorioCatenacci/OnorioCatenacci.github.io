@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
  <title type="text">onor.io: Posts tagged 'DetroitTechWatch'</title>
- <link rel="self" href="https://onor.io/feeds/DetroitTechWatch.atom.xml" />
- <link href="https://onor.io/tags/DetroitTechWatch.html" />
+ <link rel="self" href="https://onor.io/feeds\DetroitTechWatch.atom.xml" />
+ <link href="https://onor.io/tags\DetroitTechWatch.html" />
  <id>urn:https-onor-io:-tags-DetroitTechWatch-html</id>
  <updated>2024-12-19T16:16:03Z</updated>
  <entry>
   <title type="text">Detroit Tech Watch Book Club</title>
-  <link rel="alternate" href="https://onor.io/2024/12/detroit-tech-watch-book-club.html?utm_source=DetroitTechWatch&amp;utm_medium=Atom" />
+  <link rel="alternate" href="https://onor.io/2024\12\detroit-tech-watch-book-club.html?utm_source=DetroitTechWatch&amp;utm_medium=Atom" />
   <id>urn:https-onor-io:-2024-12-detroit-tech-watch-book-club-html</id>
   <published>2024-12-19T16:16:03Z</published>
   <updated>2024-12-19T16:16:03Z</updated>
   <author>
    <name>Onorio Catenacci</name></author>
   <content type="html">
-&lt;p&gt;Announcing the free Detroit Tech Watch book club to help technologists step up their technical game.&lt;/p&gt;&lt;a href="https://onor.io/2024/12/detroit-tech-watch-book-club.html?utm_source=DetroitTechWatch&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>
+&lt;p&gt;Announcing the free Detroit Tech Watch book club to help technologists step up their technical game.&lt;/p&gt;&lt;a href="https://onor.io/2024\12\detroit-tech-watch-book-club.html?utm_source=DetroitTechWatch&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>

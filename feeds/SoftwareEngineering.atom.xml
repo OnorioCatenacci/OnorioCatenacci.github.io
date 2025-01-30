@@ -1,87 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
  <title type="text">onor.io: Posts tagged 'SoftwareEngineering'</title>
- <link rel="self" href="https://onor.io/feeds/SoftwareEngineering.atom.xml" />
- <link href="https://onor.io/tags/SoftwareEngineering.html" />
+ <link rel="self" href="https://onor.io/feeds\SoftwareEngineering.atom.xml" />
+ <link href="https://onor.io/tags\SoftwareEngineering.html" />
  <id>urn:https-onor-io:-tags-SoftwareEngineering-html</id>
  <updated>2025-01-28T20:50:08Z</updated>
  <entry>
   <title type="text">Exercises 80 and 81 From How To Design Programs</title>
-  <link rel="alternate" href="https://onor.io/2025/01/exercises-80-and-81-from-how-to-design-programs.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
+  <link rel="alternate" href="https://onor.io/2025\01\exercises-80-and-81-from-how-to-design-programs.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
   <id>urn:https-onor-io:-2025-01-exercises-80-and-81-from-how-to-design-programs-html</id>
   <published>2025-01-28T20:50:08Z</published>
   <updated>2025-01-28T20:50:08Z</updated>
   <author>
    <name>Onorio Catenacci</name></author>
   <content type="html">
-&lt;p&gt;My responses for Exercises 80 and 81 (Chapter 5.8) of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;a href="https://onor.io/2025/01/exercises-80-and-81-from-how-to-design-programs.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+&lt;p&gt;My responses for Exercises 80 and 81 (Chapter 5.8) of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;a href="https://onor.io/2025\01\exercises-80-and-81-from-how-to-design-programs.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Exercise 72 From How To Design Programs</title>
-  <link rel="alternate" href="https://onor.io/2025/01/exercise-72-from-how-to-design-programs.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
+  <link rel="alternate" href="https://onor.io/2025\01\exercise-72-from-how-to-design-programs.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
   <id>urn:https-onor-io:-2025-01-exercise-72-from-how-to-design-programs-html</id>
   <published>2025-01-23T19:09:01Z</published>
   <updated>2025-01-23T19:09:01Z</updated>
   <author>
    <name>Onorio Catenacci</name></author>
   <content type="html">
-&lt;p&gt;My response for Exercises 72 and 73 (Chapter 5.6) of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;a href="https://onor.io/2025/01/exercise-72-from-how-to-design-programs.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+&lt;p&gt;My response for Exercises 72 and 73 (Chapter 5.6) of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;a href="https://onor.io/2025\01\exercise-72-from-how-to-design-programs.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Exercise 58 HtDP</title>
-  <link rel="alternate" href="https://onor.io/2025/01/exercise-58-htdp.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
+  <link rel="alternate" href="https://onor.io/2025\01\exercise-58-htdp.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
   <id>urn:https-onor-io:-2025-01-exercise-58-htdp-html</id>
   <published>2025-01-20T20:59:14Z</published>
   <updated>2025-01-20T20:59:14Z</updated>
   <author>
    <name>Onorio Catenacci</name></author>
   <content type="html">
-&lt;p&gt;My answers for the exercises in Chapter 4.6 Exercise 58 of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;&lt;a href="https://onor.io/2025/01/exercise-58-htdp.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+&lt;p&gt;My answers for the exercises in Chapter 4.6 Exercise 58 of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;&lt;a href="https://onor.io/2025\01\exercise-58-htdp.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Exercises for Chapter 2.1 HTDP</title>
-  <link rel="alternate" href="https://onor.io/2025/01/exercises-for-chapter-2-1-htdp.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
+  <link rel="alternate" href="https://onor.io/2025\01\exercises-for-chapter-2-1-htdp.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
   <id>urn:https-onor-io:-2025-01-exercises-for-chapter-2-1-htdp-html</id>
   <published>2025-01-13T17:31:36Z</published>
   <updated>2025-01-13T17:31:36Z</updated>
   <author>
    <name>Onorio Catenacci</name></author>
   <content type="html">
-&lt;p&gt;My answers for the exercises in Chapter 2 Section 1 of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;&lt;a href="https://onor.io/2025/01/exercises-for-chapter-2-1-htdp.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+&lt;p&gt;My answers for the exercises in Chapter 2 Section 1 of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;&lt;a href="https://onor.io/2025\01\exercises-for-chapter-2-1-htdp.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Another Exercise From HTDP</title>
-  <link rel="alternate" href="https://onor.io/2025/01/another-exercise-from-htdp.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
+  <link rel="alternate" href="https://onor.io/2025\01\another-exercise-from-htdp.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
   <id>urn:https-onor-io:-2025-01-another-exercise-from-htdp-html</id>
   <published>2025-01-10T16:46:08Z</published>
   <updated>2025-01-10T16:46:08Z</updated>
   <author>
    <name>Onorio Catenacci</name></author>
   <content type="html">
-&lt;p&gt;Another exercise from Chapter 1 of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;&lt;a href="https://onor.io/2025/01/another-exercise-from-htdp.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+&lt;p&gt;Another exercise from Chapter 1 of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;&lt;a href="https://onor.io/2025\01\another-exercise-from-htdp.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Some Exercises From HtDP</title>
-  <link rel="alternate" href="https://onor.io/2025/01/some-exercises-from-htdp.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
+  <link rel="alternate" href="https://onor.io/2025\01\some-exercises-from-htdp.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
   <id>urn:https-onor-io:-2025-01-some-exercises-from-htdp-html</id>
   <published>2025-01-07T18:21:18Z</published>
   <updated>2025-01-07T18:21:18Z</updated>
   <author>
    <name>Onorio Catenacci</name></author>
   <content type="html">
-&lt;p&gt;Working through How To Design Programs; here&amp;rsquo;s my first crack at one of the first exercises!&lt;/p&gt;&lt;a href="https://onor.io/2025/01/some-exercises-from-htdp.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+&lt;p&gt;Working through How To Design Programs; here&amp;rsquo;s my first crack at one of the first exercises!&lt;/p&gt;&lt;a href="https://onor.io/2025\01\some-exercises-from-htdp.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Speaking</title>
-  <link rel="alternate" href="https://onor.io/2024/12/speaking.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
+  <link rel="alternate" href="https://onor.io/2024\12\speaking.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
   <id>urn:https-onor-io:-2024-12-speaking-html</id>
   <published>2024-12-24T14:28:03Z</published>
   <updated>2024-12-24T14:28:03Z</updated>
   <author>
    <name>Onorio Catenacci</name></author>
   <content type="html">
-&lt;p&gt;I&amp;rsquo;m going to be speaking at Ann Arbor Tech Convergence. You should attend!&lt;/p&gt;&lt;a href="https://onor.io/2024/12/speaking.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+&lt;p&gt;I&amp;rsquo;m going to be speaking at Ann Arbor Tech Convergence. You should attend!&lt;/p&gt;&lt;a href="https://onor.io/2024\12\speaking.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Where I'm Going</title>
-  <link rel="alternate" href="https://onor.io/2024/12/where-i-m-going.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
+  <link rel="alternate" href="https://onor.io/2024\12\where-i-m-going.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
   <id>urn:https-onor-io:-2024-12-where-i-m-going-html</id>
   <published>2024-12-05T15:38:50Z</published>
   <updated>2024-12-05T15:38:50Z</updated>
   <author>
    <name>Onorio Catenacci</name></author>
   <content type="html">
-&lt;p&gt;There are a few things in terms of technology that I&amp;rsquo;ve had my eye upon. I&amp;rsquo;d like to share some thoughts with you for whatever it&amp;rsquo;s worth.&lt;/p&gt;&lt;a href="https://onor.io/2024/12/where-i-m-going.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>
+&lt;p&gt;There are a few things in terms of technology that I&amp;rsquo;ve had my eye upon. I&amp;rsquo;d like to share some thoughts with you for whatever it&amp;rsquo;s worth.&lt;/p&gt;&lt;a href="https://onor.io/2024\12\where-i-m-going.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>

@@ -3,23 +3,23 @@
  <channel>
   <title>onor.io: Posts tagged 'CodingRecipes'</title>
   <description>onor.io: Posts tagged 'CodingRecipes'</description>
-  <link>https://onor.io/tags/CodingRecipes.html</link>
+  <link>https://onor.io/tags\CodingRecipes.html</link>
   <lastBuildDate>Wed, 18 Dec 2024 14:40:00 UT</lastBuildDate>
   <pubDate>Wed, 18 Dec 2024 14:40:00 UT</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>Three Ways To Share Values Between Elixir Modules</title>
-   <link>https://onor.io/2024/12/three-ways-to-share-values-between-elixir-modules.html?utm_source=CodingRecipes&amp;utm_medium=RSS</link>
+   <link>https://onor.io/2024\12\three-ways-to-share-values-between-elixir-modules.html?utm_source=CodingRecipes&amp;utm_medium=RSS</link>
    <guid isPermaLink="false">urn:https-onor-io:-2024-12-three-ways-to-share-values-between-elixir-modules-html</guid>
    <pubDate>Wed, 18 Dec 2024 14:40:00 UT</pubDate>
    <author>Onorio Catenacci</author>
    <description>
-&lt;p&gt;A recipe for avoiding repeated definitions in &lt;a href="https://elixir-lang.org"&gt;Elixir&lt;/a&gt; modules!&lt;/p&gt;&lt;a href="https://onor.io/2024/12/three-ways-to-share-values-between-elixir-modules.html?utm_source=CodingRecipes&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+&lt;p&gt;A recipe for avoiding repeated definitions in &lt;a href="https://elixir-lang.org"&gt;Elixir&lt;/a&gt; modules!&lt;/p&gt;&lt;a href="https://onor.io/2024\12\three-ways-to-share-values-between-elixir-modules.html?utm_source=CodingRecipes&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>Scripting With Racket</title>
-   <link>https://onor.io/2024/12/scripting-with-racket.html?utm_source=CodingRecipes&amp;utm_medium=RSS</link>
+   <link>https://onor.io/2024\12\scripting-with-racket.html?utm_source=CodingRecipes&amp;utm_medium=RSS</link>
    <guid isPermaLink="false">urn:https-onor-io:-2024-12-scripting-with-racket-html</guid>
    <pubDate>Wed, 11 Dec 2024 22:13:20 UT</pubDate>
    <author>Onorio Catenacci</author>
    <description>
-&lt;p&gt;Using &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; in a shell script allows a developer to basically use a lot of the same code across platforms.&lt;/p&gt;&lt;a href="https://onor.io/2024/12/scripting-with-racket.html?utm_source=CodingRecipes&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item></channel></rss>
+&lt;p&gt;Using &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; in a shell script allows a developer to basically use a lot of the same code across platforms.&lt;/p&gt;&lt;a href="https://onor.io/2024\12\scripting-with-racket.html?utm_source=CodingRecipes&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item></channel></rss>
