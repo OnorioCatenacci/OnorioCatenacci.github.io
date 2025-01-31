@@ -149,7 +149,7 @@
  <li>
   <p>The <code>parameterize</code> construct (which was pointed out to me by a few of the friendly folks of the Racket community) allows me to temporarily change to another directory, run what I want there and then the directory is changed back to the original directory when the scope of the parameterize ends.</p></li>
  <li>
-  <p>In that <code>parameterize</code> function the function to be parameterized would normally be specified in this fashion <code>([current-directory ZED-PATH])</code>. However the square brackets are special characters to Powershell and Racket allows me to use paratheses there so rather than trying to figure out how to escape the square brackets I simply using parens instead.</p></li>
+  <p>In that <code>parameterize</code> function the function to be parameterized would normally be specified in this fashion <code>([current-directory ZED-PATH])</code>. However the square brackets are special characters to Powershell and Racket allows me to use parentheses there so rather than trying to figure out how to escape the square brackets I simply using parens instead.</p></li>
  <li>
   <p>The <code>system</code> function starts the command <em>synchronously</em>. That is, it blocks until the command exits. I wouldn&rsquo;t normally want it to be synchronous but the regular async option (at least as far as I know) in Racket is <code>process</code>. While that seemed to work just fine as far as I could tell (I mean it looked as if everything were working as expected) it failed to actually start the binary for me.</p></li>
  <li>

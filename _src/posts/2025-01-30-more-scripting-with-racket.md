@@ -31,7 +31,7 @@ A few comments about the script are in order I think:
 
 2. The `parameterize` construct (which was pointed out to me by a few of the friendly folks of the Racket community) allows me to temporarily change to another directory, run what I want there and then the directory is changed back to the original directory when the scope of the parameterize ends.
 
-3. In that `parameterize` function the function to be parameterized would normally be specified in this fashion `([current-directory ZED-PATH])`. However the square brackets are special characters to Powershell and Racket allows me to use paratheses there so rather than trying to figure out how to escape the square brackets I simply using parens instead.
+3. In that `parameterize` function the function to be parameterized would normally be specified in this fashion `([current-directory ZED-PATH])`. However the square brackets are special characters to Powershell and Racket allows me to use parentheses there so rather than trying to figure out how to escape the square brackets I simply using parens instead.
 
 4. The `system` function starts the command _synchronously_.  That is, it blocks until the command exits.  I wouldn't normally want it to be synchronous but the regular async option (at least as far as I know) in Racket is `process`.  While that seemed to work just fine as far as I could tell (I mean it looked as if everything were working as expected) it failed to actually start the binary for me.
 
