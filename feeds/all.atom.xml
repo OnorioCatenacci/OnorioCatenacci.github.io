@@ -4,7 +4,17 @@
  <link rel="self" href="https://onor.io/feeds\all.atom.xml" />
  <link href="https://onor.io/index.html" />
  <id>urn:https-onor-io:-index-html</id>
- <updated>2025-01-30T20:01:08Z</updated>
+ <updated>2025-02-11T14:22:17Z</updated>
+ <entry>
+  <title type="text">Appearance On A Podcast</title>
+  <link rel="alternate" href="https://onor.io/2025\02\appearance-on-a-podcast.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-02-appearance-on-a-podcast-html</id>
+  <published>2025-02-11T14:22:17Z</published>
+  <updated>2025-02-11T14:22:17Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;In spite of lots of good advice to the contrary, rather than keeping my mouth closed and being thought a fool I opened it and removed any doubt.&lt;/p&gt;&lt;a href="https://onor.io/2025\02\appearance-on-a-podcast.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">More Scripting With Racket</title>
   <link rel="alternate" href="https://onor.io/2025\01\more-scripting-with-racket.html?utm_source=all&amp;utm_medium=Atom" />
