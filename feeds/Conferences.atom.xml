@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">onor.io: Posts tagged 'Conferences'</title>
+ <link rel="self" href="https://onor.io/feeds\Conferences.atom.xml" />
+ <link href="https://onor.io/tags\Conferences.html" />
+ <id>urn:https-onor-io:-tags-Conferences-html</id>
+ <updated>2025-02-21T16:17:08Z</updated>
+ <entry>
+  <title type="text">Speaking at MITechCon</title>
+  <link rel="alternate" href="https://onor.io/2025\02\speaking-at-mitechcon.html?utm_source=Conferences&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-02-speaking-at-mitechcon-html</id>
+  <published>2025-02-21T16:17:08Z</published>
+  <updated>2025-02-21T16:17:08Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Due to the inability of a previously invited speaker to attend, I&amp;rsquo;m filling in at MITechCon for a session.&lt;/p&gt;&lt;a href="https://onor.io/2025\02\speaking-at-mitechcon.html?utm_source=Conferences&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>
