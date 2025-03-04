@@ -4,7 +4,17 @@
  <link rel="self" href="https://onor.io/feeds\all.atom.xml" />
  <link href="https://onor.io/index.html" />
  <id>urn:https-onor-io:-index-html</id>
- <updated>2025-02-25T16:37:38Z</updated>
+ <updated>2025-03-04T21:17:42Z</updated>
+ <entry>
+  <title type="text">Codeberg and Reinventing A Wheel</title>
+  <link rel="alternate" href="https://onor.io/2025\03\codeberg-and-reinventing-a-wheel.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-03-codeberg-and-reinventing-a-wheel-html</id>
+  <published>2025-03-04T21:17:42Z</published>
+  <updated>2025-03-04T21:17:42Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;I decided to give Codeberg a whirl. I also decided to create a binary tree implementation in Rust to practice my Rust skills a bit.&lt;/p&gt;&lt;a href="https://onor.io/2025\03\codeberg-and-reinventing-a-wheel.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">If You Laid All The . . .</title>
   <link rel="alternate" href="https://onor.io/2025\02\if-you-laid-all-the.html?utm_source=all&amp;utm_medium=Atom" />
