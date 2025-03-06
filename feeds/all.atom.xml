@@ -4,7 +4,17 @@
  <link rel="self" href="https://onor.io/feeds\all.atom.xml" />
  <link href="https://onor.io/index.html" />
  <id>urn:https-onor-io:-index-html</id>
- <updated>2025-03-04T21:17:42Z</updated>
+ <updated>2025-03-06T14:34:36Z</updated>
+ <entry>
+  <title type="text">You Would Have Failed</title>
+  <link rel="alternate" href="https://onor.io/2025\03\you-would-have-failed.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-03-you-would-have-failed-html</id>
+  <published>2025-03-06T14:34:36Z</published>
+  <updated>2025-03-06T14:34:36Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Elon Musk and the other DOGE folks might learn a lesson from history. Sometimes it&amp;rsquo;s smarter to ask the natives rather than assuming they have nothing intelligent to say.&lt;/p&gt;&lt;a href="https://onor.io/2025\03\you-would-have-failed.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Codeberg and Reinventing A Wheel</title>
   <link rel="alternate" href="https://onor.io/2025\03\codeberg-and-reinventing-a-wheel.html?utm_source=all&amp;utm_medium=Atom" />
