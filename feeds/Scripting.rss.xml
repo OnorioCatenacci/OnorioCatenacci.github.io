@@ -4,9 +4,17 @@
   <title>onor.io: Posts tagged 'Scripting'</title>
   <description>onor.io: Posts tagged 'Scripting'</description>
   <link>https://onor.io/tags\Scripting.html</link>
-  <lastBuildDate>Thu, 30 Jan 2025 20:01:08 UT</lastBuildDate>
-  <pubDate>Thu, 30 Jan 2025 20:01:08 UT</pubDate>
+  <lastBuildDate>Mon, 07 Apr 2025 21:38:06 UT</lastBuildDate>
+  <pubDate>Mon, 07 Apr 2025 21:38:06 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Even More Scripting With Racket</title>
+   <link>https://onor.io/2025\04\even-more-scripting-with-racket.html?utm_source=Scripting&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-04-even-more-scripting-with-racket-html</guid>
+   <pubDate>Mon, 07 Apr 2025 21:38:06 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;Extending my use of &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; to allow my shell scripts to be parameterized.&lt;/p&gt;&lt;a href="https://onor.io/2025\04\even-more-scripting-with-racket.html?utm_source=Scripting&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
   <item>
    <title>More Scripting With Racket</title>
    <link>https://onor.io/2025\01\more-scripting-with-racket.html?utm_source=Scripting&amp;utm_medium=RSS</link>

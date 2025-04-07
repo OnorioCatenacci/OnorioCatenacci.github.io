@@ -3,14 +3,14 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Posts tagged 'Scripting'</title>
-    <meta name="description" content="Posts tagged 'Scripting'">
+    <title>Even More Scripting With Racket</title>
+    <meta name="description" content="Extending my use of racket to allow my shell scripts to be parameterized....">
     <meta name="author"      content="Onorio Catenacci">
-    <meta name="keywords"    content="Scripting">
+    <meta name="keywords"    content="Racket, Scripting, CrossPlatform, CodingRecipes">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="https://onor.io/tags\Scripting.html">
-
+    <link rel="canonical" href="https://onor.io/2025\04\even-more-scripting-with-racket.html">
+    <link rel="next" href="/2025\03\you-would-have-failed.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
@@ -19,9 +19,9 @@
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <!-- Feeds -->
     <link rel="alternate" type="application/atom+xml"
-          href="/feeds\Scripting.atom.xml" title="Atom Feed">
+          href="/feeds\all.atom.xml" title="Atom Feed">
     <link rel="alternate" type="application/rss+xml"
-          href="/feeds\Scripting.rss.xml" title="RSS Feed">
+          href="/feeds\all.rss.xml" title="RSS Feed">
     <!-- JS -->
     <script type="text/javascript">
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -66,11 +66,11 @@
             </li> 
 
             <li class="nav-item">
-              <a class="nav-link" href="/feeds\Scripting.atom.xml">Atom</a>
+              <a class="nav-link" href="/feeds\all.atom.xml">Atom</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/feeds\Scripting.rss.xml">RSS</a>
+              <a class="nav-link" href="/feeds\all.rss.xml">RSS</a>
             </li>
           </ul>
       </div>
@@ -87,50 +87,90 @@
 
 
 
-          <h1>Posts tagged <em>Scripting</em></h1>
+
 
           <article>
   <header>
-    <h2><a href='/2025\04\even-more-scripting-with-racket.html'>Even More Scripting With Racket</a></h2>
+    <h1>Even More Scripting With Racket</h1>
     <p class='date-and-tags'>
 <time datetime="2025-04-07" pubdate="true">2025-04-07</time> :: <span class="tags"><a href="/tags\Racket.html">Racket</a>, <a href="/tags\Scripting.html">Scripting</a>, <a href="/tags\CrossPlatform.html">CrossPlatform</a>, <a href="/tags\CodingRecipes.html">CodingRecipes</a></span></p>
     <p class='authors'>By: <span class="authors">Onorio Catenacci</span></p>
   </header>
 
 <p>Extending my use of <a href="https://racket-lang.org">racket</a> to allow my shell scripts to be parameterized.</p>
+<!-- more-->
+
+<p>Lately for various reasons, I&rsquo;ve been trying to move stuff off of my C drive. As with most of us the C drive has become a bit of a chokepoint for me in terms of free space. So I&rsquo;ve had an external drive for a while (E:) and lately as I add stuff I&rsquo;ve been shifting it over to my E: drive.</p>
+
+<p>Some of you may recall that I was using Racket within Powershell to automate things. So here&rsquo;s an update on that idea with some comments afterward.</p>
+
+<div class="brush: racket">
+ <pre><code>; e:/usr/bin/Racket/Racket.exe (Resolve-Path $PSCommandPath) $args
+; Exit
+
+#lang typed/racket/base
+(require typed/racket)
+
+(define no-args-passed "n")
+(define command-line-empty? (= (vector-length (current-command-line-arguments)) 0))
+
+(: first-arg String)
+(define first-arg (if (not command-line-empty?) (vector-ref (current-command-line-arguments) 0) no-args-passed))
+
+(: zed-path String)
+(define zed-path (if (string=? first-arg no-args-passed) "C:\\Users\\Public\\zed\\" first-arg))
+
+(: ZED-PATH Path)
+(define ZED-PATH (string-&gt;path zed-path))
+
+(: ZED-UPDATE-CMD String)
+(define ZED-UPDATE-CMD "git pull origin main")
+
+(parameterize ((current-directory ZED-PATH)) (system ZED-UPDATE-CMD))</code></pre></div>
+
+<p>As you might guess I created a script to automate pulling down the most recent Zed source code. However I initially had it on my C:. So I modified my <code>zup.ps1</code> script to allow me to continue to pull the source to C or to specify a different location. The current-command-line-arguments parameter (and the word &ldquo;parameter&rdquo; has a very specific meaning in Racket by the way) is set by Racket when I invoke the zup.ps1 script. If I pass something on the command line it goes into the current-command-line-arguments parameter. So further down where I define zed-path I check if no arguments were passed and if not I default to my C drive.</p>
+
+<p>Some of you may be curious why no-args-passed is &ldquo;n&rdquo; instead of an empty string or even something else. Something about Powershell&rsquo;s parsing refused to work correctly with "". I couldn&rsquo;t figure it out and I have better things to do with my time than to try to figure it out. I&rsquo;ll leave that as a job for future me.</p>
   <footer>
-    <a href='/2025\04\even-more-scripting-with-racket.html'>&hellip; more &hellip;</a>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <g:plusone size="medium" href="https://onor.io/2025\04\even-more-scripting-with-racket.html"></g:plusone>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.identifier = undefined;
+        this.page.url = undefined;
+        this.page.title = undefined;
+        this.page.category_id = undefined;
+      };
+      var disqus_shortname = 'DesultoryNerdery';
+      (function() {
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          dsq.setAttribute('data-timestamp', +new Date());
+          (document.head || document.body).appendChild(dsq);
+      })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <div class="row justify-content-center">
+      <nav aria-label="Page Navigation">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="/2025\03\you-would-have-failed.html"
+               aria-label="Previous">
+              <span aria-hidden="true">&larr; You Would Have Failed</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
   </footer>
 </article>
-
-<article>
-  <header>
-    <h2><a href='/2025\01\more-scripting-with-racket.html'>More Scripting With Racket</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2025-01-30" pubdate="true">2025-01-30</time> :: <span class="tags"><a href="/tags\Racket.html">Racket</a>, <a href="/tags\Scripting.html">Scripting</a>, <a href="/tags\CrossPlatform.html">CrossPlatform</a>, <a href="/tags\CodingRecipes.html">CodingRecipes</a></span></p>
-    <p class='authors'>By: <span class="authors">Onorio Catenacci</span></p>
-  </header>
-
-<p>Using <a href="https://racket-lang.org">racket</a> in a shell script to automate some repetitive commands.</p>
-  <footer>
-    <a href='/2025\01\more-scripting-with-racket.html'>&hellip; more &hellip;</a>
-  </footer>
-</article>
-
-<article>
-  <header>
-    <h2><a href='/2024\12\scripting-with-racket.html'>Scripting With Racket</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2024-12-11" pubdate="true">2024-12-11</time> :: <span class="tags"><a href="/tags\Racket.html">Racket</a>, <a href="/tags\Scripting.html">Scripting</a>, <a href="/tags\CrossPlatform.html">CrossPlatform</a>, <a href="/tags\CodingRecipes.html">CodingRecipes</a></span></p>
-    <p class='authors'>By: <span class="authors">Onorio Catenacci</span></p>
-  </header>
-
-<p>Using <a href="https://racket-lang.org">racket</a> in a shell script allows a developer to basically use a lot of the same code across platforms.</p>
-  <footer>
-    <a href='/2024\12\scripting-with-racket.html'>&hellip; more &hellip;</a>
-  </footer>
-</article>
-
         </div>
       </div>
       <div id="root"></div>
