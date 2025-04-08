@@ -17,24 +17,28 @@ Some of you may recall that I was using Racket within Powershell to automate thi
 #lang typed/racket/base
 (require typed/racket)
 
-(define no-args-passed "n")
+(define no-args-passed "")
 (define command-line-empty? (= (vector-length (current-command-line-arguments)) 0))
 
 (: first-arg String)
 (define first-arg (if (not command-line-empty?) (vector-ref (current-command-line-arguments) 0) no-args-passed))
 
-(: zed-path String)
-(define zed-path (if (string=? first-arg no-args-passed) "C:\\Users\\Public\\zed\\" first-arg))
+(: DEFAULT-ZED-SOURCE-PATH String)
+(define DEFAULT-ZED-SOURCE-PATH "E:\\zed")
 
-(: ZED-PATH Path)
-(define ZED-PATH (string->path zed-path))
+(: zed-source-path String)
+(define zed-source-path (if (string=? first-arg no-args-passed) DEFAULT-ZED-SOURCE-PATH first-arg))
+
+(: ZED-GIT-DIR Path)
+(define ZED-GIT-DIR (string->path zed-source-path))
 
 (: ZED-UPDATE-CMD String)
 (define ZED-UPDATE-CMD "git pull origin main")
 
-(parameterize ((current-directory ZED-PATH)) (system ZED-UPDATE-CMD))
+(parameterize ((current-directory ZED-GIT-DIR)) (system ZED-UPDATE-CMD))
 ```
 
-As you might guess I created a script to automate pulling down the most recent Zed source code.  However I initially had it on my C:.  So I modified my `zup.ps1` script to allow me to continue to pull the source to C or to specify a different location.  The current-command-line-arguments parameter (and the word "parameter" has a very specific meaning in Racket by the way) is set by Racket when I invoke the zup.ps1 script.  If I pass something on the command line it goes into the current-command-line-arguments parameter.  So further down where I define zed-path I check if no arguments were passed and if not I default to my C drive.
+As you might guess I created a script to automate pulling down the most recent Zed source code.  However I initially had it on my C:.  So I modified my `zup.ps1` script to allow me to pull the source to E or to specify a different location. I can pass a directory on the command line but if I don't it's defaulted to `DEFAULT-ZED-SOURCE-PATH`. The `current-command-line-arguments` parameter (and the word ["parameter"](https://docs.racket-lang.org/reference/parameters.html) has a very specific meaning in Racket by the way) is set by Racket when I invoke the zup.ps1 script.  If I pass something on the command line it goes into the current-command-line-arguments parameter.  So further down where I define zed-path I check if no arguments were passed and if not I default to my E drive.
 
-Some of you may be curious why no-args-passed is "n" instead of an empty string or even something else.  Something about Powershell's parsing refused to work correctly with "".  I couldn't figure it out and I have better things to do with my time than to try to figure it out.  I'll leave that as a job for future me.
+----
+EDIT: It was pointed out to me by one of the knowledgeable Racket folks that Racket has a very nice library for dealing with command lines. I thought about using it but in this case since I'm only dealing with one unnamed parameter it just seemed like it would be overengineering a solution.
