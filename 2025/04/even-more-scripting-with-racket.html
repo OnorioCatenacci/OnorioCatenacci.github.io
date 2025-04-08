@@ -105,31 +105,67 @@
 <p>Some of you may recall that I was using Racket within Powershell to automate things. So here&rsquo;s an update on that idea with some comments afterward.</p>
 
 <div class="brush: racket">
- <pre><code>; e:/usr/bin/Racket/Racket.exe (Resolve-Path $PSCommandPath) $args
-; Exit
+ <div class="source">
+  <table class="sourcetable">
+   <tbody>
+    <tr>
+     <td class="linenos">
+      <div class="linenodiv">
+       <pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td>
+     <td class="code">
+      <div>
+       <pre><span></span><span class="c1">; e:/usr/bin/Racket/Racket.exe (Resolve-Path $PSCommandPath) $args</span>
+<span class="c1">; Exit</span>
 
-#lang typed/racket/base
-(require typed/racket)
+<span class="kn">#lang </span><span class="nn">typed/racket/base</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/require.html#(form._((lib._racket/private/base..rkt)._require))" style="color: inherit">require</a></span><span class="w"> </span><span class="n">typed/racket</span><span class="p">)</span>
 
-(define no-args-passed "")
-(define command-line-empty? (= (vector-length (current-command-line-arguments)) 0))
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="n">no-args-passed</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="n">command-line-empty?</span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3d))" style="color: inherit">=</a></span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector-length))" style="color: inherit">vector-length</a></span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/runtime.html#(def._((quote._~23~25kernel)._current-command-line-arguments))" style="color: inherit">current-command-line-arguments</a></span><span class="p">))</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span>
 
-(: first-arg String)
-(define first-arg (if (not command-line-empty?) (vector-ref (current-command-line-arguments) 0) no-args-passed))
+<span class="p">(</span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/special-forms.html#(form._((lib._typed-racket/base-env/prims..rkt)._~3a))" style="color: inherit">:</a></span><span class="w"> </span><span class="n">first-arg</span><span class="w"> </span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/type-ref.html#(form._((lib._typed-racket/base-env/base-types..rkt)._.String))" style="color: inherit">String</a></span><span class="p">)</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="n">first-arg</span><span class="w"> </span><span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/if.html#(form._((quote._~23~25kernel)._if))" style="color: inherit">if</a></span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/booleans.html#(def._((quote._~23~25kernel)._not))" style="color: inherit">not</a></span><span class="w"> </span><span class="n">command-line-empty?</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector-ref))" style="color: inherit">vector-ref</a></span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/runtime.html#(def._((quote._~23~25kernel)._current-command-line-arguments))" style="color: inherit">current-command-line-arguments</a></span><span class="p">)</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">no-args-passed</span><span class="p">))</span>
 
-(: DEFAULT-ZED-SOURCE-PATH String)
-(define DEFAULT-ZED-SOURCE-PATH "E:\\zed")
+<span class="p">(</span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/special-forms.html#(form._((lib._typed-racket/base-env/prims..rkt)._~3a))" style="color: inherit">:</a></span><span class="w"> </span><span class="n">DEFAULT-ZED-SOURCE-PATH</span><span class="w"> </span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/type-ref.html#(form._((lib._typed-racket/base-env/base-types..rkt)._.String))" style="color: inherit">String</a></span><span class="p">)</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="n">DEFAULT-ZED-SOURCE-PATH</span><span class="w"> </span><span class="s2">"E:</span><span class="se">\\</span><span class="s2">zed"</span><span class="p">)</span>
 
-(: zed-source-path String)
-(define zed-source-path (if (string=? first-arg no-args-passed) DEFAULT-ZED-SOURCE-PATH first-arg))
+<span class="p">(</span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/special-forms.html#(form._((lib._typed-racket/base-env/prims..rkt)._~3a))" style="color: inherit">:</a></span><span class="w"> </span><span class="n">zed-source-path</span><span class="w"> </span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/type-ref.html#(form._((lib._typed-racket/base-env/base-types..rkt)._.String))" style="color: inherit">String</a></span><span class="p">)</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="n">zed-source-path</span><span class="w"> </span><span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/if.html#(form._((quote._~23~25kernel)._if))" style="color: inherit">if</a></span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/strings.html#(def._((quote._~23~25kernel)._string~3d~3f))" style="color: inherit">string=?</a></span><span class="w"> </span><span class="n">first-arg</span><span class="w"> </span><span class="n">no-args-passed</span><span class="p">)</span><span class="w"> </span><span class="n">DEFAULT-ZED-SOURCE-PATH</span><span class="w"> </span><span class="n">first-arg</span><span class="p">))</span>
 
-(: ZED-GIT-DIR Path)
-(define ZED-GIT-DIR (string-&gt;path zed-source-path))
+<span class="p">(</span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/special-forms.html#(form._((lib._typed-racket/base-env/prims..rkt)._~3a))" style="color: inherit">:</a></span><span class="w"> </span><span class="n">ZED-GIT-DIR</span><span class="w"> </span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/type-ref.html#(form._((lib._typed-racket/base-env/base-types..rkt)._.Path))" style="color: inherit">Path</a></span><span class="p">)</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="n">ZED-GIT-DIR</span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/Manipulating_Paths.html#(def._((quote._~23~25kernel)._string-~3epath))" style="color: inherit">string-&gt;path</a></span><span class="w"> </span><span class="n">zed-source-path</span><span class="p">))</span>
 
-(: ZED-UPDATE-CMD String)
-(define ZED-UPDATE-CMD "git pull origin main")
+<span class="p">(</span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/special-forms.html#(form._((lib._typed-racket/base-env/prims..rkt)._~3a))" style="color: inherit">:</a></span><span class="w"> </span><span class="n">ZED-UPDATE-CMD</span><span class="w"> </span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/type-ref.html#(form._((lib._typed-racket/base-env/base-types..rkt)._.String))" style="color: inherit">String</a></span><span class="p">)</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="n">ZED-UPDATE-CMD</span><span class="w"> </span><span class="s2">"git pull origin main"</span><span class="p">)</span>
 
-(parameterize ((current-directory ZED-GIT-DIR)) (system ZED-UPDATE-CMD))</code></pre></div>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/parameters.html#(form._((lib._racket/private/more-scheme..rkt)._parameterize))" style="color: inherit">parameterize</a></span><span class="w"> </span><span class="p">((</span><span class="nb"><a href="http://docs.racket-lang.org/reference/Filesystem.html#(def._((quote._~23~25kernel)._current-directory))" style="color: inherit">current-directory</a></span><span class="w"> </span><span class="n">ZED-GIT-DIR</span><span class="p">))</span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/subprocess.html#(def._((lib._racket/system..rkt)._system))" style="color: inherit">system</a></span><span class="w"> </span><span class="n">ZED-UPDATE-CMD</span><span class="p">))</span>
+</pre></div></td></tr></tbody></table></div>
+
+</div>
 
 <p>As you might guess I created a script to automate pulling down the most recent Zed source code. However I initially had it on my C:. So I modified my <code>zup.ps1</code> script to allow me to pull the source to E or to specify a different location. I can pass a directory on the command line but if I don&rsquo;t it&rsquo;s defaulted to <code>DEFAULT-ZED-SOURCE-PATH</code>. The <code>current-command-line-arguments</code> parameter (and the word <a href="https://docs.racket-lang.org/reference/parameters.html">&ldquo;parameter&rdquo;</a> has a very specific meaning in Racket by the way) is set by Racket when I invoke the zup.ps1 script. If I pass something on the command line it goes into the current-command-line-arguments parameter. So further down where I define zed-path I check if no arguments were passed and if not I default to my E drive.</p>
 
