@@ -4,7 +4,17 @@
  <link rel="self" href="https://onor.io/feeds\all.atom.xml" />
  <link href="https://onor.io/index.html" />
  <id>urn:https-onor-io:-index-html</id>
- <updated>2025-04-07T21:38:06Z</updated>
+ <updated>2025-05-29T18:54:24Z</updated>
+ <entry>
+  <title type="text">The Impractical Engineer</title>
+  <link rel="alternate" href="https://onor.io/2025\05\the-impractical-engineer.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-05-the-impractical-engineer-html</id>
+  <published>2025-05-29T18:54:24Z</published>
+  <updated>2025-05-29T18:54:24Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;I&amp;rsquo;ve started a newsletter called &amp;ldquo;The Impractical Engineer&amp;rdquo;. I hope you&amp;rsquo;ll give it a look!&lt;/p&gt;&lt;a href="https://onor.io/2025\05\the-impractical-engineer.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">Even More Scripting With Racket</title>
   <link rel="alternate" href="https://onor.io/2025\04\even-more-scripting-with-racket.html?utm_source=all&amp;utm_medium=Atom" />
