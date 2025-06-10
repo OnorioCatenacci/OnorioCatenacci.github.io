@@ -2,7 +2,7 @@
     Date: 2025-06-10T11:11:56
     Tags: Satire
 
-Channeling my inner Johnathan Swift
+Channeling my inner Jonathan Swift
 
 <!-- more -->
 In this job market getting rid of that pesky staff (or as many managers call them “wage leeches”) has never been easier.  But if you lay them off then they collect unemployment and who want to have the wage leeches continuing to drain your profits?  Even worse if you lay off enough of them at once some kind of legal nonsense kicks in and it gets even more expensive.  While we’ve got a friend in the White House (yay DJT!) we can’t always stomp all over the wage leeches like we’d like to. So many companies are pursuing a “Kevorkian Layoff” strategy–that is, make people want to fire themselves and they don’t get any unemployment.  A win/win (well at least from the accountant’s perspective anyway). Even better, you can keep on telling the entire world that you’d rather sleep on people’s couches than to lay people off.  No official layoffs–just the Kevorkian Layoff where people can no longer stand working for you so they terminate themselves.
