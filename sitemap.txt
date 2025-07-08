@@ -7,6 +7,7 @@ https://onor.io/2025\07\doctors-don-t-do-side-projects.html
 https://onor.io/2024\12\where-i-m-going.html
 https://onor.io/2025\02\if-you-laid-all-the.html
 https://onor.io/2024\12\scripting-with-racket.html
+https://onor.io/2025\07\stop-helping-me-ai.html
 https://onor.io/2025\01\more-scripting-with-racket.html
 https://onor.io/2025\01\exercise-72-from-how-to-design-programs.html
 https://onor.io/2025\01\another-exercise-from-htdp.html
