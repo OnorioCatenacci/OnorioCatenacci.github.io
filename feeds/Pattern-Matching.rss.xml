@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<rss version="2.0">
+ <channel>
+  <title>onor.io: Posts tagged 'Pattern Matching'</title>
+  <description>onor.io: Posts tagged 'Pattern Matching'</description>
+  <link>https://onor.io/tags\Pattern-Matching.html</link>
+  <lastBuildDate>Fri, 01 Aug 2025 15:58:31 UT</lastBuildDate>
+  <pubDate>Fri, 01 Aug 2025 15:58:31 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>Rosie And Elixir</title>
+   <link>https://onor.io/2025\08\rosie-and-elixir.html?utm_source=Pattern-Matching&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-08-rosie-and-elixir-html</guid>
+   <pubDate>Fri, 01 Aug 2025 15:58:31 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;I&amp;rsquo;ve been working on writing &lt;a href="https://en.wikipedia.org/wiki/Parsing_expression_grammar"&gt;PEG&lt;/a&gt; expressions with &lt;a href="https://gitlab.com/rosie-pattern-language/rosie"&gt;Rosie Pattern Language&lt;/a&gt; to help people to search Elixir code bases for certain things. Very preliminary but I did want to share what I&amp;rsquo;ve got so far.&lt;/p&gt;&lt;a href="https://onor.io/2025\08\rosie-and-elixir.html?utm_source=Pattern-Matching&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item></channel></rss>
