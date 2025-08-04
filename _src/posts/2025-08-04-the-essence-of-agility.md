@@ -1,0 +1,17 @@
+    Title: The Essence Of Agility
+    Date: 2025-08-04T12:05:31
+    Tags: SoftwareEngineering
+
+I am afraid that more and more people are following the outline of agile without understanding WHY the practices are important.  It's becoming a sort of [cargo cult science](https://en.wikipedia.org/wiki/Surely_You%27re_Joking,_Mr._Feynman!#Cargo_Cult_Science) situation.
+
+<!-- more -->
+
+I actually practiced agile long before the term existed.  I'm not kidding or being facetious.  I worked at a small tool and die shop and my boss would ask me to create software.  I'd go and create an app and show it to him.  Then he'd tell what I'd got right and what I needed to change.  I'd create a new version, show it to him and in that fashion we'd build what he wanted. He is a smart, practical fellow and it was a great way to work--he got what he wanted and I got the chance to perfect my work.
+
+I think people (at least in my experience) have gotten the wrong understanding of "agility."  The big takeaway from the whole waterfall vs. agile conversation should be that people--even the smartest people--don't know or cannot articulate what it is that they want or need.  Waterfall with all the requirement gathering upfront ignores the basic human reality that we (people) aren't really wired to pay attention to details. Business analysts do their best to call out all the requirements but the only projects I have ever worked on where the requirements didn't change were projects that were simply discarded because the need for the software product had passed.  Just as software developers discover details as we build, our counterparts who are asking to have the software built will often discover there are requirements they forgot--or maybe never realized in the first place.  This is fine; as long as we respond to the changing needs rather than rigidly insisting that we have already determined the requirements, we're good.
+
+Agile works and brings value to the software development arena because it's an acknowledgement of a simple human truth; we usually don't know all the requirements and sometimes the only way to figure out the right answer is to see the wrong one.  
+
+Hence if you're doing an "agile" project and you're defining requirements for 6 months from now--well you're not really doing agile.  You may be doing waterfall in two week increments.  And by the same token in those rare cases where requirements are fixed--say you've got a legal requirement to have some process built by a particular date--then you might just as well do waterfall.   
+
+Daily standups, burndown charts, backlogs--all of these are just tools to help us to deal with the reality that we almost always discover new requirements (or refine existing requirements) as we continue to build projects. The main element of agility was (and continues to be) allowing ourselves to discover requirements as we build.  This is one of the reasons that I have considered that true agility may never be something that large businesses can achieve. I say this because if you think about it, uncertainty is anathema to businesses and even moreso to larger ones. Large businesses need to be able to plan staffing levels; they need to be able to plan certain capabilities. While this is not directly opposed to discovering requirements as we build, it's definitely not as compatible with predictability and long-term forecasts as we'd like either. 
