@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">onor.io: Posts tagged 'Software Engineering'</title>
+ <link rel="self" href="https://onor.io/feeds\Software-Engineering.atom.xml" />
+ <link href="https://onor.io/tags\Software-Engineering.html" />
+ <id>urn:https-onor-io:-tags-Software-Engineering-html</id>
+ <updated>2025-08-04T16:05:31Z</updated>
+ <entry>
+  <title type="text">The Essence Of Agility</title>
+  <link rel="alternate" href="https://onor.io/2025\08\the-essence-of-agility.html?utm_source=Software-Engineering&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-08-the-essence-of-agility-html</id>
+  <published>2025-08-04T16:05:31Z</published>
+  <updated>2025-08-04T16:05:31Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;I am afraid that more and more people are following the outline of agile without understanding WHY the practices are important. It&amp;rsquo;s becoming a sort of &lt;a href="https://en.wikipedia.org/wiki/Surely_You%27re_Joking,_Mr._Feynman!#Cargo_Cult_Science"&gt;cargo cult science&lt;/a&gt; situation.&lt;/p&gt;&lt;a href="https://onor.io/2025\08\the-essence-of-agility.html?utm_source=Software-Engineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>
