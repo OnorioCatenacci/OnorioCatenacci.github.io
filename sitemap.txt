@@ -10,6 +10,7 @@ https://onor.io/2025\08\the-essence-of-agility.html
 https://onor.io/2024\12\scripting-with-racket.html
 https://onor.io/2025\07\stop-helping-me-ai.html
 https://onor.io/2025\01\more-scripting-with-racket.html
+https://onor.io/2025\09\modeling-and-software-development.html
 https://onor.io/2025\01\exercise-72-from-how-to-design-programs.html
 https://onor.io/2025\01\another-exercise-from-htdp.html
 https://onor.io/2025\04\even-more-scripting-with-racket.html

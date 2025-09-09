@@ -4,7 +4,17 @@
  <link rel="self" href="https://onor.io/feeds\SoftwareEngineering.atom.xml" />
  <link href="https://onor.io/tags\SoftwareEngineering.html" />
  <id>urn:https-onor-io:-tags-SoftwareEngineering-html</id>
- <updated>2025-08-04T16:05:31Z</updated>
+ <updated>2025-09-09T13:25:08Z</updated>
+ <entry>
+  <title type="text">Modeling And Software Development</title>
+  <link rel="alternate" href="https://onor.io/2025\09\modeling-and-software-development.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-09-modeling-and-software-development-html</id>
+  <published>2025-09-09T13:25:08Z</published>
+  <updated>2025-09-09T13:25:08Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;A brief discussion of some obvious observations that are routinely forgotten. We&amp;rsquo;re dealing with models and we&amp;rsquo;re not all dealing with the same models.&lt;/p&gt;&lt;a href="https://onor.io/2025\09\modeling-and-software-development.html?utm_source=SoftwareEngineering&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
  <entry>
   <title type="text">The Essence Of Agility</title>
   <link rel="alternate" href="https://onor.io/2025\08\the-essence-of-agility.html?utm_source=SoftwareEngineering&amp;utm_medium=Atom" />

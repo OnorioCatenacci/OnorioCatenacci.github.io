@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Modeling And Software Development</title>
+    <meta name="description" content="A brief discussion of some obvious observations that are routinely forgotten. We're dealing with models and we're not all dealing with the same models....">
+    <meta name="author"      content="Onorio Catenacci">
+    <meta name="keywords"    content="SoftwareEngineering, Opinion">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="https://onor.io/2025\09\modeling-and-software-development.html">
+    <link rel="next" href="/2025\08\the-essence-of-agility.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml"
+          href="/feeds\all.atom.xml" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml"
+          href="/feeds\all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-xxxxx', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+
+      <a href="/index.html" class="navbar-brand">onor.io</a>
+
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+              data-target="#navbar_collapse" aria-controls="navbar_collapse"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar_collapse">
+          <ul class="navbar-nav mr-auto">
+
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b>
+              </a>
+
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/tags\AI.html">AI</a><a class="dropdown-item" href="/tags\Books.html">Books</a><a class="dropdown-item" href="/tags\CodingRecipes.html">CodingRecipes</a><a class="dropdown-item" href="/tags\Conferences.html">Conferences</a><a class="dropdown-item" href="/tags\CrossPlatform.html">CrossPlatform</a><a class="dropdown-item" href="/tags\DetroitTechWatch.html">DetroitTechWatch</a><a class="dropdown-item" href="/tags\Elixir.html">Elixir</a><a class="dropdown-item" href="/tags\History.html">History</a><a class="dropdown-item" href="/tags\HtDP.html">HtDP</a><a class="dropdown-item" href="/tags\Humor.html">Humor</a><a class="dropdown-item" href="/tags\Intro.html">Intro</a><a class="dropdown-item" href="/tags\Learning.html">Learning</a><a class="dropdown-item" href="/tags\Meetups.html">Meetups</a><a class="dropdown-item" href="/tags\Newsletters.html">Newsletters</a><a class="dropdown-item" href="/tags\Opinion.html">Opinion</a><a class="dropdown-item" href="/tags\Pattern-Matching.html">Pattern Matching</a><a class="dropdown-item" href="/tags\Personal.html">Personal</a><a class="dropdown-item" href="/tags\Podcasts.html">Podcasts</a><a class="dropdown-item" href="/tags\Politics.html">Politics</a><a class="dropdown-item" href="/tags\Racket.html">Racket</a><a class="dropdown-item" href="/tags\Scripting.html">Scripting</a><a class="dropdown-item" href="/tags\Searching-Code.html">Searching Code</a><a class="dropdown-item" href="/tags\SoftwareEngineering.html">SoftwareEngineering</a><a class="dropdown-item" href="/tags\Writing.html">Writing</a>
+              </div>
+            </li>
+
+            <li>
+              <a class="nav-link" href="/About.html">About</a>
+            </li> 
+
+            <li class="nav-item">
+              <a class="nav-link" href="/feeds\all.atom.xml">Atom</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/feeds\all.rss.xml">RSS</a>
+            </li>
+          </ul>
+      </div>
+
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+
+
+
+
+          <article>
+    <header>
+        <h1>Modeling And Software Development</h1>
+        <p class="date-and-tags">
+<time datetime="2025-09-09" pubdate="true">2025-09-09</time> :: <span class="tags"><a href="/tags\SoftwareEngineering.html">SoftwareEngineering</a>, <a href="/tags\Opinion.html">Opinion</a></span></p>
+        <p class="authors">By: <span class="authors">Onorio Catenacci</span></p>
+    </header>
+
+<p>A brief discussion of some obvious observations that are routinely forgotten. We&rsquo;re dealing with models and we&rsquo;re not all dealing with the same models.</p>
+<!-- more-->
+
+<p>One thing that strikes me again and again as I mull the profession of software developer is how often we forget fundamental truths about what it is we&rsquo;re doing. I hope you&rsquo;ll indulge me for a few paragraphs while I lay out some thoughts on what seems so obvious that it&rsquo;s usually forgotten.</p>
+
+<h2 id="models-abstractions-and-reality">Models, Abstractions And Reality</h2>
+
+<p>First, although all of us should have this quite firmly in our heads by now, it&rsquo;s wise to remember that models are simplifications of reality. Reality is messy and doesn&rsquo;t want to conform to your neatly built mental constructs. Reality is that the ratio of the circumference of a circle to the diameter is 3.14159265358. The model is that it&rsquo;s ∏ (Pi). <em>Lest anyone start splitting hairs with me, yes I know that pi is actually more real than any decimal. I&rsquo;m just trying to make a point about the messiness of reality versus the clean, discrete nature of models.</em> Reality is that the atomic weight of aluminum is 26.9815385. (I can recall how mind boggling I found it when I first learned that atomic weight wasn&rsquo;t an integer.) The model is that it&rsquo;s 27. And so forth and so on ad infitum.</p>
+
+<p>And so we must be quite careful to remember that any software artifact we&rsquo;re dealing with involves at least two models (and very likely three) and at least one bit of reality. For any software artifact there&rsquo;s the model of the person(s) requesting that the software be built. There&rsquo;s the model of the software developers building the software. And likely there&rsquo;s the model of the actual software which is unlikely to correspond <em>exactly</em> to either of the other two models.</p>
+
+<p>What does this mean in practicality? A few conclusions jump out very quickly.</p>
+
+<p><strong>The person requesting the software is already abstracting the reality of what they want.</strong> As human beings often do, they are likely to omit details because &ldquo;well that&rsquo;s so obvious I don&rsquo;t need to say it!&rdquo;</p>
+
+<p><strong>The process of communicating the mental model of the person requesting the software to the software developer is error-prone and often fragile.</strong> There are a few good reasons for this:</p>
+
+<p>a.) It&rsquo;s not usually a direct communication.</p>
+
+<p>b.) Even in cases where there is direct communication it&rsquo;s done in natural language which is inherently (intentionally) ambiguous.</p>
+
+<p>c.) The mental model of the person requesting the software to be built is often incomplete and lacking details.</p>
+
+<p><strong>The software artifact that is created presents its own model of the situation.</strong> This model doesn&rsquo;t have to correspond to either the model of the person requesting the software to be built or the model of the software developers building the software. You may read that last sentence and say &ldquo;Waitasec! How could it not represent the mental model of the people building the software?&rdquo; A couple of things are in play here:</p>
+
+<p>a.) The developers may not know how to express their mental model in code. Developer skills vary along a spectrum of &ldquo;fresh out of a coding bootcamp&rdquo; to &ldquo;years and years of experience.&rdquo; Even with years and years of experience there&rsquo;s no guarantees that the developer will be able to express his/her model of the code in the code.</p>
+
+<p>b.) There&rsquo;s a translation between the source code and the actual instructions which the computer executes. This is not a trivial step. Almost every language of which I am aware allows for certain things to be &ldquo;implementation details&rdquo;. Consider this: in C# what size is an &ldquo;int&rdquo;? If you said 64 bit, you&rsquo;re wrong. It would seem to make sense that on a 64-bit machine it&rsquo;d be 64-bits but it isn&rsquo;t. I recall once when I was starting as a software developer that we ran into a very odd bug. Hard to reproduce. I&rsquo;m embarassed to say I was ever this green but I was&mdash;the issue was that we didn&rsquo;t specify the return type of a C function. The function should have returned a double. Because we didn&rsquo;t specify the return type (you don&rsquo;t have to in C) the compiler was silently truncating the double to an int (C&rsquo;s default return type). There are other examples I could give but I trust the point is made.</p>
+
+<p><strong>Models expressed in natural language are inherently hard to check for contradictions and inconsistencies.</strong> If a business says that at some point an invoice should be marked &ldquo;pending&rdquo; and at another point it should be marked &ldquo;resolved&rdquo; are those two states mutually exclusive? They don&rsquo;t have to be. Unless and until someone asks &ldquo;hey can an invoice be pending and resolved?&rdquo; that inconsistency is there. This is one of my issues with models that rely on boxes and arrows. Don&rsquo;t get me wrong&mdash;they&rsquo;re great communication tools and communication is exceedingly important. But in many cases they cannot easily be checked for contradictions or inconsistencies.</p>
+
+<p>So pretty much all of the preceeding discussion should strike experienced developers as &ldquo;Well congratulations Captain Obvious! You&rsquo;ve managed to state what everyone knows!&rdquo; But my issue with &ldquo;everyone knows that&rdquo; is how often &ldquo;everyone&rdquo; forgets it. These are the rules of the game we play and we don&rsquo;t often spend time considering the implication of these rules and what steps we can take to be more effective in what we do.</p>
+    <footer>
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+        <g:plusone size="medium" href="https://onor.io/2025\09\modeling-and-software-development.html"></g:plusone> <div id="disqus_thread"></div>
+                                                                                                                    <script type="text/javascript">
+                                                                                                                      var disqus_config = function () {
+                                                                                                                        this.page.identifier = undefined;
+                                                                                                                        this.page.url = undefined;
+                                                                                                                        this.page.title = undefined;
+                                                                                                                        this.page.category_id = undefined;
+                                                                                                                      };
+                                                                                                                      var disqus_shortname = 'DesultoryNerdery';
+                                                                                                                      (function() {
+                                                                                                                          var dsq = document.createElement('script');
+                                                                                                                          dsq.type = 'text/javascript';
+                                                                                                                          dsq.async = true;
+                                                                                                                          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                                                                                                          dsq.setAttribute('data-timestamp', +new Date());
+                                                                                                                          (document.head || document.body).appendChild(dsq);
+                                                                                                                      })();
+                                                                                                                    </script>
+                                                                                                                    <noscript>
+                                                                                                                      Please enable JavaScript to view the
+                                                                                                                      <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                                                                                                                    </noscript>
+        <div class="row justify-content-center">
+          <nav aria-label="Page Navigation">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="/2025\08\the-essence-of-agility.html"
+                   aria-label="Previous">
+                  <span aria-hidden="true">&larr; The Essence Of Agility</span>
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+        <iframe
+            src="https://embeds.beehiiv.com/dc265450-9873-4ff2-a9b7-f4d1182667c8"
+            data-test-id="beehiiv-embed"
+            width="100%"
+            height="320"
+            frameborder="0"
+            scrolling="no"
+            style="
+                border-radius: 4px;
+                border: 2px solid #e5e7eb;
+                margin: 0;
+                background-color: transparent;
+            "
+        ></iframe>
+    </footer>
+</article>
+        </div>
+      </div>
+      <div id="root"></div>
+      <script type="text/babel">
+        function App() {
+          return (
+            <img
+              src="https://i.imgur.com/MK3eW3Am.jpg"
+              alt="Katherine Johnson"
+            />
+          );
+        }
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+      </script>
+
+      <footer>
+        <hr />
+        <p>Site generated
+        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+        <p><em>Copyright 2024 By Onorio Catenacci</em>.</p>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/react.development.js"></script>
+    <script src="/js/react-dom.development.js"></script>
+    <!-- Load our React component. -->
+<!--    <script type="text/javascript" src="/js/index.js"></script> -->
+  </body>
+</html>
