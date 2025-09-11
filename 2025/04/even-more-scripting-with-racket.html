@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Even More Scripting With Racket</title>
+    <meta name="description" content="Extending my use of racket to allow my shell scripts to be parameterized....">
+    <meta name="author"      content="Onorio Catenacci">
+    <meta name="keywords"    content="Racket, Scripting, CrossPlatform, CodingRecipes">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="https://onor.io/2025\04\even-more-scripting-with-racket.html">
+    <link rel="next" href="/2025\03\you-would-have-failed.html">
+    <link rel="prev" href="/2025\05\the-impractical-engineer.html">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml"
+          href="/feeds\all.atom.xml" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml"
+          href="/feeds\all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-xxxxx', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+
+      <a href="/index.html" class="navbar-brand">onor.io</a>
+
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+              data-target="#navbar_collapse" aria-controls="navbar_collapse"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar_collapse">
+          <ul class="navbar-nav mr-auto">
+
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b>
+              </a>
+
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/tags\AI.html">AI</a><a class="dropdown-item" href="/tags\Books.html">Books</a><a class="dropdown-item" href="/tags\CodingRecipes.html">CodingRecipes</a><a class="dropdown-item" href="/tags\Conferences.html">Conferences</a><a class="dropdown-item" href="/tags\CrossPlatform.html">CrossPlatform</a><a class="dropdown-item" href="/tags\DetroitTechWatch.html">DetroitTechWatch</a><a class="dropdown-item" href="/tags\Elixir.html">Elixir</a><a class="dropdown-item" href="/tags\History.html">History</a><a class="dropdown-item" href="/tags\HtDP.html">HtDP</a><a class="dropdown-item" href="/tags\Humor.html">Humor</a><a class="dropdown-item" href="/tags\Intro.html">Intro</a><a class="dropdown-item" href="/tags\Learning.html">Learning</a><a class="dropdown-item" href="/tags\Meetups.html">Meetups</a><a class="dropdown-item" href="/tags\Newsletters.html">Newsletters</a><a class="dropdown-item" href="/tags\Opinion.html">Opinion</a><a class="dropdown-item" href="/tags\Pattern-Matching.html">Pattern Matching</a><a class="dropdown-item" href="/tags\Personal.html">Personal</a><a class="dropdown-item" href="/tags\Podcasts.html">Podcasts</a><a class="dropdown-item" href="/tags\Politics.html">Politics</a><a class="dropdown-item" href="/tags\Racket.html">Racket</a><a class="dropdown-item" href="/tags\Scripting.html">Scripting</a><a class="dropdown-item" href="/tags\Searching-Code.html">Searching Code</a><a class="dropdown-item" href="/tags\SoftwareEngineering.html">SoftwareEngineering</a><a class="dropdown-item" href="/tags\Writing.html">Writing</a>
+              </div>
+            </li>
+
+            <li>
+              <a class="nav-link" href="/About.html">About</a>
+            </li> 
+
+            <li class="nav-item">
+              <a class="nav-link" href="/feeds\all.atom.xml">Atom</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/feeds\all.rss.xml">RSS</a>
+            </li>
+          </ul>
+      </div>
+
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+
+
+
+
+          <article>
+    <header>
+        <h1>Even More Scripting With Racket</h1>
+        <p class="date-and-tags">
+<time datetime="2025-04-07" pubdate="true">2025-04-07</time> :: <span class="tags"><a href="/tags\Racket.html">Racket</a>, <a href="/tags\Scripting.html">Scripting</a>, <a href="/tags\CrossPlatform.html">CrossPlatform</a>, <a href="/tags\CodingRecipes.html">CodingRecipes</a></span></p>
+        <p class="authors">By: <span class="authors">Onorio Catenacci</span></p>
+    </header>
+
+<p>Extending my use of <a href="https://racket-lang.org">racket</a> to allow my shell scripts to be parameterized.</p>
+<!-- more-->
+
+<p>Lately for various reasons, I&rsquo;ve been trying to move stuff off of my C drive. As with most of us the C drive has become a bit of a chokepoint for me in terms of free space. So I&rsquo;ve had an external drive for a while (E:) and lately as I add stuff I&rsquo;ve been shifting it over to my E: drive.</p>
+
+<p>Some of you may recall that I was using Racket within Powershell to automate things. So here&rsquo;s an update on that idea with some comments afterward.</p>
+
+<div class="brush: racket">
+ <div class="source">
+  <table class="sourcetable">
+   <tbody>
+    <tr>
+     <td class="linenos">
+      <div class="linenodiv">
+       <pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td>
+     <td class="code">
+      <div>
+       <pre><span></span><span class="c1">; e:/usr/bin/Racket/Racket.exe (Resolve-Path $PSCommandPath) $args</span>
+<span class="c1">; Exit</span>
+
+<span class="kn">#lang </span><span class="nn">typed/racket/base</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/require.html#(form._((lib._racket/private/base..rkt)._require))" style="color: inherit">require</a></span><span class="w"> </span><span class="n">typed/racket</span><span class="p">)</span>
+
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="n">no-args-passed</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="n">command-line-empty?</span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3d))" style="color: inherit">=</a></span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector-length))" style="color: inherit">vector-length</a></span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/runtime.html#(def._((quote._~23~25kernel)._current-command-line-arguments))" style="color: inherit">current-command-line-arguments</a></span><span class="p">))</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span>
+
+<span class="p">(</span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/special-forms.html#(form._((lib._typed-racket/base-env/prims..rkt)._~3a))" style="color: inherit">:</a></span><span class="w"> </span><span class="n">first-arg</span><span class="w"> </span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/type-ref.html#(form._((lib._typed-racket/base-env/base-types..rkt)._.String))" style="color: inherit">String</a></span><span class="p">)</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="n">first-arg</span><span class="w"> </span><span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/if.html#(form._((quote._~23~25kernel)._if))" style="color: inherit">if</a></span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/booleans.html#(def._((quote._~23~25kernel)._not))" style="color: inherit">not</a></span><span class="w"> </span><span class="n">command-line-empty?</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector-ref))" style="color: inherit">vector-ref</a></span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/runtime.html#(def._((quote._~23~25kernel)._current-command-line-arguments))" style="color: inherit">current-command-line-arguments</a></span><span class="p">)</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">no-args-passed</span><span class="p">))</span>
+
+<span class="p">(</span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/special-forms.html#(form._((lib._typed-racket/base-env/prims..rkt)._~3a))" style="color: inherit">:</a></span><span class="w"> </span><span class="n">DEFAULT-ZED-SOURCE-PATH</span><span class="w"> </span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/type-ref.html#(form._((lib._typed-racket/base-env/base-types..rkt)._.String))" style="color: inherit">String</a></span><span class="p">)</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="n">DEFAULT-ZED-SOURCE-PATH</span><span class="w"> </span><span class="s2">"E:</span><span class="se">\\</span><span class="s2">zed"</span><span class="p">)</span>
+
+<span class="p">(</span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/special-forms.html#(form._((lib._typed-racket/base-env/prims..rkt)._~3a))" style="color: inherit">:</a></span><span class="w"> </span><span class="n">zed-source-path</span><span class="w"> </span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/type-ref.html#(form._((lib._typed-racket/base-env/base-types..rkt)._.String))" style="color: inherit">String</a></span><span class="p">)</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="n">zed-source-path</span><span class="w"> </span><span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/if.html#(form._((quote._~23~25kernel)._if))" style="color: inherit">if</a></span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/strings.html#(def._((quote._~23~25kernel)._string~3d~3f))" style="color: inherit">string=?</a></span><span class="w"> </span><span class="n">first-arg</span><span class="w"> </span><span class="n">no-args-passed</span><span class="p">)</span><span class="w"> </span><span class="n">DEFAULT-ZED-SOURCE-PATH</span><span class="w"> </span><span class="n">first-arg</span><span class="p">))</span>
+
+<span class="p">(</span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/special-forms.html#(form._((lib._typed-racket/base-env/prims..rkt)._~3a))" style="color: inherit">:</a></span><span class="w"> </span><span class="n">ZED-GIT-DIR</span><span class="w"> </span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/type-ref.html#(form._((lib._typed-racket/base-env/base-types..rkt)._.Path))" style="color: inherit">Path</a></span><span class="p">)</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="n">ZED-GIT-DIR</span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/Manipulating_Paths.html#(def._((quote._~23~25kernel)._string-~3epath))" style="color: inherit">string-&gt;path</a></span><span class="w"> </span><span class="n">zed-source-path</span><span class="p">))</span>
+
+<span class="p">(</span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/special-forms.html#(form._((lib._typed-racket/base-env/prims..rkt)._~3a))" style="color: inherit">:</a></span><span class="w"> </span><span class="n">ZED-UPDATE-CMD</span><span class="w"> </span><span class="n"><a href="http://docs.racket-lang.org/ts-reference/type-ref.html#(form._((lib._typed-racket/base-env/base-types..rkt)._.String))" style="color: inherit">String</a></span><span class="p">)</span>
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span><span class="w"> </span><span class="n">ZED-UPDATE-CMD</span><span class="w"> </span><span class="s2">"git pull origin main"</span><span class="p">)</span>
+
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/parameters.html#(form._((lib._racket/private/more-scheme..rkt)._parameterize))" style="color: inherit">parameterize</a></span><span class="w"> </span><span class="p">((</span><span class="nb"><a href="http://docs.racket-lang.org/reference/Filesystem.html#(def._((quote._~23~25kernel)._current-directory))" style="color: inherit">current-directory</a></span><span class="w"> </span><span class="n">ZED-GIT-DIR</span><span class="p">))</span><span class="w"> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/subprocess.html#(def._((lib._racket/system..rkt)._system))" style="color: inherit">system</a></span><span class="w"> </span><span class="n">ZED-UPDATE-CMD</span><span class="p">))</span>
+</pre></div></td></tr></tbody></table></div>
+
+</div>
+
+<p>As you might guess I created a script to automate pulling down the most recent Zed source code. However I initially had it on my C:. So I modified my <code>zup.ps1</code> script to allow me to pull the source to E or to specify a different location. I can pass a directory on the command line but if I don&rsquo;t it&rsquo;s defaulted to <code>DEFAULT-ZED-SOURCE-PATH</code>. The <code>current-command-line-arguments</code> parameter (and the word <a href="https://docs.racket-lang.org/reference/parameters.html">&ldquo;parameter&rdquo;</a> has a very specific meaning in Racket by the way) is set by Racket when I invoke the zup.ps1 script. If I pass something on the command line it goes into the current-command-line-arguments parameter. So further down where I define zed-path I check if no arguments were passed and if not I default to my E drive.</p>
+
+<hr />
+
+<p>EDIT: It was pointed out to me by one of the knowledgeable Racket folks that Racket has a very nice library for dealing with command lines. I thought about using it but in this case since I&rsquo;m only dealing with one unnamed parameter it just seemed like it would be overengineering a solution.</p>
+    <footer>
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+        <g:plusone size="medium" href="https://onor.io/2025\04\even-more-scripting-with-racket.html"></g:plusone> <div id="disqus_thread"></div>
+                                                                                                                  <script type="text/javascript">
+                                                                                                                    var disqus_config = function () {
+                                                                                                                      this.page.identifier = undefined;
+                                                                                                                      this.page.url = undefined;
+                                                                                                                      this.page.title = undefined;
+                                                                                                                      this.page.category_id = undefined;
+                                                                                                                    };
+                                                                                                                    var disqus_shortname = 'DesultoryNerdery';
+                                                                                                                    (function() {
+                                                                                                                        var dsq = document.createElement('script');
+                                                                                                                        dsq.type = 'text/javascript';
+                                                                                                                        dsq.async = true;
+                                                                                                                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                                                                                                        dsq.setAttribute('data-timestamp', +new Date());
+                                                                                                                        (document.head || document.body).appendChild(dsq);
+                                                                                                                    })();
+                                                                                                                  </script>
+                                                                                                                  <noscript>
+                                                                                                                    Please enable JavaScript to view the
+                                                                                                                    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                                                                                                                  </noscript>
+        <div class="row justify-content-center">
+          <nav aria-label="Page Navigation">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="/2025\03\you-would-have-failed.html"
+                   aria-label="Previous">
+                  <span aria-hidden="true">&larr; You Would Have Failed</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="/2025\05\the-impractical-engineer.html"
+                   aria-label="Next">
+                  <span aria-hidden="true">The Impractical Engineer &rarr;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <iframe
+            src="https://embeds.beehiiv.com/dc265450-9873-4ff2-a9b7-f4d1182667c8"
+            data-test-id="beehiiv-embed"
+            width="100%"
+            height="320"
+            frameborder="0"
+            scrolling="no"
+            style="
+                border-radius: 4px;
+                border: 2px solid #e5e7eb;
+                margin: 0;
+                background-color: transparent;
+            "
+        ></iframe>
+    </footer>
+</article>
+        </div>
+      </div>
+      <div id="root"></div>
+      <script type="text/babel">
+        function App() {
+          return (
+            <img
+              src="https://i.imgur.com/MK3eW3Am.jpg"
+              alt="Katherine Johnson"
+            />
+          );
+        }
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+      </script>
+
+      <footer>
+        <hr />
+        <p>Site generated
+        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+        <p><em>Copyright 2024 By Onorio Catenacci</em>.</p>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="/js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/react.development.js"></script>
+    <script src="/js/react-dom.development.js"></script>
+    <!-- Load our React component. -->
+<!--    <script type="text/javascript" src="/js/index.js"></script> -->
+  </body>
+</html>

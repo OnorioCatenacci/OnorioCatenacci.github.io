@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">onor.io: onor.io</title>
+ <link rel="self" href="https://onor.io/feeds\all.atom.xml" />
+ <link href="https://onor.io/index.html" />
+ <id>urn:https-onor-io:-index-html</id>
+ <updated>2025-09-09T13:25:08Z</updated>
+ <entry>
+  <title type="text">Modeling And Software Development</title>
+  <link rel="alternate" href="https://onor.io/2025\09\modeling-and-software-development.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-09-modeling-and-software-development-html</id>
+  <published>2025-09-09T13:25:08Z</published>
+  <updated>2025-09-09T13:25:08Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;A brief discussion of some obvious observations that are routinely forgotten. We&amp;rsquo;re dealing with models and we&amp;rsquo;re not all dealing with the same models.&lt;/p&gt;&lt;a href="https://onor.io/2025\09\modeling-and-software-development.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">The Essence Of Agility</title>
+  <link rel="alternate" href="https://onor.io/2025\08\the-essence-of-agility.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-08-the-essence-of-agility-html</id>
+  <published>2025-08-04T16:05:31Z</published>
+  <updated>2025-08-04T16:05:31Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;I am afraid that more and more people are following the outline of agile without understanding WHY the practices are important. It&amp;rsquo;s becoming a sort of &lt;a href="https://en.wikipedia.org/wiki/Surely_You%27re_Joking,_Mr._Feynman!#Cargo_Cult_Science"&gt;cargo cult science&lt;/a&gt; situation.&lt;/p&gt;&lt;a href="https://onor.io/2025\08\the-essence-of-agility.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Rosie And Elixir</title>
+  <link rel="alternate" href="https://onor.io/2025\08\rosie-and-elixir.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-08-rosie-and-elixir-html</id>
+  <published>2025-08-01T15:58:31Z</published>
+  <updated>2025-08-01T15:58:31Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;I&amp;rsquo;ve been working on writing &lt;a href="https://en.wikipedia.org/wiki/Parsing_expression_grammar"&gt;PEG&lt;/a&gt; expressions with &lt;a href="https://gitlab.com/rosie-pattern-language/rosie"&gt;Rosie Pattern Language&lt;/a&gt; to help people to search Elixir code bases for certain things. Very preliminary but I did want to share what I&amp;rsquo;ve got so far.&lt;/p&gt;&lt;a href="https://onor.io/2025\08\rosie-and-elixir.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Stop Helping Me AI!</title>
+  <link rel="alternate" href="https://onor.io/2025\07\stop-helping-me-ai.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-07-stop-helping-me-ai-html</id>
+  <published>2025-07-08T15:03:07Z</published>
+  <updated>2025-07-08T15:03:07Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;I suppose I will sound like a luddite but so far I&amp;rsquo;ve found AI to be more of a hindrance than a help! I&amp;rsquo;ll explain why.&lt;/p&gt;&lt;a href="https://onor.io/2025\07\stop-helping-me-ai.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Doctors Don't Do Side Projects</title>
+  <link rel="alternate" href="https://onor.io/2025\07\doctors-don-t-do-side-projects.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-07-doctors-don-t-do-side-projects-html</id>
+  <published>2025-07-03T13:48:33Z</published>
+  <updated>2025-07-03T13:48:33Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;A few people when discussing side work by developers trot out the argument &amp;ldquo;No one asks a surgeon if he or she does side work!&amp;rdquo; This argument is flawed in a few major ways.&lt;/p&gt;&lt;a href="https://onor.io/2025\07\doctors-don-t-do-side-projects.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">The Impractical Engineer</title>
+  <link rel="alternate" href="https://onor.io/2025\05\the-impractical-engineer.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-05-the-impractical-engineer-html</id>
+  <published>2025-05-29T18:54:24Z</published>
+  <updated>2025-05-29T18:54:24Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;I&amp;rsquo;ve started a newsletter called &amp;ldquo;The Impractical Engineer&amp;rdquo;. I hope you&amp;rsquo;ll give it a look!&lt;/p&gt;&lt;a href="https://onor.io/2025\05\the-impractical-engineer.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Even More Scripting With Racket</title>
+  <link rel="alternate" href="https://onor.io/2025\04\even-more-scripting-with-racket.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-04-even-more-scripting-with-racket-html</id>
+  <published>2025-04-07T21:38:06Z</published>
+  <updated>2025-04-07T21:38:06Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Extending my use of &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; to allow my shell scripts to be parameterized.&lt;/p&gt;&lt;a href="https://onor.io/2025\04\even-more-scripting-with-racket.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">You Would Have Failed</title>
+  <link rel="alternate" href="https://onor.io/2025\03\you-would-have-failed.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-03-you-would-have-failed-html</id>
+  <published>2025-03-06T14:34:36Z</published>
+  <updated>2025-03-06T14:34:36Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Elon Musk and the other DOGE folks might learn a lesson from history. Sometimes it&amp;rsquo;s smarter to ask the natives rather than assuming they have nothing intelligent to say.&lt;/p&gt;&lt;a href="https://onor.io/2025\03\you-would-have-failed.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Codeberg and Reinventing A Wheel</title>
+  <link rel="alternate" href="https://onor.io/2025\03\codeberg-and-reinventing-a-wheel.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-03-codeberg-and-reinventing-a-wheel-html</id>
+  <published>2025-03-04T21:17:42Z</published>
+  <updated>2025-03-04T21:17:42Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;I decided to give Codeberg a whirl. I also decided to create a binary tree implementation in Rust to practice my Rust skills a bit.&lt;/p&gt;&lt;a href="https://onor.io/2025\03\codeberg-and-reinventing-a-wheel.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">If You Laid All The . . .</title>
+  <link rel="alternate" href="https://onor.io/2025\02\if-you-laid-all-the.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-02-if-you-laid-all-the-html</id>
+  <published>2025-02-25T16:37:38Z</published>
+  <updated>2025-02-25T16:37:38Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;It&amp;rsquo;s sometimes helpful to people to have an analogy to help understand the magnitude of something. That is, to get an idea of how much money one is discussing sometimes authors will refer to a line of dollar bills laid end to end and how many times it&amp;rsquo;d circle the earth at the equator. In that spirit we&amp;rsquo;d like to give some helpful approximations of the number of various kinds of technical people there are in the world to help people get a grasp of the magnitude.&lt;/p&gt;&lt;a href="https://onor.io/2025\02\if-you-laid-all-the.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Speaking at MITechCon</title>
+  <link rel="alternate" href="https://onor.io/2025\02\speaking-at-mitechcon.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-02-speaking-at-mitechcon-html</id>
+  <published>2025-02-21T16:17:08Z</published>
+  <updated>2025-02-21T16:17:08Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Due to the inability of a previously invited speaker to attend, I&amp;rsquo;m filling in at MITechCon for a session.&lt;/p&gt;&lt;a href="https://onor.io/2025\02\speaking-at-mitechcon.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Appearance On A Podcast</title>
+  <link rel="alternate" href="https://onor.io/2025\02\appearance-on-a-podcast.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-02-appearance-on-a-podcast-html</id>
+  <published>2025-02-11T14:22:17Z</published>
+  <updated>2025-02-11T14:22:17Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;In spite of lots of good advice to the contrary, rather than keeping my mouth closed and being thought a fool I opened it and removed any doubt.&lt;/p&gt;&lt;a href="https://onor.io/2025\02\appearance-on-a-podcast.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">More Scripting With Racket</title>
+  <link rel="alternate" href="https://onor.io/2025\01\more-scripting-with-racket.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-01-more-scripting-with-racket-html</id>
+  <published>2025-01-30T20:01:08Z</published>
+  <updated>2025-01-30T20:01:08Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Using &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; in a shell script to automate some repetitive commands.&lt;/p&gt;&lt;a href="https://onor.io/2025\01\more-scripting-with-racket.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Exercises 80 and 81 From How To Design Programs</title>
+  <link rel="alternate" href="https://onor.io/2025\01\exercises-80-and-81-from-how-to-design-programs.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-01-exercises-80-and-81-from-how-to-design-programs-html</id>
+  <published>2025-01-28T20:50:08Z</published>
+  <updated>2025-01-28T20:50:08Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;My responses for Exercises 80 and 81 (Chapter 5.8) of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;a href="https://onor.io/2025\01\exercises-80-and-81-from-how-to-design-programs.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Exercise 72 From How To Design Programs</title>
+  <link rel="alternate" href="https://onor.io/2025\01\exercise-72-from-how-to-design-programs.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-01-exercise-72-from-how-to-design-programs-html</id>
+  <published>2025-01-23T19:09:01Z</published>
+  <updated>2025-01-23T19:09:01Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;My response for Exercises 72 and 73 (Chapter 5.6) of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;a href="https://onor.io/2025\01\exercise-72-from-how-to-design-programs.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Exercise 58 HtDP</title>
+  <link rel="alternate" href="https://onor.io/2025\01\exercise-58-htdp.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-01-exercise-58-htdp-html</id>
+  <published>2025-01-20T20:59:14Z</published>
+  <updated>2025-01-20T20:59:14Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;My answers for the exercises in Chapter 4.6 Exercise 58 of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;&lt;a href="https://onor.io/2025\01\exercise-58-htdp.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Exercises for Chapter 2.1 HTDP</title>
+  <link rel="alternate" href="https://onor.io/2025\01\exercises-for-chapter-2-1-htdp.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-01-exercises-for-chapter-2-1-htdp-html</id>
+  <published>2025-01-13T17:31:36Z</published>
+  <updated>2025-01-13T17:31:36Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;My answers for the exercises in Chapter 2 Section 1 of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;&lt;a href="https://onor.io/2025\01\exercises-for-chapter-2-1-htdp.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Another Exercise From HTDP</title>
+  <link rel="alternate" href="https://onor.io/2025\01\another-exercise-from-htdp.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-01-another-exercise-from-htdp-html</id>
+  <published>2025-01-10T16:46:08Z</published>
+  <updated>2025-01-10T16:46:08Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Another exercise from Chapter 1 of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;&lt;a href="https://onor.io/2025\01\another-exercise-from-htdp.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Some Exercises From HtDP</title>
+  <link rel="alternate" href="https://onor.io/2025\01\some-exercises-from-htdp.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-01-some-exercises-from-htdp-html</id>
+  <published>2025-01-07T18:21:18Z</published>
+  <updated>2025-01-07T18:21:18Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Working through How To Design Programs; here&amp;rsquo;s my first crack at one of the first exercises!&lt;/p&gt;&lt;a href="https://onor.io/2025\01\some-exercises-from-htdp.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Speaking</title>
+  <link rel="alternate" href="https://onor.io/2024\12\speaking.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2024-12-speaking-html</id>
+  <published>2024-12-24T14:28:03Z</published>
+  <updated>2024-12-24T14:28:03Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;I&amp;rsquo;m going to be speaking at Ann Arbor Tech Convergence. You should attend!&lt;/p&gt;&lt;a href="https://onor.io/2024\12\speaking.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Detroit Tech Watch Book Club</title>
+  <link rel="alternate" href="https://onor.io/2024\12\detroit-tech-watch-book-club.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2024-12-detroit-tech-watch-book-club-html</id>
+  <published>2024-12-19T16:16:03Z</published>
+  <updated>2024-12-19T16:16:03Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Announcing the free Detroit Tech Watch book club to help technologists step up their technical game.&lt;/p&gt;&lt;a href="https://onor.io/2024\12\detroit-tech-watch-book-club.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Three Ways To Share Values Between Elixir Modules</title>
+  <link rel="alternate" href="https://onor.io/2024\12\three-ways-to-share-values-between-elixir-modules.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2024-12-three-ways-to-share-values-between-elixir-modules-html</id>
+  <published>2024-12-18T14:40:00Z</published>
+  <updated>2024-12-18T14:40:00Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;A recipe for avoiding repeated definitions in &lt;a href="https://elixir-lang.org"&gt;Elixir&lt;/a&gt; modules!&lt;/p&gt;&lt;a href="https://onor.io/2024\12\three-ways-to-share-values-between-elixir-modules.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Scripting With Racket</title>
+  <link rel="alternate" href="https://onor.io/2024\12\scripting-with-racket.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2024-12-scripting-with-racket-html</id>
+  <published>2024-12-11T22:13:20Z</published>
+  <updated>2024-12-11T22:13:20Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Using &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; in a shell script allows a developer to basically use a lot of the same code across platforms.&lt;/p&gt;&lt;a href="https://onor.io/2024\12\scripting-with-racket.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Where I'm Going</title>
+  <link rel="alternate" href="https://onor.io/2024\12\where-i-m-going.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2024-12-where-i-m-going-html</id>
+  <published>2024-12-05T15:38:50Z</published>
+  <updated>2024-12-05T15:38:50Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;There are a few things in terms of technology that I&amp;rsquo;ve had my eye upon. I&amp;rsquo;d like to share some thoughts with you for whatever it&amp;rsquo;s worth.&lt;/p&gt;&lt;a href="https://onor.io/2024\12\where-i-m-going.html?utm_source=all&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry>
+ <entry>
+  <title type="text">Hello Again World</title>
+  <link rel="alternate" href="https://onor.io/2024\12\hello-again-world.html?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2024-12-hello-again-world-html</id>
+  <published>2024-12-03T01:12:35Z</published>
+  <updated>2024-12-03T01:12:35Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;Yeah I want to write some stuff again and I don&amp;rsquo;t want to let procrastination keep me from writing. So, yeah, this is a really, really short first post but if I wait for inspiration or something smart to say I&amp;rsquo;ll never say anything!&lt;/p&gt;</content></entry></feed>

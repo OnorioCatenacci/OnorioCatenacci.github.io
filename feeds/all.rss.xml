@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<rss version="2.0">
+ <channel>
+  <title>onor.io: onor.io</title>
+  <description>onor.io: onor.io</description>
+  <link>https://onor.io/index.html</link>
+  <lastBuildDate>Tue, 09 Sep 2025 13:25:08 UT</lastBuildDate>
+  <pubDate>Tue, 09 Sep 2025 13:25:08 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>Modeling And Software Development</title>
+   <link>https://onor.io/2025\09\modeling-and-software-development.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-09-modeling-and-software-development-html</guid>
+   <pubDate>Tue, 09 Sep 2025 13:25:08 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;A brief discussion of some obvious observations that are routinely forgotten. We&amp;rsquo;re dealing with models and we&amp;rsquo;re not all dealing with the same models.&lt;/p&gt;&lt;a href="https://onor.io/2025\09\modeling-and-software-development.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>The Essence Of Agility</title>
+   <link>https://onor.io/2025\08\the-essence-of-agility.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-08-the-essence-of-agility-html</guid>
+   <pubDate>Mon, 04 Aug 2025 16:05:31 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;I am afraid that more and more people are following the outline of agile without understanding WHY the practices are important. It&amp;rsquo;s becoming a sort of &lt;a href="https://en.wikipedia.org/wiki/Surely_You%27re_Joking,_Mr._Feynman!#Cargo_Cult_Science"&gt;cargo cult science&lt;/a&gt; situation.&lt;/p&gt;&lt;a href="https://onor.io/2025\08\the-essence-of-agility.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Rosie And Elixir</title>
+   <link>https://onor.io/2025\08\rosie-and-elixir.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-08-rosie-and-elixir-html</guid>
+   <pubDate>Fri, 01 Aug 2025 15:58:31 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;I&amp;rsquo;ve been working on writing &lt;a href="https://en.wikipedia.org/wiki/Parsing_expression_grammar"&gt;PEG&lt;/a&gt; expressions with &lt;a href="https://gitlab.com/rosie-pattern-language/rosie"&gt;Rosie Pattern Language&lt;/a&gt; to help people to search Elixir code bases for certain things. Very preliminary but I did want to share what I&amp;rsquo;ve got so far.&lt;/p&gt;&lt;a href="https://onor.io/2025\08\rosie-and-elixir.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Stop Helping Me AI!</title>
+   <link>https://onor.io/2025\07\stop-helping-me-ai.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-07-stop-helping-me-ai-html</guid>
+   <pubDate>Tue, 08 Jul 2025 15:03:07 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;I suppose I will sound like a luddite but so far I&amp;rsquo;ve found AI to be more of a hindrance than a help! I&amp;rsquo;ll explain why.&lt;/p&gt;&lt;a href="https://onor.io/2025\07\stop-helping-me-ai.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Doctors Don't Do Side Projects</title>
+   <link>https://onor.io/2025\07\doctors-don-t-do-side-projects.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-07-doctors-don-t-do-side-projects-html</guid>
+   <pubDate>Thu, 03 Jul 2025 13:48:33 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;A few people when discussing side work by developers trot out the argument &amp;ldquo;No one asks a surgeon if he or she does side work!&amp;rdquo; This argument is flawed in a few major ways.&lt;/p&gt;&lt;a href="https://onor.io/2025\07\doctors-don-t-do-side-projects.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>The Impractical Engineer</title>
+   <link>https://onor.io/2025\05\the-impractical-engineer.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-05-the-impractical-engineer-html</guid>
+   <pubDate>Thu, 29 May 2025 18:54:24 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;I&amp;rsquo;ve started a newsletter called &amp;ldquo;The Impractical Engineer&amp;rdquo;. I hope you&amp;rsquo;ll give it a look!&lt;/p&gt;&lt;a href="https://onor.io/2025\05\the-impractical-engineer.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Even More Scripting With Racket</title>
+   <link>https://onor.io/2025\04\even-more-scripting-with-racket.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-04-even-more-scripting-with-racket-html</guid>
+   <pubDate>Mon, 07 Apr 2025 21:38:06 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;Extending my use of &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; to allow my shell scripts to be parameterized.&lt;/p&gt;&lt;a href="https://onor.io/2025\04\even-more-scripting-with-racket.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>You Would Have Failed</title>
+   <link>https://onor.io/2025\03\you-would-have-failed.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-03-you-would-have-failed-html</guid>
+   <pubDate>Thu, 06 Mar 2025 14:34:36 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;Elon Musk and the other DOGE folks might learn a lesson from history. Sometimes it&amp;rsquo;s smarter to ask the natives rather than assuming they have nothing intelligent to say.&lt;/p&gt;&lt;a href="https://onor.io/2025\03\you-would-have-failed.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Codeberg and Reinventing A Wheel</title>
+   <link>https://onor.io/2025\03\codeberg-and-reinventing-a-wheel.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-03-codeberg-and-reinventing-a-wheel-html</guid>
+   <pubDate>Tue, 04 Mar 2025 21:17:42 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;I decided to give Codeberg a whirl. I also decided to create a binary tree implementation in Rust to practice my Rust skills a bit.&lt;/p&gt;&lt;a href="https://onor.io/2025\03\codeberg-and-reinventing-a-wheel.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>If You Laid All The . . .</title>
+   <link>https://onor.io/2025\02\if-you-laid-all-the.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-02-if-you-laid-all-the-html</guid>
+   <pubDate>Tue, 25 Feb 2025 16:37:38 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;It&amp;rsquo;s sometimes helpful to people to have an analogy to help understand the magnitude of something. That is, to get an idea of how much money one is discussing sometimes authors will refer to a line of dollar bills laid end to end and how many times it&amp;rsquo;d circle the earth at the equator. In that spirit we&amp;rsquo;d like to give some helpful approximations of the number of various kinds of technical people there are in the world to help people get a grasp of the magnitude.&lt;/p&gt;&lt;a href="https://onor.io/2025\02\if-you-laid-all-the.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Speaking at MITechCon</title>
+   <link>https://onor.io/2025\02\speaking-at-mitechcon.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-02-speaking-at-mitechcon-html</guid>
+   <pubDate>Fri, 21 Feb 2025 16:17:08 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;Due to the inability of a previously invited speaker to attend, I&amp;rsquo;m filling in at MITechCon for a session.&lt;/p&gt;&lt;a href="https://onor.io/2025\02\speaking-at-mitechcon.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Appearance On A Podcast</title>
+   <link>https://onor.io/2025\02\appearance-on-a-podcast.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-02-appearance-on-a-podcast-html</guid>
+   <pubDate>Tue, 11 Feb 2025 14:22:17 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;In spite of lots of good advice to the contrary, rather than keeping my mouth closed and being thought a fool I opened it and removed any doubt.&lt;/p&gt;&lt;a href="https://onor.io/2025\02\appearance-on-a-podcast.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>More Scripting With Racket</title>
+   <link>https://onor.io/2025\01\more-scripting-with-racket.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-01-more-scripting-with-racket-html</guid>
+   <pubDate>Thu, 30 Jan 2025 20:01:08 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;Using &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; in a shell script to automate some repetitive commands.&lt;/p&gt;&lt;a href="https://onor.io/2025\01\more-scripting-with-racket.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Exercises 80 and 81 From How To Design Programs</title>
+   <link>https://onor.io/2025\01\exercises-80-and-81-from-how-to-design-programs.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-01-exercises-80-and-81-from-how-to-design-programs-html</guid>
+   <pubDate>Tue, 28 Jan 2025 20:50:08 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;My responses for Exercises 80 and 81 (Chapter 5.8) of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;a href="https://onor.io/2025\01\exercises-80-and-81-from-how-to-design-programs.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Exercise 72 From How To Design Programs</title>
+   <link>https://onor.io/2025\01\exercise-72-from-how-to-design-programs.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-01-exercise-72-from-how-to-design-programs-html</guid>
+   <pubDate>Thu, 23 Jan 2025 19:09:01 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;My response for Exercises 72 and 73 (Chapter 5.6) of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;a href="https://onor.io/2025\01\exercise-72-from-how-to-design-programs.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Exercise 58 HtDP</title>
+   <link>https://onor.io/2025\01\exercise-58-htdp.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-01-exercise-58-htdp-html</guid>
+   <pubDate>Mon, 20 Jan 2025 20:59:14 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;My answers for the exercises in Chapter 4.6 Exercise 58 of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;&lt;a href="https://onor.io/2025\01\exercise-58-htdp.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Exercises for Chapter 2.1 HTDP</title>
+   <link>https://onor.io/2025\01\exercises-for-chapter-2-1-htdp.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-01-exercises-for-chapter-2-1-htdp-html</guid>
+   <pubDate>Mon, 13 Jan 2025 17:31:36 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;My answers for the exercises in Chapter 2 Section 1 of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;&lt;a href="https://onor.io/2025\01\exercises-for-chapter-2-1-htdp.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Another Exercise From HTDP</title>
+   <link>https://onor.io/2025\01\another-exercise-from-htdp.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-01-another-exercise-from-htdp-html</guid>
+   <pubDate>Fri, 10 Jan 2025 16:46:08 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;Another exercise from Chapter 1 of &lt;a href="https://htdp.org/2024-11-6/Book/index.html"&gt;&lt;em&gt;How to Design Programs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;&lt;a href="https://onor.io/2025\01\another-exercise-from-htdp.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Some Exercises From HtDP</title>
+   <link>https://onor.io/2025\01\some-exercises-from-htdp.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2025-01-some-exercises-from-htdp-html</guid>
+   <pubDate>Tue, 07 Jan 2025 18:21:18 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;Working through How To Design Programs; here&amp;rsquo;s my first crack at one of the first exercises!&lt;/p&gt;&lt;a href="https://onor.io/2025\01\some-exercises-from-htdp.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Speaking</title>
+   <link>https://onor.io/2024\12\speaking.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2024-12-speaking-html</guid>
+   <pubDate>Tue, 24 Dec 2024 14:28:03 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;I&amp;rsquo;m going to be speaking at Ann Arbor Tech Convergence. You should attend!&lt;/p&gt;&lt;a href="https://onor.io/2024\12\speaking.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Detroit Tech Watch Book Club</title>
+   <link>https://onor.io/2024\12\detroit-tech-watch-book-club.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2024-12-detroit-tech-watch-book-club-html</guid>
+   <pubDate>Thu, 19 Dec 2024 16:16:03 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;Announcing the free Detroit Tech Watch book club to help technologists step up their technical game.&lt;/p&gt;&lt;a href="https://onor.io/2024\12\detroit-tech-watch-book-club.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Three Ways To Share Values Between Elixir Modules</title>
+   <link>https://onor.io/2024\12\three-ways-to-share-values-between-elixir-modules.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2024-12-three-ways-to-share-values-between-elixir-modules-html</guid>
+   <pubDate>Wed, 18 Dec 2024 14:40:00 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;A recipe for avoiding repeated definitions in &lt;a href="https://elixir-lang.org"&gt;Elixir&lt;/a&gt; modules!&lt;/p&gt;&lt;a href="https://onor.io/2024\12\three-ways-to-share-values-between-elixir-modules.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Scripting With Racket</title>
+   <link>https://onor.io/2024\12\scripting-with-racket.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2024-12-scripting-with-racket-html</guid>
+   <pubDate>Wed, 11 Dec 2024 22:13:20 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;Using &lt;a href="https://racket-lang.org"&gt;racket&lt;/a&gt; in a shell script allows a developer to basically use a lot of the same code across platforms.&lt;/p&gt;&lt;a href="https://onor.io/2024\12\scripting-with-racket.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Where I'm Going</title>
+   <link>https://onor.io/2024\12\where-i-m-going.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2024-12-where-i-m-going-html</guid>
+   <pubDate>Thu, 05 Dec 2024 15:38:50 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;There are a few things in terms of technology that I&amp;rsquo;ve had my eye upon. I&amp;rsquo;d like to share some thoughts with you for whatever it&amp;rsquo;s worth.&lt;/p&gt;&lt;a href="https://onor.io/2024\12\where-i-m-going.html?utm_source=all&amp;amp;utm_medium=RSS"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</description></item>
+  <item>
+   <title>Hello Again World</title>
+   <link>https://onor.io/2024\12\hello-again-world.html?utm_source=all&amp;utm_medium=RSS</link>
+   <guid isPermaLink="false">urn:https-onor-io:-2024-12-hello-again-world-html</guid>
+   <pubDate>Tue, 03 Dec 2024 01:12:35 UT</pubDate>
+   <author>Onorio Catenacci</author>
+   <description>
+&lt;p&gt;Yeah I want to write some stuff again and I don&amp;rsquo;t want to let procrastination keep me from writing. So, yeah, this is a really, really short first post but if I wait for inspiration or something smart to say I&amp;rsquo;ll never say anything!&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">onor.io: Posts tagged 'Searching Code'</title>
+ <link rel="self" href="https://onor.io/feeds\Searching-Code.atom.xml" />
+ <link href="https://onor.io/tags\Searching-Code.html" />
+ <id>urn:https-onor-io:-tags-Searching-Code-html</id>
+ <updated>2025-08-01T15:58:31Z</updated>
+ <entry>
+  <title type="text">Rosie And Elixir</title>
+  <link rel="alternate" href="https://onor.io/2025\08\rosie-and-elixir.html?utm_source=Searching-Code&amp;utm_medium=Atom" />
+  <id>urn:https-onor-io:-2025-08-rosie-and-elixir-html</id>
+  <published>2025-08-01T15:58:31Z</published>
+  <updated>2025-08-01T15:58:31Z</updated>
+  <author>
+   <name>Onorio Catenacci</name></author>
+  <content type="html">
+&lt;p&gt;I&amp;rsquo;ve been working on writing &lt;a href="https://en.wikipedia.org/wiki/Parsing_expression_grammar"&gt;PEG&lt;/a&gt; expressions with &lt;a href="https://gitlab.com/rosie-pattern-language/rosie"&gt;Rosie Pattern Language&lt;/a&gt; to help people to search Elixir code bases for certain things. Very preliminary but I did want to share what I&amp;rsquo;ve got so far.&lt;/p&gt;&lt;a href="https://onor.io/2025\08\rosie-and-elixir.html?utm_source=Searching-Code&amp;amp;utm_medium=Atom"&gt;&lt;em&gt;More&amp;hellip;&lt;/em&gt;&lt;/a&gt;</content></entry></feed>
